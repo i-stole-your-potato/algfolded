@@ -240,9 +240,8 @@ export const useSessionStore = defineStore('session', () => {
 
     const setSelectedKeys = (keys) => {
         timerState.value = TimerState.NOT_RUNNING
-        // Only reset recap/counts when the selection actually changed. This
-        // preserves recap progress across page reloads, since App.vue calls
-        // this on every boot.
+        // App.vue calls this on every boot as well as on selection changes.
+        // An unchanged selection must preserve the current run.
         const sameKeys = keys.length === store.keys.length
             && keys.every(k => store.keys.includes(k))
         if (sameKeys) {
@@ -256,7 +255,27 @@ export const useSessionStore = defineStore('session', () => {
             else refillUpcoming() // ensure the preview queue is populated after a reload
             return
         }
-        if (store.mode === 'recap') store.mode = 'practice'
+        if (store.mode === 'recap') {
+            // Editing the selection continues the same recap: retain counts
+            // for remaining cases and start newly selected ones at zero.
+            const counts = store.keysCount
+            store.keys = keys
+            store.keysCount = Object.fromEntries(keys.map(k => [k, counts[k] ?? 0]))
+            store.recapDone = false
+            recentCases.value = recentCases.value.filter(k => keys.includes(k))
+            const pending = new Set(casesWithZeroCount.value)
+            store.upcoming = store.upcoming.filter(u => pending.has(u.key))
+            if (pending.has(store.currentKey)) {
+                refillUpcoming()
+            } else {
+                // Release the old current case before picking; it must not
+                // reserve the only remaining case or leave a stale scramble.
+                store.currentKey = null
+                store.currentScramble = null
+                setRandomCase()
+            }
+            return
+        }
         store.recapDone = false // a different selection is a different recap
         store.keys = keys
         recentCases.value = []

@@ -27,6 +27,13 @@ const letters = (c: ReturnType<typeof partition>[number]): string[] =>
   threeTwists.levels.map((lvl, i) => lvl.display(c.path[i], { toLetter }).primary)
 
 describe('three-twists partition', () => {
+  it('labels D-layer buffers using their D-face letters', () => {
+    for (const [buffer, letter] of [['DFR', 'V'], ['DFL', 'U']]) {
+      const [c] = partition([mk('cw', [buffer, 'DBR', 'DBL'])], DEFAULT_BUFFER_ORDER)
+      expect(c.path[0]).toBe(buffer)
+      expect(letters(c)[0]).toBe(letter)
+    }
+  })
   it('matches the documented example: cw {UFR,UBL,UBR} -> C/CR/CRN', () => {
     const cases = partition([mk('cw', ['UFR', 'UBL', 'UBR'])], DEFAULT_BUFFER_ORDER)
     expect(letters(cases[0])).toEqual(['C', 'CR', 'CRN'])
@@ -56,7 +63,7 @@ describe('three-twists partition', () => {
     const withUFR = partition([twist], DEFAULT_BUFFER_ORDER)[0]
     expect(letters(withUFR)[0]).toBe('C') // UFR is highest priority by default
     // move UFR to the end -> buffer becomes UFL (next in this order)
-    const reordered = ['UFL', 'UBR', 'UBL', 'RDF', 'FDL', 'UFR']
+    const reordered = ['UFL', 'UBR', 'UBL', 'DFR', 'DFL', 'UFR']
     const without = partition([twist], reordered)[0]
     expect(letters(without)[0]).toBe('D') // UFL
   })

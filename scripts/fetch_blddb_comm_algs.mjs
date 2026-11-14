@@ -71,7 +71,7 @@ const edgeName = (pos) => HOME_E[pos][0];
 
 // ── configurable trainer buffers (sticker -> the piece it lives on) ──────────
 // Corners: same set/stickers as the 3-twists buffers.
-const CORNER_BUFFERS = { UFR:"UFR", UFL:"UFL", UBR:"UBR", UBL:"UBL", RDF:"DFR", FDL:"DFL" };
+const CORNER_BUFFERS = { UFR:"UFR", UFL:"UFL", UBR:"UBR", UBL:"UBL", DFR:"DFR", DFL:"DFL" };
 // Edges: the U/D (and F/B for equator) reference sticker of each buffer edge.
 const EDGE_BUFFERS = { UF:"UF", UB:"UB", UR:"UR", UL:"UL", FR:"FR", FL:"FL", DF:"DF", DB:"DB", DR:"DR", DL:"DL" };
 

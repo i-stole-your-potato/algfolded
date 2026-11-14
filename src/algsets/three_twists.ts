@@ -19,11 +19,11 @@ const BUFFERS: Record<string, { corner: string; sticker: string }> = {
   UFL: { corner: 'UFL', sticker: 'UFL' },
   UBR: { corner: 'UBR', sticker: 'UBR' },
   UBL: { corner: 'UBL', sticker: 'UBL' },
-  RDF: { corner: 'DFR', sticker: 'RDF' },
-  FDL: { corner: 'DFL', sticker: 'FDL' },
+  DFR: { corner: 'DFR', sticker: 'DFR' },
+  DFL: { corner: 'DFL', sticker: 'DFL' },
 }
 
-export const DEFAULT_BUFFER_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL']
+export const DEFAULT_BUFFER_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL']
 
 // The sticker a twisted corner's U/D facelet lands on. We store stickers (not
 // letters) in the path so the displayed letters follow the user's letter

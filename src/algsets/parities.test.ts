@@ -14,13 +14,13 @@ const SPEFFZ: Record<string, string> = {
 }
 const toLetter = (s: string): string => SPEFFZ[s] ?? s
 
-const DEFAULT_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL']
+const DEFAULT_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL']
 
 const raw: Record<string, RawParity> = {
   'UFR UBL UF UR': { algs: ['a1'] }, // the reference case, memoed "A"
   'UFR RDF UF UB': { algs: ['a2'] }, // alternative edge swap, target P
   'UFR UBL UF BU': { algs: ['a3'] }, // flipped swap of UF and UB
-  'UBL LDF UF UR': { algs: ['a4'] }, // other corner buffer (UBL beats FDL)
+  'UBL LDF UF UR': { algs: ['a4'] }, // other corner buffer (UBL beats DFL)
 }
 
 describe('parities partition', () => {
@@ -63,28 +63,32 @@ describe('parities partition', () => {
   it('re-anchors D-layer cases to the tracked buffer sticker', () => {
     const dRaw: Record<string, RawParity> = {
       // data names the corner swap canonically; the trainer's buffer is the
-      // RDF sticker, so the target is where RDF goes (DBR, not RDB).
+      // DFR sticker, so the target remains RDB.
       'DFR RDB UF UR': { algs: ['a5'] },
-      // both corners carry a buffer: RDF beats FDL in the default order
+      // both corners carry a buffer: DFR beats DFL in the default order
       'DFR DFL UF UR': { algs: ['a6'] },
-      // the DBL corner is tracked from LDB (never configurable, lowest priority)
+      // the DBL corner is tracked from its D face (lowest priority)
       'DBR LDB UF UR': { algs: ['a7'] },
       'DBR DBL UF UR': { algs: ['a8'] },
     }
     const cases = partition(dRaw, DEFAULT_ORDER)
     const byId = (id: string) => cases.find((c) => c.id === id)!
 
-    expect(byId('DFR RDB UF UR').path).toEqual(['RDF', 'UF·UR', 'DBR'])
-    expect(byId('DFR DFL UF UR').path).toEqual(['RDF', 'UF·UR', 'FDL'])
-    expect(byId('DBR LDB UF UR').path).toEqual(['LDB', 'UF·UR', 'DBR'])
-    expect(byId('DBR DBL UF UR').path).toEqual(['LDB', 'UF·UR', 'BDR'])
+    expect(byId('DFR RDB UF UR').path).toEqual(['DFR', 'UF·UR', 'RDB'])
+    expect(byId('DFR DFL UF UR').path).toEqual(['DFR', 'UF·UR', 'DFL'])
+    expect(byId('DBR LDB UF UR').path).toEqual(['DBL', 'UF·UR', 'RDB'])
+    expect(byId('DBR DBL UF UR').path).toEqual(['DBL', 'UF·UR', 'DBR'])
+    expect(parities.caseLabel(byId('DBR LDB UF UR'), toLetter)).toBe('O')
+    expect(parities.caseLabel(byId('DBR DBL UF UR'), toLetter)).toBe('W')
+    expect(parities.levels[0].display('DBL', { toLetter }))
+      .toEqual({ primary: 'DBL', secondary: 'X' })
 
-    // buffer level shows the sticker with its letter; LDB groups sort last
-    const d = parities.levels[0].display('RDF', { toLetter })
-    expect(d).toEqual({ primary: 'RDF', secondary: 'P' })
-    expect(cases[cases.length - 1].path[0]).toBe('LDB')
+    // buffer level shows the sticker with its letter; DBL groups sort last
+    const d = parities.levels[0].display('DFR', { toLetter })
+    expect(d).toEqual({ primary: 'DFR', secondary: 'V' })
+    expect(cases[cases.length - 1].path[0]).toBe('DBL')
     // stats grid: re-anchored target letter, buffer sticker in the secondary
     const s = parities.statsDisplay!(byId('DFR RDB UF UR'), toLetter)
-    expect(s).toEqual({ primary: 'W', secondary: 'RDF UF-UR' })
+    expect(s).toEqual({ primary: 'O', secondary: 'DFR UF-UR' })
   })
 })

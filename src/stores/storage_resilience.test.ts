@@ -27,7 +27,7 @@ describe('stores survive corrupt localStorage', () => {
       localStorage.setItem('ltctTrainerSettings', bad)
       const { useSettingsStore } = await import('@/stores/SettingsStore')
       const s = useSettingsStore()
-      expect(s.store.bufferOrder).toEqual(['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL'])
+      expect(s.store.bufferOrder).toEqual(['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL'])
       expect(s.store.smartSelection).toBe(true)
     }
   })
@@ -38,6 +38,23 @@ describe('stores survive corrupt localStorage', () => {
     const s = useSettingsStore()
     expect(s.store.smartSelection).toBe(false)
     expect(s.store.bufferOrder).toBeDefined() // default merged in
+  })
+
+  it('migrates old D-layer buffers without changing their priority or other settings', async () => {
+    localStorage.setItem('ltctTrainerSettings', JSON.stringify({
+      bufferOrder: ['FDL', 'UFR', 'RDF', 'UFL', 'UBR', 'UBL'],
+      smartSelection: false,
+    }))
+    const { useSettingsStore } = await import('@/stores/SettingsStore')
+    const s = useSettingsStore()
+    const expected = ['DFL', 'UFR', 'DFR', 'UFL', 'UBR', 'UBL']
+    expect(s.store.bufferOrder).toEqual(expected)
+    expect(s.store.smartSelection).toBe(false)
+    expect(JSON.parse(localStorage.getItem('ltctTrainerSettings')!).bufferOrder).toEqual(expected)
+    freshPinia()
+    expect(useSettingsStore().store.bufferOrder).toEqual(expected)
+    s.resetDefaults()
+    expect(s.store.bufferOrder).toEqual(['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL'])
   })
 
   it('LetterSchemeStore falls back to the default scheme', async () => {

@@ -417,6 +417,9 @@
         "title": "Code source",
         "body": "Le code source complet de cette application est consultable publiquement :"
       }
+    },
+    "footer": {
+      "forked_from": "Fork du dépôt de tobipch"
     }
   }
 }

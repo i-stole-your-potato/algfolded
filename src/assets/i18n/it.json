@@ -417,6 +417,9 @@
         "title": "Codice sorgente",
         "body": "Il codice sorgente completo di questa applicazione è pubblicamente consultabile:"
       }
+    },
+    "footer": {
+      "forked_from": "Fork del repository di tobipch"
     }
   }
 }

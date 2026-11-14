@@ -12,7 +12,7 @@ const SPEFFZ: Record<string, string> = {
 }
 const toLetter = (s: string): string => SPEFFZ[s] ?? s
 
-const DEFAULT_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL']
+const DEFAULT_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL']
 
 // The user's reference case (blddb "AWL"): corners UFL+DFL, UFR twisted so
 // that its U sticker shows on F (FUR). Variants as generated into t2c_map.
@@ -56,12 +56,12 @@ describe('t2c representation choice', () => {
   })
 
   it('re-keys the same case when the buffer order prefers the other corner', () => {
-    // FDL (on corner DFL) before UFL -> corner X = DFL, memo starts at FDL.
-    const order = ['UFR', 'FDL', 'UFL', 'UBR', 'UBL', 'RDF']
-    expect(chooseStart(dufCase, order)).toBe('FDL')
+    // DFL (on corner DFL) before UFL -> corner X = DFL, memo starts at DFL.
+    const order = ['UFR', 'DFL', 'UFL', 'UBR', 'UBL', 'DFR']
+    expect(chooseStart(dufCase, order)).toBe('DFL')
     const [c] = partition({ 'UFL DFL FUR': dufCase }, order)
     expect(c.path[0]).toBe('DFL')
-    expect(t2c.caseLabel(c, toLetter)).toBe('LIG')
+    expect(t2c.caseLabel(c, toLetter)).toBe('UFL')
   })
 
   it('falls back to the canonical representation when no buffer is on the case', () => {
@@ -73,7 +73,7 @@ describe('t2c representation choice', () => {
 
   it('keeps a stable id regardless of buffer order', () => {
     const a = partition({ 'UFL DFL FUR': dufCase }, DEFAULT_ORDER)[0]
-    const b = partition({ 'UFL DFL FUR': dufCase }, ['UFR', 'FDL', 'UFL', 'UBR', 'UBL', 'RDF'])[0]
+    const b = partition({ 'UFL DFL FUR': dufCase }, ['UFR', 'DFL', 'UFL', 'UBR', 'UBL', 'DFR'])[0]
     expect(a.id).toBe(b.id)
   })
 

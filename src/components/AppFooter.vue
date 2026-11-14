@@ -19,12 +19,16 @@ const visible = computed(() => route.name !== 'timer')
     <RouterLink to="/imprint" class="app-footer-link">{{ $t('legal.imprint') }}</RouterLink>
     <span class="app-footer-sep" aria-hidden="true">·</span>
     <RouterLink to="/privacy" class="app-footer-link">{{ $t('legal.privacy') }}</RouterLink>
+    <span class="app-footer-sep" aria-hidden="true">·</span>
+    <a href="https://github.com/tobipch/algfolded" class="app-footer-link"
+       target="_blank" rel="noopener noreferrer">{{ $t('footer.forked_from') }}</a>
   </footer>
 </template>
 
 <style scoped>
 .app-footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;

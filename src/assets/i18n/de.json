@@ -417,6 +417,9 @@
         "title": "Quellcode",
         "body": "Der vollständige Quellcode dieser Anwendung ist öffentlich einsehbar:"
       }
+    },
+    "footer": {
+      "forked_from": "Fork des Repositorys von tobipch"
     }
   }
 }

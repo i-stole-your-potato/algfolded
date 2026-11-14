@@ -221,6 +221,75 @@ describe('persistence', () => {
 })
 
 describe('recap', () => {
+  it('keeps the current case and progress when a completed case is deselected', async () => {
+    const s = await load()
+    s.setSelectedKeys(['c1', 'c2', 'c3'])
+    s.startRecap()
+    const removed = s.store.currentKey
+    s.startTimer(); s.stopTimer()
+    const completed = s.store.currentKey
+    s.startTimer(); s.stopTimer()
+    const current = s.store.currentKey
+    const scramble = s.currentScramble
+
+    s.setSelectedKeys(s.store.keys.filter(k => k !== removed))
+    expect(s.store.mode).toBe('recap')
+    expect(s.store.recapDone).toBe(false)
+    expect(s.store.currentKey).toBe(current)
+    expect(s.currentScramble).toBe(scramble)
+    expect(s.casesWithZeroCount).toEqual([current])
+    expect(s.store.keysCount).toEqual({[completed!]: 1, [current!]: 0})
+
+    s.startTimer(); s.stopTimer()
+    expect(s.store.recapDone).toBe(true)
+    expect(s.store.mode).toBe('practice')
+    expect(s.store.stats).toHaveLength(3)
+  })
+
+  it('removes deselected current and queued cases without prematurely ending recap', async () => {
+    const s = await load()
+    s.setSelectedKeys(['c1', 'c2', 'c3'])
+    s.startRecap()
+    const remaining = s.store.keys.find(k => k !== s.store.currentKey)!
+    s.setSelectedKeys([remaining])
+    expect(s.store.mode).toBe('recap')
+    expect(s.store.currentKey).toBe(remaining)
+    expect(s.store.upcoming).toEqual([])
+    s.startTimer(); s.stopTimer()
+    expect(s.store.recapDone).toBe(true)
+  })
+
+  it('adds new cases to the ongoing recap without repeating completed ones', async () => {
+    const s = await load()
+    s.setSelectedKeys(['c1', 'c2'])
+    s.startRecap()
+    const completed = s.store.currentKey
+    s.startTimer(); s.stopTimer()
+    s.setSelectedKeys(['c1', 'c2', 'c3'])
+    expect(s.store.mode).toBe('recap')
+    expect(s.casesWithZeroCount).toHaveLength(2)
+    expect(s.casesWithZeroCount).not.toContain(completed)
+    expect(s.casesWithZeroCount).toContain('c3')
+    s.startTimer(); s.stopTimer()
+    expect(s.store.mode).toBe('recap')
+    s.startTimer(); s.stopTimer()
+    expect(s.store.recapDone).toBe(true)
+    expect(new Set((s.store.stats as unknown as Stat[]).map(r => r.key)).size).toBe(3)
+  })
+
+  it('keeps recap selected when all cases are deselected and new ones are picked', async () => {
+    const s = await load()
+    s.setSelectedKeys(['c1', 'c2'])
+    s.startRecap()
+    s.setSelectedKeys([])
+    expect(s.store.mode).toBe('recap')
+    expect(s.store.currentKey).toBeNull()
+    expect(s.store.upcoming).toEqual([])
+    s.setSelectedKeys(['c3'])
+    expect(s.store.mode).toBe('recap')
+    expect(s.store.currentKey).toBe('c3')
+  })
+
   // Recap walks every selected case once. When it runs out the run falls back
   // to practice, and the navbar offers to recap the same selection again.
   it('offers a repeat once every selected case has come up', async () => {

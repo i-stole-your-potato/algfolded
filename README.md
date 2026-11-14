@@ -4,7 +4,21 @@ A timer-based trainer for **blindfolded (BLD) speedcubing algorithms**.
 
 Algfolded is a general BLD **algset** trainer: it hosts several algorithm sets side by side, each with its own cases, scrambles and independent progress. Pick a set, select the cases you want, and drill them with a timer, spaced-repetition-style case selection, per-case notes and optional smart-cube tracking.
 
-Fork of [Roman Strakhov's ZBLL Trainer](https://github.com/Roman-/zbll), originally adapted with permission from the original author. Algorithm data sourced from [blddb](https://github.com/nbwzx/blddb).
+This repository is a fork of [tobipch's Algfolded](https://github.com/tobipch/algfolded). Algfolded itself was forked from [Roman Strakhov's ZBLL Trainer](https://github.com/Roman-/zbll), originally adapted with permission from the original author. Algorithm data is sourced from [blddb](https://github.com/nbwzx/blddb).
+
+## Changes in this fork
+
+Compared with the upstream snapshot at [`73db2fe`](https://github.com/tobipch/algfolded/commit/73db2fe54c7e131d072d99facc5bea091dcff7ee), this fork includes:
+
+- **D-face corner buffers:** changed the configurable buffers from `RDF` / `FDL` to `DFR` / `DFL`, and the parity fallback buffer from `LDB` to `DBL`. Case targets and displayed letters are expressed from the new stickers. Existing saved `RDF` / `FDL` buffer orders migrate automatically while retaining their priority. Sticker definitions in the letter scheme remain intact.
+- **Refreshed algorithm data:** re-fetched all eight algsets from BLDDB, regenerated corner-commutator buffer targets, and restored commutator notation. Case IDs and existing scrambles are preserved, so selections, notes and history continue to refer to the same cases. A refresh does not necessarily change every data file.
+- **Recap selection fix:** deselecting a completed case during a recap no longer switches to Practice or resets the remaining progress. The current case stays in place if still pending, deselected cases leave the queue, and newly selected cases join the recap. Completing all remaining selected cases still ends the recap normally.
+- **Visible upstream credit:** added a link to tobipch's repository in the page footer, with English, German, French and Italian translations.
+- **Regression coverage:** updated buffer-label tests and added checks for D-face target geometry, saved-setting migration and changes to the selection during Recap.
+
+Practice, Recap, Flow, smart-cube support and cloud sync were already present upstream. GitHub Pages deployment has not been configured in this fork.
+
+Validation of these changes: type checking passes; the test suite has 364 passing tests and two pre-existing failures in `src/views/legal.test.ts` that assume operator details are unfilled. The data checks also identify 11 pre-existing parity cases without pre-generated scrambles; the trainer uses its inverse-algorithm fallback for those cases.
 
 ## Algsets
 
@@ -19,7 +33,7 @@ Switch between sets from the picker on the selection page. Each set keeps its **
 | **3-Twists** | 112 | Three corners twisted in the same direction, grouped by buffer |
 | **LTCT** (Last Target Corner Twist) | 252 | The final corner-twist case at the end of a corners BLD solve |
 | **T2C** (Twisted 2 Corners) | 126 | "Two corners left and your buffer is twisted": LTCT cases of the non-UFR buffers whose twisted corner is UFR, solved as a 3-target sequence from the next buffer |
-| **Parities** | 802 | Corner parity algs that swap the corner buffer with a target and two edges with each other (memo swap / pseudo swap), grouped by buffer → edge swap → target letter |
+| **Parities** | 813 | Corner parity algs that swap the corner buffer with a target and two edges with each other (memo swap / pseudo swap), grouped by buffer → edge swap → target letter |
 
 Because the app is set-agnostic, adding a new set is essentially "a data file + a small descriptor" (see `src/algsets/`).
 
@@ -41,9 +55,9 @@ Because the app is set-agnostic, adding a new set is essentially "a data file + 
 
 Most sets are grouped by **buffer**. In settings you can reorder the buffer priority — by **drag-and-drop** or the up/down buttons — and the sets **re-partition live**: each case is assigned to its highest-priority buffer, so the grouping and the case letters follow your preferred buffer order.
 
-There are two buffer lists: a **corner** order (3-twists, corner commutators, corner 2-twists, parities, T2C) and a separate **edge** order (edge commutators, edge 2-flips). The D-layer corner buffers are named by their tracked sticker (`RDF`, `FDL`), and case targets are expressed from that sticker. A case only shows up under its highest-priority buffer — later buffers list only the cases their earlier buffers don't already cover, so the corner commutator set counts down 378 → 270 → 180 → 108 → 54 → 18 across the default order and the edge set 440 → 360 → … → 8.
+There are two buffer lists: a **corner** order (3-twists, corner commutators, corner 2-twists, parities, T2C) and a separate **edge** order (edge commutators, edge 2-flips). The D-layer corner buffers are named by their tracked sticker (`DFR`, `DFL`), and case targets are expressed from that sticker. A case only shows up under its highest-priority buffer — later buffers list only the cases their earlier buffers don't already cover, so the corner commutator set counts down 378 → 270 → 180 → 108 → 54 → 18 across the default order and the edge set 440 → 360 → … → 8.
 
-Some cases consist only of never-configured pieces: the 2-piece sets can pair exactly the two back pieces (`DBR`+`DBL`, or `BR`+`BL`), and the parity set contains cases whose buffer corner is `DBL` (tracked from `LDB`). Those get an implicit lowest-priority fallback buffer so every case is still reachable.
+Some cases consist only of never-configured pieces: the 2-piece sets can pair exactly the two back pieces (`DBR`+`DBL`, or `BR`+`BL`), and the parity set contains cases whose buffer corner is `DBL` (tracked from its D-face sticker). Those get an implicit lowest-priority fallback buffer so every case is still reachable.
 
 ### Smart case selection
 

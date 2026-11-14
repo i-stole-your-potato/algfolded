@@ -151,10 +151,10 @@ describe('footer', () => {
     return mount(AppFooter, { global: { plugins: [makeI18n('de'), router] } })
   }
 
-  it('links to both legal pages', async () => {
+  it('links to both legal pages and the upstream repository', async () => {
     const wrapper = await mountFooter('/')
     const hrefs = wrapper.findAll('a').map((a) => a.attributes('href'))
-    expect(hrefs).toEqual(['#/imprint', '#/privacy'])
+    expect(hrefs).toEqual(['#/imprint', '#/privacy', 'https://github.com/tobipch/algfolded'])
   })
 
   it('stays out of the timer, where it would sit in the tap-to-start zone', async () => {

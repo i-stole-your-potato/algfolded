@@ -5,6 +5,8 @@ import { isValidAlg } from '@/helpers/alg_match'
 // @ts-ignore -- plain JS helper
 import { algToMoveString } from '@/helpers/scramble_utils'
 import { puzzles } from 'cubing/puzzles'
+import { Alg } from 'cubing/alg'
+import { partition, DEFAULT_CORNER_BUFFER_ORDER, type RawComm } from './commutators'
 import cornerComms from '@/assets/corner_comms.json'
 import edgeComms from '@/assets/edge_comms.json'
 
@@ -65,3 +67,40 @@ const check = (data: CommData, label: string) => {
 
 check(cornerComms as CommData, 'corner')
 check(edgeComms as CommData, 'edge')
+
+describe('D-face corner buffers in the imported data', () => {
+  it('keeps every case reachable with the new default order', () => {
+    const cases = partition(cornerComms as unknown as Record<string, RawComm>, DEFAULT_CORNER_BUFFER_ORDER)
+    expect(cases).toHaveLength(Object.keys(cornerComms).length)
+    expect(DEFAULT_CORNER_BUFFER_ORDER.map(b => cases.filter(c => c.path[0] === b).length))
+      .toEqual([378, 270, 180, 108, 54, 18])
+  })
+
+  it('traces targets from DFR and DFL rather than merely renaming the old buffers', async () => {
+    const home = [
+      ['UFR', 'FUR', 'RUF'], ['UBR', 'RUB', 'BUR'],
+      ['UBL', 'BUL', 'LUB'], ['UFL', 'LUF', 'FUL'],
+      ['DFR', 'RDF', 'FDR'], ['DFL', 'FDL', 'LDF'],
+      ['DBL', 'LDB', 'BDL'], ['DBR', 'BDR', 'RDB'],
+    ]
+    const solved = (await puzzles['3x3x3'].kpuzzle()).defaultPattern()
+    let checked = 0
+    for (const [id, c] of Object.entries(cornerComms) as [string, CommData[string]][]) {
+      expect(c.buffers).not.toHaveProperty('RDF')
+      expect(c.buffers).not.toHaveProperty('FDL')
+      const corners = solved.applyAlg(new Alg(algToMoveString(c.algs[0])).invert()).patternData.CORNERS
+      const read = (sticker: string): string => {
+        const pos = home.findIndex(stickers => stickers.includes(sticker))
+        const slot = home[pos].indexOf(sticker)
+        return home[corners.pieces[pos]][(slot + corners.orientation[pos]) % 3]
+      }
+      for (const buffer of ['DFR', 'DFL']) {
+        if (!c.buffers[buffer]) continue
+        const first = read(buffer)
+        expect(c.buffers[buffer], `${id} from ${buffer}`).toEqual([first, read(first)])
+        checked++
+      }
+    }
+    expect(checked).toBe(756)
+  })
+})

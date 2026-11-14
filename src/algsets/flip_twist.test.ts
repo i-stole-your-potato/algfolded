@@ -13,7 +13,7 @@ const SPEFFZ: Record<string, string> = {
 const toLetter = (s: string): string => SPEFFZ[s] ?? s
 
 const deps = {
-  bufferOrder: ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL'],
+  bufferOrder: ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL'],
   edgeBufferOrder: ['UF', 'UB', 'UR', 'UL', 'FR', 'FL', 'DF', 'DB', 'DR', 'DL'],
 }
 
@@ -59,12 +59,12 @@ describe('corner 2-twists', () => {
     expect(cornerTwists2.caseLabel(c, toLetter)).toBe('UFR/N')
   })
 
-  it('shows the DFR buffer in piece notation, not its RDF sticker', () => {
+  it('uses the DFR sticker as both the buffer key and displayed piece', () => {
     const raw: Record<string, RawFlipTwist> = {
-      y: { algs: ['a'], scrambles: [], buffers: { RDF: 'RUB', DBR: 'FDR' } },
+      y: { algs: ['a'], scrambles: [], buffers: { DFR: 'RUB', DBR: 'FDR' } },
     }
     const [c] = cornerTwists2.derive(raw, deps)
-    expect(c.path[0]).toBe('RDF')
+    expect(c.path[0]).toBe('DFR')
     expect(levels(cornerTwists2, c)[0]).toBe('DFR')
   })
 })

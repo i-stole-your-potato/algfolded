@@ -169,7 +169,7 @@ const fmt = (ms) => ms == null ? '—' : msToHumanReadable(ms, 1, true)
             <table class="help-examples">
               <tbody>
                 <tr><td><code>NP</code></td><td>{{ $t('stats.search_help_ex_pair') }}</td></tr>
-                <tr><td><code>RDF</code></td><td>{{ $t('stats.search_help_ex_piece') }}</td></tr>
+                <tr><td><code>DFR</code></td><td>{{ $t('stats.search_help_ex_piece') }}</td></tr>
                 <tr><td><code>UD*P</code></td><td>{{ $t('stats.search_help_ex_star') }}</td></tr>
                 <tr><td><code>N?</code></td><td>{{ $t('stats.search_help_ex_qmark') }}</td></tr>
               </tbody>

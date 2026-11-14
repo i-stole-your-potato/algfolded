@@ -14,7 +14,7 @@ import edgeCommsRaw from '@/assets/edge_comms.json?raw'
 import cornerCommsRaw from '@/assets/corner_comms.json?raw'
 
 const EDGE_BUFFERS = ['UF', 'UR', 'UB', 'UL', 'FR', 'FL', 'DF', 'BR']
-const CORNER_BUFFERS = ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL']
+const CORNER_BUFFERS = ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL']
 
 const LEVELS = [
   { id: 'buffer', display: (v: string) => ({ primary: v }) },

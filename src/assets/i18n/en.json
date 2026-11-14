@@ -417,6 +417,9 @@
         "title": "Source code",
         "body": "The complete source code of this application is publicly available:"
       }
+    },
+    "footer": {
+      "forked_from": "Forked from tobipch's repo"
     }
   }
 }

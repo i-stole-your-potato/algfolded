@@ -13,11 +13,6 @@ export interface RawFlipTwist {
   buffers: Record<string, string>
 }
 
-// Corner buffer stickers that aren't already a piece name (for piece-notation
-// display on the first level).
-const CORNER_BUFFER_PIECE: Record<string, string> = { RDF: 'DFR', FDL: 'DFL' }
-const bufferPiece = (v: string): string => CORNER_BUFFER_PIECE[v] ?? v
-
 // The two back corners / back-down edges are never configurable buffers, but a
 // 2-piece case can consist of exactly those two — so they're appended to the
 // effective order (lowest priority) to guarantee every case is assignable.
@@ -93,7 +88,7 @@ export const cornerTwists2: Algset = {
   usesLetterScheme: true,
   levels: [
     // Stufe 1: buffer corner (piece notation).
-    { id: 'buffer', display: (v) => ({ primary: bufferPiece(v) }) },
+    { id: 'buffer', display: (v) => ({ primary: v }) },
     // Stufe 2: buffer piece + "/" + the other corner's U/D landing letter.
     { id: 'case', display: (v, ctx) => ({ primary: twistCaseDisplay(v, ctx.toLetter) }) },
   ],
@@ -101,7 +96,7 @@ export const cornerTwists2: Algset = {
     import('@/assets/corner_twists2.json?raw').then((m) => parseRaw<Record<string, RawFlipTwist>>(m.default)),
   derive: (raw, deps) =>
     partition(raw as Record<string, RawFlipTwist>, withExtras(deps.bufferOrder, EXTRA_CORNERS),
-      (buffer, other) => `${bufferPiece(buffer)}/${other}`),
+      (buffer, other) => `${buffer}/${other}`),
   caseLabel: (c, toLetter) => twistCaseDisplay(c.path[c.path.length - 1], toLetter),
   // The label ("UFR/N") already identifies the case in piece notation.
   caseSecondary: () => '',

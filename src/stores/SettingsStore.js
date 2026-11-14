@@ -26,7 +26,7 @@ const defaultSettings = {
     slownessPower: 2,
     recencyDecay: 0.5,
     // buffer order for the 3-twists and corner-commutator algsets (shared)
-    bufferOrder: ["UFR", "UFL", "UBR", "UBL", "RDF", "FDL"],
+    bufferOrder: ["UFR", "UFL", "UBR", "UBL", "DFR", "DFL"],
     // buffer order for the edge-commutator algset
     edgeBufferOrder: ["UF", "UB", "UR", "UL", "FR", "FL", "DF", "DB", "DR", "DL"],
 }
@@ -39,6 +39,14 @@ export const useSettingsStore = defineStore('settings', () => {
     const store = reactive(
         {...defaultSettings, ...readJson(localStorageKey, {})}
     )
+
+    // Move the two D-layer buffers to their D-face stickers, preserving the
+    // user's priority order. Case IDs and the full sticker scheme stay intact.
+    const oldBuffers = {RDF: 'DFR', FDL: 'DFL'}
+    if (Array.isArray(store.bufferOrder) && store.bufferOrder.some(b => b in oldBuffers)) {
+        store.bufferOrder = [...new Set(store.bufferOrder.map(b => oldBuffers[b] ?? b))]
+        writeJson(localStorageKey, store)
+    }
 
     const resetDefaults = () => {
         for (let key in defaultSettings) {

@@ -15,7 +15,7 @@ export interface RawComm {
 
 // Default buffer orders. Corners reuse the 3-twists buffer order (shared
 // setting); edges have their own.
-export const DEFAULT_CORNER_BUFFER_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'RDF', 'FDL']
+export const DEFAULT_CORNER_BUFFER_ORDER = ['UFR', 'UFL', 'UBR', 'UBL', 'DFR', 'DFL']
 export const DEFAULT_EDGE_BUFFER_ORDER = ['UF', 'UB', 'UR', 'UL', 'FR', 'FL', 'DF', 'DB', 'DR', 'DL']
 
 // Default (Speffz) letter of every sticker, used only for scheme-independent
@@ -94,7 +94,7 @@ const makeCommAlgset = (opts: {
   name: opts.name,
   usesLetterScheme: true,
   levels: [
-    // Stufe 1: buffer, shown as its tracked sticker (UFR, RDF / UF, not its
+    // Stufe 1: buffer, shown as its tracked sticker (UFR, DFR / UF, not its
     // letter). Stufe 2: the second (first-target) letter. Stufe 3: the pair.
     { id: 'buffer', display: (v, ctx) => ({ primary: v, secondary: ctx.toLetter(v) }) },
     { id: 'secondLetter', display: (v, ctx) => ({ primary: ctx.toLetter(v) }) },

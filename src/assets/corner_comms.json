@@ -15,9 +15,9 @@
         "LDF",
         "UFL"
       ],
-      "FDL": [
-        "FUL",
-        "LUB"
+      "DFL": [
+        "LUF",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -52,9 +52,9 @@
         "FDL",
         "UFL"
       ],
-      "FDL": [
-        "UFL",
-        "UBL"
+      "DFL": [
+        "FUL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -281,6 +281,7 @@
       "[U D R' D R: [U, R D' R']]",
       "[D R' U' D': [R' D' R, U']]",
       "[R D R' U' D': [R' D' R, U']]",
+      "[U' R D R' D': [R' D' R, U']]",
       "[U2: [U R' U' R, F2]]",
       "[U x': [L2, U' R' U]]",
       "[D R' D R U: [U, R D' R']]",
@@ -295,9 +296,9 @@
         "DFL",
         "UFL"
       ],
-      "FDL": [
-        "LUF",
-        "BUL"
+      "DFL": [
+        "UFL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -327,7 +328,8 @@
       "[U: [R2, D' L2 D]]",
       "[R' U' D': [R' D' R, U']]",
       "[y R: [L2, U R' U']]",
-      "[y' x: [R2, U' L' U]]"
+      "[y' x: [R2, U' L' U]]",
+      "[U' D R D' R': [R' D R, U']]"
     ],
     "buffers": {
       "UFL": [
@@ -338,9 +340,9 @@
         "DFR",
         "UFL"
       ],
-      "RDF": [
-        "LUF",
-        "BUL"
+      "DFR": [
+        "UFL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -373,9 +375,9 @@
         "FDR",
         "UFL"
       ],
-      "RDF": [
-        "FUL",
-        "LUB"
+      "DFR": [
+        "LUF",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -407,9 +409,9 @@
         "RDF",
         "UFL"
       ],
-      "RDF": [
-        "UFL",
-        "UBL"
+      "DFR": [
+        "FUL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -443,9 +445,9 @@
         "DFL",
         "LUF"
       ],
-      "FDL": [
-        "FUL",
-        "BUL"
+      "DFL": [
+        "LUF",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -480,9 +482,9 @@
         "LDF",
         "LUF"
       ],
-      "FDL": [
-        "UFL",
-        "LUB"
+      "DFL": [
+        "FUL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -721,9 +723,9 @@
         "FDL",
         "LUF"
       ],
-      "FDL": [
-        "LUF",
-        "UBL"
+      "DFL": [
+        "UFL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -761,9 +763,9 @@
         "RDF",
         "LUF"
       ],
-      "RDF": [
-        "LUF",
-        "UBL"
+      "DFR": [
+        "UFL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -800,9 +802,9 @@
         "DFR",
         "LUF"
       ],
-      "RDF": [
-        "FUL",
-        "BUL"
+      "DFR": [
+        "LUF",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -842,9 +844,9 @@
         "FDR",
         "LUF"
       ],
-      "RDF": [
-        "UFL",
-        "LUB"
+      "DFR": [
+        "FUL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -870,6 +872,7 @@
       "[D: [U' R U, L]]",
       "[D z: [R' D R, U]]",
       "[z R': [R' D' R, U']]",
+      "[U' f: [R' D' R, U']]",
       "[D R U' R': [U', R' D' R]]",
       "[y': [R, U L U']]",
       "[y: [L, U R U']]",
@@ -884,9 +887,9 @@
         "FDL",
         "FUL"
       ],
-      "FDL": [
-        "FUL",
-        "UBL"
+      "DFL": [
+        "LUF",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -910,6 +913,7 @@
       "[D: [L', U R2 U']]",
       "[R B' R' D: [U', R' D' R]]",
       "[D r: [U' R' U, L]]",
+      "[U' R' F R U: [R' D R, U2]]",
       "L' z x R2 D2 R U R' D2 R U' l z' L",
       "[D F R U: [R' D R, U]]",
       "[x F2: [D2, R U2 R']]"
@@ -923,9 +927,9 @@
         "DFL",
         "FUL"
       ],
-      "FDL": [
-        "UFL",
-        "BUL"
+      "DFL": [
+        "FUL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -946,9 +950,9 @@
   "AFO": {
     "algs": [
       "[U D' R U: [R' U' R, D]]",
+      "[U2 D R' U: [R U' R', D]]",
       "[R' F R D': [R D R', U]]",
       "[D' R' F R: [R D R', U]]",
-      "[U2 D R' U: [R U' R', D]]",
       "[F R D': [R D R', U]]",
       "[U R U R': [R' D2 R, U]]",
       "z x R2 D2 R U R' D2 R U' l z'",
@@ -1051,8 +1055,8 @@
   "AFR": {
     "algs": [
       "[U R U: [R' U' R, D]]",
-      "[U' R2 U, L]",
       "[R' F R: [R D R', U]]",
+      "[U' R2 U, L]",
       "[U' R U' R': [D, R' U R]]",
       "[r': [L', U R U']]",
       "[z: [R' D2 R, U]]"
@@ -1155,9 +1159,9 @@
   "AFW": {
     "algs": [
       "[U2 R' U: [R U' R', D]]",
+      "[U R U R': [R' D R, U]]",
       "[U: [L2, U R U']]",
       "[U2: [U' r2 D, R]]",
-      "[U R U R': [R' D R, U]]",
       "[U' R2 D: [R U' R', D2]]",
       "[D F R: [R D2 R', U]]"
     ],
@@ -1170,9 +1174,9 @@
         "LDF",
         "FUL"
       ],
-      "FDL": [
-        "LUF",
-        "LUB"
+      "DFL": [
+        "UFL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -1213,9 +1217,9 @@
         "FDR",
         "FUL"
       ],
-      "RDF": [
-        "LUF",
-        "LUB"
+      "DFR": [
+        "UFL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -1249,9 +1253,9 @@
         "RDF",
         "FUL"
       ],
-      "RDF": [
-        "FUL",
-        "UBL"
+      "DFR": [
+        "LUF",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -1271,8 +1275,8 @@
   },
   "AFZ": {
     "algs": [
-      "[L', U R2 U']",
       "[U' R' U': [D', R U R']]",
+      "[L', U R2 U']",
       "[R B' R': [U', R' D' R]]",
       "[R2 U R: [R D R', U]]",
       "[r: [U' R' U, L]]",
@@ -1288,9 +1292,9 @@
         "DFR",
         "FUL"
       ],
-      "RDF": [
-        "UFL",
-        "BUL"
+      "DFR": [
+        "FUL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -1323,9 +1327,9 @@
         "UFL",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "FUL"
+      "DFL": [
+        "BUL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1359,9 +1363,9 @@
         "LUF",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "FUL"
+      "DFL": [
+        "UBL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1387,6 +1391,7 @@
       "[D: [L, U' R U]]",
       "[l' U': [U', R' D2 R]]",
       "[z R': [U', R' D' R]]",
+      "[U' f: [U', R' D' R]]",
       "[D R U' R': [R' D' R, U']]",
       "[y': [U L U', R]]",
       "[y: [U R U', L]]",
@@ -1401,9 +1406,9 @@
         "FUL",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "FUL"
+      "DFL": [
+        "LUB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1433,9 +1438,9 @@
         "LDF",
         "DBL"
       ],
-      "FDL": [
-        "BDL",
-        "FUL"
+      "DFL": [
+        "LDB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1463,9 +1468,9 @@
         "LDF",
         "BDL"
       ],
-      "FDL": [
-        "LDB",
-        "FUL"
+      "DFL": [
+        "DBL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1487,16 +1492,17 @@
     "algs": [
       "[D R D: [U', R' D' R]]",
       "[U' D R': [F', R D' R' D]]",
-      "[R' B' R U': [U', R' D R]]"
+      "[R' B' R U': [U', R' D R]]",
+      "[R' D R: [U', R' D' R U' R D' R']]"
     ],
     "buffers": {
       "UFL": [
         "LDF",
         "LDB"
       ],
-      "FDL": [
-        "DBL",
-        "FUL"
+      "DFL": [
+        "BDL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1517,16 +1523,17 @@
   "AMR": {
     "algs": [
       "[R: [D, R U' R']]",
-      "[R' F2 R: [U', R D R']]"
+      "[R' F2 R: [U', R D R']]",
+      "[R B': [D, R U' R']]"
     ],
     "buffers": {
       "UFL": [
         "LDF",
         "DBR"
       ],
-      "FDL": [
-        "RDB",
-        "FUL"
+      "DFL": [
+        "BDR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1554,9 +1561,9 @@
         "LDF",
         "RDB"
       ],
-      "FDL": [
-        "BDR",
-        "FUL"
+      "DFL": [
+        "DBR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1584,9 +1591,9 @@
         "LDF",
         "BDR"
       ],
-      "FDL": [
-        "DBR",
-        "FUL"
+      "DFL": [
+        "RDB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1614,13 +1621,13 @@
         "LDF",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "DFL"
+      "DFR": [
+        "UFL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "FUL"
+      "DFL": [
+        "RDF",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1648,13 +1655,13 @@
         "LDF",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "FDL"
+      "DFR": [
+        "LUF",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "FUL"
+      "DFL": [
+        "DFR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1683,13 +1690,13 @@
         "LDF",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "LDF"
+      "DFR": [
+        "FUL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "FUL"
+      "DFL": [
+        "FDR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -1724,9 +1731,9 @@
         "UFL",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "UFL"
+      "DFL": [
+        "LUB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1761,9 +1768,9 @@
         "LUF",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "UFL"
+      "DFL": [
+        "BUL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1787,6 +1794,7 @@
       "[D: [U R2 U', L']]",
       "[R B' R' D: [R' D' R, U']]",
       "[D r: [L, U' R' U]]",
+      "[U' R' F R U': [R' D R, U2]]",
       "L' z l' U R' D2 R U' R' D2 R2 x' z' L",
       "[D F R U: [U, R' D R]]"
     ],
@@ -1799,9 +1807,9 @@
         "FUL",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "UFL"
+      "DFL": [
+        "UBL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1830,9 +1838,9 @@
         "FDL",
         "DBL"
       ],
-      "FDL": [
-        "DBL",
-        "UFL"
+      "DFL": [
+        "BDL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1853,16 +1861,17 @@
   "ANP": {
     "algs": [
       "[D R' D': [R U' R', D2]]",
-      "[R B R' U D: [R' D' R, U2]]"
+      "[R B R' U D: [R' D' R, U2]]",
+      "[R' F' R U R' D: [D, R U' R']]"
     ],
     "buffers": {
       "UFL": [
         "FDL",
         "BDL"
       ],
-      "FDL": [
-        "BDL",
-        "UFL"
+      "DFL": [
+        "LDB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1890,9 +1899,9 @@
         "FDL",
         "LDB"
       ],
-      "FDL": [
-        "LDB",
-        "UFL"
+      "DFL": [
+        "DBL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1919,9 +1928,9 @@
         "FDL",
         "DBR"
       ],
-      "FDL": [
-        "DBR",
-        "UFL"
+      "DFL": [
+        "RDB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1951,9 +1960,9 @@
         "FDL",
         "RDB"
       ],
-      "FDL": [
-        "RDB",
-        "UFL"
+      "DFL": [
+        "BDR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -1981,9 +1990,9 @@
         "FDL",
         "BDR"
       ],
-      "FDL": [
-        "BDR",
-        "UFL"
+      "DFL": [
+        "DBR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -2011,13 +2020,13 @@
         "FDL",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "LDF"
+      "DFR": [
+        "UFL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "UFL"
+      "DFL": [
+        "FDR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -2038,21 +2047,22 @@
   "ANY": {
     "algs": [
       "[R D: [R' D' R, U']]",
-      "[F': [D, R U R']]",
-      "[U' R U, L']"
+      "[U' R U, L']",
+      "[U': [R, U r' F']]",
+      "[F': [D, R U R']]"
     ],
     "buffers": {
       "UFL": [
         "FDL",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "DFL"
+      "DFR": [
+        "LUF",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "UFL"
+      "DFL": [
+        "RDF",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -2080,13 +2090,13 @@
         "FDL",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "FDL"
+      "DFR": [
+        "FUL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "UFL"
+      "DFL": [
+        "DFR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -2176,9 +2186,9 @@
   "AOF": {
     "algs": [
       "[U D' R U: [D, R' U' R]]",
+      "[U2 D R' U: [D, R U' R']]",
       "[R' F R D': [U, R D R']]",
       "[D' R' F R: [U, R D R']]",
-      "[U2 D R' U: [D, R U' R']]",
       "[F R D': [U, R D R']]",
       "[U R U R': [U, R' D2 R]]",
       "z l' U R' D2 R U' R' D2 R2 x' z'",
@@ -2222,9 +2232,9 @@
         "DBL",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "BDL"
+      "DFL": [
+        "LUF",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -2253,9 +2263,9 @@
         "DBL",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "DBL"
+      "DFL": [
+        "FUL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -2374,9 +2384,9 @@
         "DBL",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "LDB"
+      "DFL": [
+        "UFL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -2409,9 +2419,9 @@
         "DBL",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "LDB"
+      "DFR": [
+        "UFL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -2433,16 +2443,17 @@
     "algs": [
       "[D' R: [R U' R', D]]",
       "[U' R U, L2]",
-      "[U' R2 U': [R' U R, D']]"
+      "[U' R2 U': [R' U R, D']]",
+      "[D' R B': [R U' R', D]]"
     ],
     "buffers": {
       "UFL": [
         "DBL",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "BDL"
+      "DFR": [
+        "LUF",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -2470,9 +2481,9 @@
         "DBL",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "DBL"
+      "DFR": [
+        "FUL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -2496,6 +2507,7 @@
       "[U2 D: [R' D R, U]]",
       "[U': [U', R' D2 R]]",
       "[R U2 D: [R' D R, U]]",
+      "[R' D' R U': [U', R' D' R]]",
       "[y': [L D L', U]]"
     ],
     "buffers": {
@@ -2600,9 +2612,9 @@
         "BDL",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "LDB"
+      "DFL": [
+        "LUF",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -2623,16 +2635,17 @@
   "APN": {
     "algs": [
       "[D R' D: [R U' R', D2]]",
-      "[R B R' U' D: [R' D' R, U2]]"
+      "[R B R' U' D: [R' D' R, U2]]",
+      "[R' F' R U R' D: [R U' R', D]]"
     ],
     "buffers": {
       "UFL": [
         "BDL",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "BDL"
+      "DFL": [
+        "FUL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -2743,9 +2756,9 @@
         "BDL",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "DBL"
+      "DFL": [
+        "UFL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -2773,9 +2786,9 @@
         "BDL",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "DBL"
+      "DFR": [
+        "UFL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -2803,9 +2816,9 @@
         "BDL",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "LDB"
+      "DFR": [
+        "LUF",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -2834,9 +2847,9 @@
         "BDL",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "BDL"
+      "DFR": [
+        "FUL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -2957,16 +2970,17 @@
     "algs": [
       "[D R D: [R' D' R, U']]",
       "[U' R' D: [F', D' R D R']]",
-      "[R' B' R U': [R' D R, U']]"
+      "[R' B' R U': [R' D R, U']]",
+      "[U' R D' R': [U', R D R' U R' D R]]"
     ],
     "buffers": {
       "UFL": [
         "LDB",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "DBL"
+      "DFL": [
+        "LUF",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -2994,9 +3008,9 @@
         "LDB",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "LDB"
+      "DFL": [
+        "FUL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -3109,9 +3123,9 @@
         "LDB",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "BDL"
+      "DFL": [
+        "UFL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -3142,9 +3156,9 @@
         "LDB",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "BDL"
+      "DFR": [
+        "UFL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -3171,9 +3185,9 @@
         "LDB",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "DBL"
+      "DFR": [
+        "LUF",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -3205,9 +3219,9 @@
         "LDB",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "LDB"
+      "DFR": [
+        "FUL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -3332,16 +3346,17 @@
   "ARM": {
     "algs": [
       "[R: [R U' R', D]]",
-      "[R' F2 R: [R D R', U']]"
+      "[R' F2 R: [R D R', U']]",
+      "[R B': [R U' R', D]]"
     ],
     "buffers": {
       "UFL": [
         "DBR",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "RDB"
+      "DFL": [
+        "LUF",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -3368,9 +3383,9 @@
         "DBR",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "DBR"
+      "DFL": [
+        "FUL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -3481,9 +3496,9 @@
         "DBR",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "BDR"
+      "DFL": [
+        "UFL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -3518,9 +3533,9 @@
         "DBR",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "BDR"
+      "DFR": [
+        "UFL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -3548,9 +3563,9 @@
         "DBR",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "RDB"
+      "DFR": [
+        "LUF",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -3572,8 +3587,8 @@
     "algs": [
       "[F D': [R U R', D2]]",
       "[R2 U' R': [R' D' R, U2]]",
-      "[D' R' U' D': [R U R', D2]]",
       "[U' D' R U' R': [U2, R' D R]]",
+      "[D' R' U' D': [R U R', D2]]",
       "[U D' R': [R' U R, D2]]",
       "[f D': [R U R', D2]]"
     ],
@@ -3582,9 +3597,9 @@
         "DBR",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "DBR"
+      "DFR": [
+        "FUL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -3710,9 +3725,9 @@
         "RDB",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "BDR"
+      "DFL": [
+        "LUF",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -3742,9 +3757,9 @@
         "RDB",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "RDB"
+      "DFL": [
+        "FUL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -3858,9 +3873,9 @@
         "RDB",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "DBR"
+      "DFL": [
+        "UFL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -3883,16 +3898,17 @@
       "[D' R U': [F2, U R' U' R]]",
       "[R' U D R: [U, R D' R']]",
       "[D R: [D2, R U' R']]",
-      "[z': [R U R2 U' R', F2]]"
+      "[z': [R U R2 U' R', F2]]",
+      "[U' R U' D' R': [R' D R, U2]]"
     ],
     "buffers": {
       "UFL": [
         "RDB",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "DBR"
+      "DFR": [
+        "UFL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -3919,9 +3935,9 @@
         "RDB",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "BDR"
+      "DFR": [
+        "LUF",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -3945,6 +3961,7 @@
       "[U' R' U: [D', R U R']]",
       "[R D R' U': [R' D' R, U2]]",
       "[D' R D: [U', R' D' R]]",
+      "[U' R D R': [R' D' R, U]]",
       "[z': [U, R' D R]]"
     ],
     "buffers": {
@@ -3952,9 +3969,9 @@
         "RDB",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "RDB"
+      "DFR": [
+        "FUL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -4086,9 +4103,9 @@
         "BDR",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "DBR"
+      "DFL": [
+        "LUF",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -4116,9 +4133,9 @@
         "BDR",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "BDR"
+      "DFL": [
+        "FUL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -4228,9 +4245,9 @@
         "BDR",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "RDB"
+      "DFL": [
+        "UFL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -4260,9 +4277,9 @@
         "BDR",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "RDB"
+      "DFR": [
+        "UFL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -4283,16 +4300,17 @@
   "ATY": {
     "algs": [
       "[D' R' D': [R U' R', D2]]",
-      "[D R' U R: [R D' R', U]]"
+      "[D R' U R: [R D' R', U]]",
+      "[U' R U R' U': [R U R', D']]"
     ],
     "buffers": {
       "UFL": [
         "BDR",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "DBR"
+      "DFR": [
+        "LUF",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -4320,9 +4338,9 @@
         "BDR",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "BDR"
+      "DFR": [
+        "FUL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -4350,6 +4368,7 @@
       "[U r U: [R', U' r2 D]]",
       "[D2 R U2 D': [R' D R, U]]",
       "[R D R' U2 D': [R' D' R, U]]",
+      "[U' R D R' D': [U', R' D' R]]",
       "[U2: [F2, U R' U' R]]",
       "[U x': [U' R' U, L2]]",
       "[D R' D R U: [R D' R', U]]",
@@ -4364,9 +4383,9 @@
         "UFL",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "LUF"
+      "DFL": [
+        "UBL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4401,9 +4420,9 @@
         "LUF",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "LUF"
+      "DFL": [
+        "LUB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4439,9 +4458,9 @@
         "FUL",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "LUF"
+      "DFL": [
+        "BUL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4475,9 +4494,9 @@
         "DFL",
         "DBL"
       ],
-      "FDL": [
-        "LDB",
-        "LUF"
+      "DFL": [
+        "DBL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4507,9 +4526,9 @@
         "DFL",
         "BDL"
       ],
-      "FDL": [
-        "DBL",
-        "LUF"
+      "DFL": [
+        "BDL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4540,9 +4559,9 @@
         "DFL",
         "LDB"
       ],
-      "FDL": [
-        "BDL",
-        "LUF"
+      "DFL": [
+        "LDB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4571,9 +4590,9 @@
         "DFL",
         "DBR"
       ],
-      "FDL": [
-        "BDR",
-        "LUF"
+      "DFL": [
+        "DBR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4602,9 +4621,9 @@
         "DFL",
         "RDB"
       ],
-      "FDL": [
-        "DBR",
-        "LUF"
+      "DFL": [
+        "RDB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4632,9 +4651,9 @@
         "DFL",
         "BDR"
       ],
-      "FDL": [
-        "RDB",
-        "LUF"
+      "DFL": [
+        "BDR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4663,13 +4682,13 @@
         "DFL",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "FDL"
+      "DFR": [
+        "UFL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "LUF"
+      "DFL": [
+        "DFR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4698,13 +4717,13 @@
         "DFL",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "LDF"
+      "DFR": [
+        "LUF",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "LUF"
+      "DFL": [
+        "FDR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4732,13 +4751,13 @@
         "DFL",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "DFL"
+      "DFR": [
+        "FUL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "LUF"
+      "DFL": [
+        "RDF",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4768,7 +4787,8 @@
       "[U: [D' L2 D, R2]]",
       "[R' U2 D': [R' D' R, U]]",
       "[y R: [U R' U', L2]]",
-      "[y' x: [U' L' U, R2]]"
+      "[y' x: [U' L' U, R2]]",
+      "[U' D R D' R': [U', R' D R]]"
     ],
     "buffers": {
       "UFL": [
@@ -4779,9 +4799,9 @@
         "UFL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "LUF"
+      "DFR": [
+        "UBL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4818,9 +4838,9 @@
         "LUF",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "LUF"
+      "DFR": [
+        "LUB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4861,9 +4881,9 @@
         "FUL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "LUF"
+      "DFR": [
+        "BUL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4891,13 +4911,13 @@
         "DFR",
         "LDF"
       ],
-      "RDF": [
-        "DFL",
-        "LUF"
+      "DFR": [
+        "LDF",
+        "UFL"
       ],
-      "FDL": [
-        "FUL",
-        "FDR"
+      "DFL": [
+        "LUF",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -4925,13 +4945,13 @@
         "DFR",
         "FDL"
       ],
-      "RDF": [
-        "LDF",
-        "LUF"
+      "DFR": [
+        "FDL",
+        "UFL"
       ],
-      "FDL": [
-        "UFL",
-        "DFR"
+      "DFL": [
+        "FUL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -4963,9 +4983,9 @@
         "DFR",
         "DBL"
       ],
-      "RDF": [
-        "LDB",
-        "LUF"
+      "DFR": [
+        "DBL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -4993,9 +5013,9 @@
         "DFR",
         "BDL"
       ],
-      "RDF": [
-        "DBL",
-        "LUF"
+      "DFR": [
+        "BDL",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -5026,9 +5046,9 @@
         "DFR",
         "LDB"
       ],
-      "RDF": [
-        "BDL",
-        "LUF"
+      "DFR": [
+        "LDB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -5063,9 +5083,9 @@
         "DFR",
         "DBR"
       ],
-      "RDF": [
-        "BDR",
-        "LUF"
+      "DFR": [
+        "DBR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -5088,16 +5108,17 @@
       "[U' D' R: [F2, R' U R U']]",
       "[R' U D R: [R D' R', U]]",
       "[D R: [R U' R', D2]]",
-      "[z': [F2, R U R2 U' R']]"
+      "[z': [F2, R U R2 U' R']]",
+      "[U' R U' D' R': [U2, R' D R]]"
     ],
     "buffers": {
       "UFL": [
         "DFR",
         "RDB"
       ],
-      "RDF": [
-        "DBR",
-        "LUF"
+      "DFR": [
+        "RDB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -5118,8 +5139,8 @@
   "AXT": {
     "algs": [
       "[U R' D: [R D' R', U]]",
-      "[R' U D': [R' D' R, U2]]",
       "[R' D: [R D' R', U2]]",
+      "[R' U D': [R' D' R, U2]]",
       "[y' x: [U' L2 U, R2]]"
     ],
     "buffers": {
@@ -5127,9 +5148,9 @@
         "DFR",
         "BDR"
       ],
-      "RDF": [
-        "RDB",
-        "LUF"
+      "DFR": [
+        "BDR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -5158,13 +5179,13 @@
         "DFR",
         "DFL"
       ],
-      "RDF": [
-        "FDL",
-        "LUF"
+      "DFR": [
+        "DFL",
+        "UFL"
       ],
-      "FDL": [
-        "LUF",
-        "RDF"
+      "DFL": [
+        "UFL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -5197,9 +5218,9 @@
         "UFL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "FUL"
+      "DFR": [
+        "BUL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5235,9 +5256,9 @@
         "LUF",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "FUL"
+      "DFR": [
+        "UBL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5271,9 +5292,9 @@
         "FUL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "FUL"
+      "DFR": [
+        "LUB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5300,13 +5321,13 @@
         "FDR",
         "LDF"
       ],
-      "RDF": [
-        "FDL",
-        "FUL"
+      "DFR": [
+        "DFL",
+        "LUF"
       ],
-      "FDL": [
-        "FUL",
-        "RDF"
+      "DFL": [
+        "LUF",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -5327,21 +5348,22 @@
   "AYN": {
     "algs": [
       "[R D: [U', R' D' R]]",
-      "[F': [R U R', D]]",
-      "[L', U' R U]"
+      "[L', U' R U]",
+      "[U': [U r' F', R]]",
+      "[F': [R U R', D]]"
     ],
     "buffers": {
       "UFL": [
         "FDR",
         "FDL"
       ],
-      "RDF": [
-        "DFL",
-        "FUL"
+      "DFR": [
+        "LDF",
+        "LUF"
       ],
-      "FDL": [
-        "UFL",
-        "FDR"
+      "DFL": [
+        "FUL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -5363,16 +5385,17 @@
     "algs": [
       "[D' R: [D, R U' R']]",
       "[L2, U' R U]",
-      "[U' R2 U': [D', R' U R]]"
+      "[U' R2 U': [D', R' U R]]",
+      "[D' R B': [D, R U' R']]"
     ],
     "buffers": {
       "UFL": [
         "FDR",
         "DBL"
       ],
-      "RDF": [
-        "BDL",
-        "FUL"
+      "DFR": [
+        "LDB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5400,9 +5423,9 @@
         "FDR",
         "BDL"
       ],
-      "RDF": [
-        "LDB",
-        "FUL"
+      "DFR": [
+        "DBL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5430,9 +5453,9 @@
         "FDR",
         "LDB"
       ],
-      "RDF": [
-        "DBL",
-        "FUL"
+      "DFR": [
+        "BDL",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5460,9 +5483,9 @@
         "FDR",
         "DBR"
       ],
-      "RDF": [
-        "RDB",
-        "FUL"
+      "DFR": [
+        "BDR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5489,9 +5512,9 @@
         "FDR",
         "RDB"
       ],
-      "RDF": [
-        "BDR",
-        "FUL"
+      "DFR": [
+        "DBR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5512,16 +5535,17 @@
   "AYT": {
     "algs": [
       "[D' R' D: [R U' R', D2]]",
-      "[D R' U R: [U, R D' R']]"
+      "[D R' U R: [U, R D' R']]",
+      "[U' R U R' U': [D', R U R']]"
     ],
     "buffers": {
       "UFL": [
         "FDR",
         "BDR"
       ],
-      "RDF": [
-        "DBR",
-        "FUL"
+      "DFR": [
+        "RDB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -5550,13 +5574,13 @@
         "FDR",
         "DFL"
       ],
-      "RDF": [
-        "LDF",
-        "FUL"
+      "DFR": [
+        "FDL",
+        "LUF"
       ],
-      "FDL": [
-        "LUF",
-        "DFR"
+      "DFL": [
+        "UFL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -5588,9 +5612,9 @@
         "UFL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "UFL"
+      "DFR": [
+        "LUB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5630,9 +5654,9 @@
         "LUF",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "UFL"
+      "DFR": [
+        "BUL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5652,8 +5676,8 @@
   },
   "AZF": {
     "algs": [
-      "[U R2 U', L']",
       "[U' R' U': [R U R', D']]",
+      "[U R2 U', L']",
       "[R B' R': [R' D' R, U']]",
       "[R2 U R: [U, R D R']]",
       "[r: [L, U' R' U]]",
@@ -5669,9 +5693,9 @@
         "FUL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "UFL"
+      "DFR": [
+        "UBL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5700,13 +5724,13 @@
         "RDF",
         "LDF"
       ],
-      "RDF": [
-        "LDF",
-        "UFL"
+      "DFR": [
+        "FDL",
+        "FUL"
       ],
-      "FDL": [
-        "FUL",
-        "DFR"
+      "DFL": [
+        "LUF",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -5734,13 +5758,13 @@
         "RDF",
         "FDL"
       ],
-      "RDF": [
-        "FDL",
-        "UFL"
+      "DFR": [
+        "DFL",
+        "FUL"
       ],
-      "FDL": [
-        "UFL",
-        "RDF"
+      "DFL": [
+        "FUL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -5768,9 +5792,9 @@
         "RDF",
         "DBL"
       ],
-      "RDF": [
-        "DBL",
-        "UFL"
+      "DFR": [
+        "BDL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5799,9 +5823,9 @@
         "RDF",
         "BDL"
       ],
-      "RDF": [
-        "BDL",
-        "UFL"
+      "DFR": [
+        "LDB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5833,9 +5857,9 @@
         "RDF",
         "LDB"
       ],
-      "RDF": [
-        "LDB",
-        "UFL"
+      "DFR": [
+        "DBL",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5857,8 +5881,8 @@
     "algs": [
       "[F D: [R U R', D2]]",
       "[R2 U' R': [U2, R' D' R]]",
-      "[D' R' U' D: [R U R', D2]]",
       "[U' D' R U' R': [R' D R, U2]]",
+      "[D' R' U' D: [R U R', D2]]",
       "[U D' R': [D2, R' U R]]",
       "[f D: [R U R', D2]]"
     ],
@@ -5867,9 +5891,9 @@
         "RDF",
         "DBR"
       ],
-      "RDF": [
-        "DBR",
-        "UFL"
+      "DFR": [
+        "RDB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5893,6 +5917,7 @@
       "[U' R' U: [R U R', D']]",
       "[R D R' U: [R' D' R, U2]]",
       "[D' R D: [R' D' R, U']]",
+      "[U' R D R': [U, R' D' R]]",
       "[z': [R' D R, U]]"
     ],
     "buffers": {
@@ -5900,9 +5925,9 @@
         "RDF",
         "RDB"
       ],
-      "RDF": [
-        "RDB",
-        "UFL"
+      "DFR": [
+        "BDR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5929,9 +5954,9 @@
         "RDF",
         "BDR"
       ],
-      "RDF": [
-        "BDR",
-        "UFL"
+      "DFR": [
+        "DBR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -5959,13 +5984,13 @@
         "RDF",
         "DFL"
       ],
-      "RDF": [
-        "DFL",
-        "UFL"
+      "DFR": [
+        "LDF",
+        "FUL"
       ],
-      "FDL": [
-        "LUF",
-        "FDR"
+      "DFL": [
+        "UFL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -5990,6 +6015,7 @@
       "[U' D' R: [D2, R U' R']]",
       "[U' R' F: [R D' R D R2, F]]",
       "[F' R U R': [R' D2 R, U']]",
+      "[U' D R U': [F2, U R' U' R]]",
       "[z' R: [R2 U R2 U' R2, D2]]"
     ],
     "buffers": {
@@ -5997,9 +6023,9 @@
         "LDF",
         "DBL"
       ],
-      "FDL": [
-        "BDL",
-        "LUB"
+      "DFL": [
+        "LDB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6031,9 +6057,9 @@
         "LDF",
         "BDL"
       ],
-      "FDL": [
-        "LDB",
-        "LUB"
+      "DFL": [
+        "DBL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6055,9 +6081,9 @@
     "algs": [
       "[D' R' D': [R D R', U]]",
       "[D': [U R' U', L]]",
+      "[f U: [R D' R', U]]",
       "[R F R' U: [R D' R', U]]",
       "[D R D: [U2, R' D' R]]",
-      "[f U: [R D' R', U]]",
       "[R D' R' D': [R D R', U]]",
       "[U' D R D: [U', R' D' R]]",
       "[F: [L' D' L, U]]",
@@ -6070,9 +6096,9 @@
         "LDF",
         "LDB"
       ],
-      "FDL": [
-        "DBL",
-        "LUB"
+      "DFL": [
+        "BDL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6103,9 +6129,9 @@
         "LDF",
         "DBR"
       ],
-      "FDL": [
-        "RDB",
-        "LUB"
+      "DFL": [
+        "BDR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6136,9 +6162,9 @@
         "LDF",
         "RDB"
       ],
-      "FDL": [
-        "BDR",
-        "LUB"
+      "DFL": [
+        "DBR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6167,9 +6193,9 @@
         "LDF",
         "BDR"
       ],
-      "FDL": [
-        "DBR",
-        "LUB"
+      "DFL": [
+        "RDB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6203,13 +6229,13 @@
         "LDF",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "DFL"
+      "DFR": [
+        "UBL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "LUB"
+      "DFL": [
+        "RDF",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6237,13 +6263,13 @@
         "LDF",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "FDL"
+      "DFR": [
+        "BUL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "LUB"
+      "DFL": [
+        "DFR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6277,13 +6303,13 @@
         "LDF",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "LDF"
+      "DFR": [
+        "LUB",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "LUB"
+      "DFL": [
+        "FDR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -6305,8 +6331,8 @@
     "algs": [
       "[D: [D R D', L2]]",
       "[D2: [R, D' r2 U]]",
-      "[D' R2 U': [R D' R', U2]]",
       "[R B' R': [U2, R' D R]]",
+      "[D' R2 U': [R D' R', U2]]",
       "[z' R: [R U R', D2]]",
       "[D2 R' D: [U, R D' R']]",
       "[U' f U': [R D' R', U']]",
@@ -6318,9 +6344,9 @@
         "FDL",
         "DBL"
       ],
-      "FDL": [
-        "DBL",
-        "UBL"
+      "DFL": [
+        "BDL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6350,9 +6376,9 @@
         "FDL",
         "BDL"
       ],
-      "FDL": [
-        "BDL",
-        "UBL"
+      "DFL": [
+        "LDB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6382,9 +6408,9 @@
         "FDL",
         "LDB"
       ],
-      "FDL": [
-        "LDB",
-        "UBL"
+      "DFL": [
+        "DBL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6415,9 +6441,9 @@
         "FDL",
         "DBR"
       ],
-      "FDL": [
-        "DBR",
-        "UBL"
+      "DFL": [
+        "RDB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6446,9 +6472,9 @@
         "FDL",
         "RDB"
       ],
-      "FDL": [
-        "RDB",
-        "UBL"
+      "DFL": [
+        "BDR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6477,9 +6503,9 @@
         "FDL",
         "BDR"
       ],
-      "FDL": [
-        "BDR",
-        "UBL"
+      "DFL": [
+        "DBR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6508,13 +6534,13 @@
         "FDL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "LDF"
+      "DFR": [
+        "UBL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "UBL"
+      "DFL": [
+        "FDR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6549,13 +6575,13 @@
         "FDL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "DFL"
+      "DFR": [
+        "BUL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "UBL"
+      "DFL": [
+        "RDF",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6585,13 +6611,13 @@
         "FDL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "FDL"
+      "DFR": [
+        "LUB",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "UBL"
+      "DFL": [
+        "DFR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -6615,6 +6641,7 @@
       "[D' R U D: [R' U' R, D2]]",
       "[U' D' R: [R U' R', D2]]",
       "[U' R' F: [F, R D' R D R2]]",
+      "[U2 F': [D2, R U' R']]",
       "[z' R: [D2, R2 U R2 U' R2]]"
     ],
     "buffers": {
@@ -6622,9 +6649,9 @@
         "DBL",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "BDL"
+      "DFL": [
+        "BUL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -6659,9 +6686,9 @@
         "DBL",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "DBL"
+      "DFL": [
+        "LUB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -6750,6 +6777,7 @@
       "[D2 R': [R' U R, D2]]",
       "[R B' R' U': [R D R', U2]]",
       "[D' R U' D' R': [R' D R, U']]",
+      "[U2 R U' D': [R' U R, D2]]",
       "[R2 U D R': [U', R' D R]]",
       "[U L': [L' U2 L, D2]]",
       "[R' D: [L2, D R2 D']]"
@@ -6789,9 +6817,9 @@
         "DBL",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "LDB"
+      "DFL": [
+        "UBL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -6824,9 +6852,9 @@
         "DBL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "LDB"
+      "DFR": [
+        "UBL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -6860,9 +6888,9 @@
         "DBL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "BDL"
+      "DFR": [
+        "BUL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -6897,9 +6925,9 @@
         "DBL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "DBL"
+      "DFR": [
+        "LUB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -6931,9 +6959,9 @@
         "BDL",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "LDB"
+      "DFL": [
+        "BUL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -6962,9 +6990,9 @@
         "BDL",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "BDL"
+      "DFL": [
+        "LUB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -7085,9 +7113,9 @@
         "BDL",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "DBL"
+      "DFL": [
+        "UBL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -7118,9 +7146,9 @@
         "BDL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "DBL"
+      "DFR": [
+        "UBL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -7149,9 +7177,9 @@
         "BDL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "LDB"
+      "DFR": [
+        "BUL",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -7171,8 +7199,8 @@
   },
   "DPZ": {
     "algs": [
-      "[R' D': [D', R U2 R']]",
       "[U R' D': [D', R U R']]",
+      "[R' D': [D', R U2 R']]",
       "[x': [U' R2 U, L]]",
       "[B' R2 B, L]",
       "[R' U: [D', R' U' R]]",
@@ -7188,9 +7216,9 @@
         "BDL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "BDL"
+      "DFR": [
+        "LUB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -7212,8 +7240,8 @@
     "algs": [
       "[D' R' D': [U, R D R']]",
       "[D': [L, U R' U']]",
-      "[D R D: [R' D' R, U2]]",
       "[f U: [U, R D' R']]",
+      "[D R D: [R' D' R, U2]]",
       "[R D' R' D': [U, R D R']]",
       "[R F R' U: [U, R D' R']]",
       "[U' D R D: [R' D' R, U']]",
@@ -7227,9 +7255,9 @@
         "LDB",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "DBL"
+      "DFL": [
+        "BUL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -7259,9 +7287,9 @@
         "LDB",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "LDB"
+      "DFL": [
+        "LUB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -7313,9 +7341,9 @@
     "algs": [
       "[R D': [R' U R, D2]]",
       "[R: [L U L', D2]]",
+      "[U' R' U R: [R D' R', U]]",
       "x' r2 U L' D2 L U' L' D2 r'",
-      "[x L: [L U L', D2]]",
-      "[U' R' U R: [R D' R', U]]"
+      "[x L: [L U L', D2]]"
     ],
     "buffers": {
       "UBL": [
@@ -7369,16 +7397,17 @@
       "[D R': [D2, R' U R]]",
       "[D' R' U: [B2, U' R U R']]",
       "[F': [L U L', D2]]",
-      "[R B': [R' D R' D' R2, B']]"
+      "[R B': [R' D R' D' R2, B']]",
+      "[F2 U': [R D' R', U2]]"
     ],
     "buffers": {
       "UBL": [
         "LDB",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "BDL"
+      "DFL": [
+        "UBL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -7409,9 +7438,9 @@
         "LDB",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "BDL"
+      "DFR": [
+        "UBL",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -7443,9 +7472,9 @@
         "LDB",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "DBL"
+      "DFR": [
+        "BUL",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -7474,9 +7503,9 @@
         "LDB",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "LDB"
+      "DFR": [
+        "LUB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -7507,9 +7536,9 @@
         "DBR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "RDB"
+      "DFL": [
+        "BUL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -7541,9 +7570,9 @@
         "DBR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "DBR"
+      "DFL": [
+        "LUB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -7564,9 +7593,9 @@
   "DRO": {
     "algs": [
       "[R U D R': [R' D R, U]]",
+      "[U' R' U' R: [R D' R', U]]",
       "[U: [R2 U' R2 U R2, D']]",
       "[U': [L2, U' R2 U]]",
-      "[U' R' U' R: [R D' R', U]]",
       "[R D' R: [D, R U2 R']]",
       "[D' R U R' U': [R D R', U']]",
       "[U' x': [U R U', L2]]",
@@ -7662,6 +7691,7 @@
       "[R B' R' D': [R U R', D2]]",
       "[R U R' U': [R' U' R, D2]]",
       "[D' R U R': [R' D2 R, U']]",
+      "[U R' U R U': [R' D R, U2]]",
       "[D: [L2 U L2 U' L2, D2]]",
       "[L U' L': [D2, L' U L]]",
       "r2 D' r2 D r2 D r2 U' r2 U' r2 U"
@@ -7671,9 +7701,9 @@
         "DBR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "BDR"
+      "DFL": [
+        "UBL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -7704,9 +7734,9 @@
         "DBR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "BDR"
+      "DFR": [
+        "UBL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -7739,9 +7769,9 @@
         "DBR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "RDB"
+      "DFR": [
+        "BUL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -7774,9 +7804,9 @@
         "DBR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "DBR"
+      "DFR": [
+        "LUB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -7807,9 +7837,9 @@
         "RDB",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "BDR"
+      "DFL": [
+        "BUL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -7838,9 +7868,9 @@
         "RDB",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "RDB"
+      "DFL": [
+        "LUB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -7923,9 +7953,9 @@
     "algs": [
       "[R D: [R' U R, D2]]",
       "[R: [D2, L U L']]",
+      "[U' R' U R: [U, R D' R']]",
       "r D2 L U L' D2 L U' r2 x",
-      "[x L: [D2, L U L']]",
-      "[U' R' U R: [U, R D' R']]"
+      "[x L: [D2, L U L']]"
     ],
     "buffers": {
       "UBL": [
@@ -7960,9 +7990,9 @@
         "RDB",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "DBR"
+      "DFL": [
+        "UBL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -7998,9 +8028,9 @@
         "RDB",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "DBR"
+      "DFR": [
+        "UBL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -8029,9 +8059,9 @@
         "RDB",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "BDR"
+      "DFR": [
+        "BUL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -8053,8 +8083,8 @@
     "algs": [
       "[R': [U' L' U, R']]",
       "[U R U': [R' U' R, D]]",
-      "[U R' D: [U', R D' R']]",
       "[f' U': [R D R', U2]]",
+      "[U R' D: [U', R D' R']]",
       "[U R' D' R: [U', R D R']]",
       "[R' D' R U': [R D R', U2]]",
       "[R, F L2 F']",
@@ -8068,9 +8098,9 @@
         "RDB",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "RDB"
+      "DFR": [
+        "LUB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -8099,9 +8129,9 @@
         "BDR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "DBR"
+      "DFL": [
+        "BUL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -8130,9 +8160,9 @@
         "BDR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "BDR"
+      "DFL": [
+        "LUB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -8156,6 +8186,7 @@
       "[D2 R': [D2, R' U R]]",
       "[R B' R' U: [R D R', U2]]",
       "[D' R U' D' R': [U', R' D R]]",
+      "[U2 R U' D: [R' U R, D2]]",
       "[R2 U D R': [R' D R, U']]",
       "[U L': [D2, L' U2 L]]",
       "[R' D: [D R2 D', L2]]"
@@ -8248,9 +8279,9 @@
         "BDR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "RDB"
+      "DFL": [
+        "UBL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -8283,9 +8314,9 @@
         "BDR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "RDB"
+      "DFR": [
+        "UBL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -8310,16 +8341,17 @@
       "[D' R' D': [R U2 R', D2]]",
       "[F: [R' U R, D2]]",
       "[D' R U' R': [U', R' D R]]",
-      "[F2: [L', U R' U']]"
+      "[F2: [L', U R' U']]",
+      "[U2 R U R' U': [R U R', D']]"
     ],
     "buffers": {
       "UBL": [
         "BDR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "DBR"
+      "DFR": [
+        "BUL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -8347,9 +8379,9 @@
         "BDR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "BDR"
+      "DFR": [
+        "LUB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -8381,9 +8413,9 @@
         "DFL",
         "DBL"
       ],
-      "FDL": [
-        "LDB",
-        "BUL"
+      "DFL": [
+        "DBL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8418,9 +8450,9 @@
         "DFL",
         "BDL"
       ],
-      "FDL": [
-        "DBL",
-        "BUL"
+      "DFL": [
+        "BDL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8443,17 +8475,17 @@
       "[D R': [R' U R, D2]]",
       "[U D' R': [B2, R U' R' U]]",
       "[F': [D2, L U L']]",
-      "[R B': [B', R' D R' D' R2]]",
-      "[F2 U: [R D' R', U2]]"
+      "[F2 U: [R D' R', U2]]",
+      "[R B': [B', R' D R' D' R2]]"
     ],
     "buffers": {
       "UBL": [
         "DFL",
         "LDB"
       ],
-      "FDL": [
-        "BDL",
-        "BUL"
+      "DFL": [
+        "LDB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8477,8 +8509,8 @@
       "[D R U R': [R' D2 R, U']]",
       "[U' R' F R: [R D R', U2]]",
       "[R B' R' D: [R U R', D2]]",
-      "[D' R U R': [U', R' D2 R]]",
       "[U R' U R U: [R' D R, U2]]",
+      "[D' R U R': [U', R' D2 R]]",
       "[U2: [R2, U' R2 D R2 U]]",
       "[R U R' U': [D2, R' U' R]]",
       "[D R U D R': [R' D R, U']]",
@@ -8491,9 +8523,9 @@
         "DFL",
         "DBR"
       ],
-      "FDL": [
-        "BDR",
-        "BUL"
+      "DFL": [
+        "DBR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8523,9 +8555,9 @@
         "DFL",
         "RDB"
       ],
-      "FDL": [
-        "DBR",
-        "BUL"
+      "DFL": [
+        "RDB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8555,9 +8587,9 @@
         "DFL",
         "BDR"
       ],
-      "FDL": [
-        "RDB",
-        "BUL"
+      "DFL": [
+        "BDR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8588,13 +8620,13 @@
         "DFL",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "FDL"
+      "DFR": [
+        "UBL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "BUL"
+      "DFL": [
+        "DFR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8629,13 +8661,13 @@
         "DFL",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "LDF"
+      "DFR": [
+        "BUL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "BUL"
+      "DFL": [
+        "FDR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8659,23 +8691,23 @@
       "[D: [D' r2 U, R]]",
       "[f': [R' D' R, U2]]",
       "[F': [R' D' R, U2]]",
+      "[D R' D: [R D' R', U]]",
       "[R D R': [R' U R, D]]",
       "[z': [D2, R U R']]",
-      "[R F' R' U: [U, R D R']]",
-      "[D R' D: [R D' R', U]]"
+      "[R F' R' U: [U, R D R']]"
     ],
     "buffers": {
       "UBL": [
         "DFL",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "DFL"
+      "DFR": [
+        "LUB",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "BUL"
+      "DFL": [
+        "RDF",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8710,13 +8742,13 @@
         "DFR",
         "LDF"
       ],
-      "RDF": [
-        "DFL",
-        "BUL"
+      "DFR": [
+        "LDF",
+        "UBL"
       ],
-      "FDL": [
-        "LUB",
-        "FDR"
+      "DFL": [
+        "BUL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -8745,13 +8777,13 @@
         "DFR",
         "FDL"
       ],
-      "RDF": [
-        "LDF",
-        "BUL"
+      "DFR": [
+        "FDL",
+        "UBL"
       ],
-      "FDL": [
-        "UBL",
-        "DFR"
+      "DFL": [
+        "LUB",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -8784,9 +8816,9 @@
         "DFR",
         "DBL"
       ],
-      "RDF": [
-        "LDB",
-        "BUL"
+      "DFR": [
+        "DBL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8817,9 +8849,9 @@
         "DFR",
         "BDL"
       ],
-      "RDF": [
-        "DBL",
-        "BUL"
+      "DFR": [
+        "BDL",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8850,9 +8882,9 @@
         "DFR",
         "LDB"
       ],
-      "RDF": [
-        "BDL",
-        "BUL"
+      "DFR": [
+        "LDB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8883,9 +8915,9 @@
         "DFR",
         "DBR"
       ],
-      "RDF": [
-        "BDR",
-        "BUL"
+      "DFR": [
+        "DBR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8921,9 +8953,9 @@
         "DFR",
         "RDB"
       ],
-      "RDF": [
-        "DBR",
-        "BUL"
+      "DFR": [
+        "RDB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8957,9 +8989,9 @@
         "DFR",
         "BDR"
       ],
-      "RDF": [
-        "RDB",
-        "BUL"
+      "DFR": [
+        "BDR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -8990,13 +9022,13 @@
         "DFR",
         "DFL"
       ],
-      "RDF": [
-        "FDL",
-        "BUL"
+      "DFR": [
+        "DFL",
+        "UBL"
       ],
-      "FDL": [
-        "BUL",
-        "RDF"
+      "DFL": [
+        "UBL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -9024,13 +9056,13 @@
         "FDR",
         "LDF"
       ],
-      "RDF": [
-        "FDL",
-        "LUB"
+      "DFR": [
+        "DFL",
+        "BUL"
       ],
-      "FDL": [
-        "LUB",
-        "RDF"
+      "DFL": [
+        "BUL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -9065,13 +9097,13 @@
         "FDR",
         "FDL"
       ],
-      "RDF": [
-        "DFL",
-        "LUB"
+      "DFR": [
+        "LDF",
+        "BUL"
       ],
-      "FDL": [
-        "UBL",
-        "FDR"
+      "DFL": [
+        "LUB",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -9104,9 +9136,9 @@
         "FDR",
         "DBL"
       ],
-      "RDF": [
-        "BDL",
-        "LUB"
+      "DFR": [
+        "LDB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9135,9 +9167,9 @@
         "FDR",
         "BDL"
       ],
-      "RDF": [
-        "LDB",
-        "LUB"
+      "DFR": [
+        "DBL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9169,9 +9201,9 @@
         "FDR",
         "LDB"
       ],
-      "RDF": [
-        "DBL",
-        "LUB"
+      "DFR": [
+        "BDL",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9204,9 +9236,9 @@
         "FDR",
         "DBR"
       ],
-      "RDF": [
-        "RDB",
-        "LUB"
+      "DFR": [
+        "BDR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9235,9 +9267,9 @@
         "FDR",
         "RDB"
       ],
-      "RDF": [
-        "BDR",
-        "LUB"
+      "DFR": [
+        "DBR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9262,16 +9294,17 @@
       "[F: [D2, R' U R]]",
       "[D' R U' R': [R' D R, U']]",
       "[x U': [U' L U, R2]]",
-      "[F2: [U R' U', L']]"
+      "[F2: [U R' U', L']]",
+      "[U2 R U R' U': [D', R U R']]"
     ],
     "buffers": {
       "UBL": [
         "FDR",
         "BDR"
       ],
-      "RDF": [
-        "DBR",
-        "LUB"
+      "DFR": [
+        "RDB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -9306,13 +9339,13 @@
         "FDR",
         "DFL"
       ],
-      "RDF": [
-        "LDF",
-        "LUB"
+      "DFR": [
+        "FDL",
+        "BUL"
       ],
-      "FDL": [
-        "BUL",
-        "DFR"
+      "DFL": [
+        "UBL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -9346,13 +9379,13 @@
         "RDF",
         "LDF"
       ],
-      "RDF": [
-        "LDF",
-        "UBL"
+      "DFR": [
+        "FDL",
+        "LUB"
       ],
-      "FDL": [
-        "LUB",
-        "DFR"
+      "DFL": [
+        "BUL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -9382,13 +9415,13 @@
         "RDF",
         "FDL"
       ],
-      "RDF": [
-        "FDL",
-        "UBL"
+      "DFR": [
+        "DFL",
+        "LUB"
       ],
-      "FDL": [
-        "UBL",
-        "RDF"
+      "DFL": [
+        "LUB",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -9422,9 +9455,9 @@
         "RDF",
         "DBL"
       ],
-      "RDF": [
-        "DBL",
-        "UBL"
+      "DFR": [
+        "BDL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9461,9 +9494,9 @@
         "RDF",
         "BDL"
       ],
-      "RDF": [
-        "BDL",
-        "UBL"
+      "DFR": [
+        "LDB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9492,9 +9525,9 @@
         "RDF",
         "LDB"
       ],
-      "RDF": [
-        "LDB",
-        "UBL"
+      "DFR": [
+        "DBL",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9527,9 +9560,9 @@
         "RDF",
         "DBR"
       ],
-      "RDF": [
-        "DBR",
-        "UBL"
+      "DFR": [
+        "RDB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9551,8 +9584,8 @@
     "algs": [
       "[R': [R', U' L' U]]",
       "[U R U': [D, R' U' R]]",
-      "[U R' D: [R D' R', U']]",
       "[f' U: [R D R', U2]]",
+      "[U R' D: [R D' R', U']]",
       "[U R' D' R: [R D R', U']]",
       "[R' D' R U: [R D R', U2]]",
       "[F L2 F', R]",
@@ -9566,9 +9599,9 @@
         "RDF",
         "RDB"
       ],
-      "RDF": [
-        "RDB",
-        "UBL"
+      "DFR": [
+        "BDR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9596,9 +9629,9 @@
         "RDF",
         "BDR"
       ],
-      "RDF": [
-        "BDR",
-        "UBL"
+      "DFR": [
+        "DBR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -9622,23 +9655,23 @@
       "[D: [R, D' r2 U]]",
       "[f': [U2, R' D' R]]",
       "[F': [U2, R' D' R]]",
+      "[D R' D: [U, R D' R']]",
       "[R D R': [D, R' U R]]",
       "[z': [R U R', D2]]",
-      "[R F' R' U: [R D R', U]]",
-      "[D R' D: [U, R D' R']]"
+      "[R F' R' U: [R D R', U]]"
     ],
     "buffers": {
       "UBL": [
         "RDF",
         "DFL"
       ],
-      "RDF": [
-        "DFL",
-        "UBL"
+      "DFR": [
+        "LDF",
+        "LUB"
       ],
-      "FDL": [
-        "BUL",
-        "FDR"
+      "DFL": [
+        "UBL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -9790,9 +9823,9 @@
         "UFL",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "FUL"
+      "DFL": [
+        "RUB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -9824,9 +9857,9 @@
         "UFL",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "UFL"
+      "DFL": [
+        "BUR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -10046,9 +10079,9 @@
         "UFL",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "LUF"
+      "DFL": [
+        "UBR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -10081,9 +10114,9 @@
         "UFL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "LUF"
+      "DFR": [
+        "UBR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -10116,9 +10149,9 @@
         "UFL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "FUL"
+      "DFR": [
+        "RUB",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -10150,9 +10183,9 @@
         "UFL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "UFL"
+      "DFR": [
+        "BUR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -10260,6 +10293,7 @@
       "[R2 U' D' R U: [R' D R, U2]]",
       "[U' R U R' U D: [R D R', U2]]",
       "[R' U' R U D': [R' D' R, U2]]",
+      "[U' R U R' D': [U2, R' D R]]",
       "[R U D R' U D': [R D R', U2]]",
       "[F R': [U2, R F' R' F]]"
     ],
@@ -10308,9 +10342,9 @@
         "FUL",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "LUF"
+      "DFL": [
+        "RUB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -10343,9 +10377,9 @@
         "FUL",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "FUL"
+      "DFL": [
+        "BUR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -10398,7 +10432,8 @@
       "[D' R: [R U' R', D']]",
       "[R': [R D' R D R2, F]]",
       "[U2 D R': [U', R' D R]]",
-      "[x: [U R' U', L2]]"
+      "[x: [U R' U', L2]]",
+      "[D' R' F R: [U', R D R']]"
     ],
     "buffers": {
       "UFL": [
@@ -10565,9 +10600,9 @@
         "FUL",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "UFL"
+      "DFL": [
+        "UBR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -10588,11 +10623,11 @@
   "GBX": {
     "algs": [
       "[U' R': [D, R' U R]]",
-      "[U': [R B' R', F']]",
       "[D' R2 U': [D, R U R']]",
+      "[U': [R B' R', F']]",
+      "[U' R B' R': [R' D' R, U]]",
       "[D' R' F': [D, R U' R']]",
       "[z': [R' D R, U2]]",
-      "[U' R B' R': [R' D' R, U]]",
       "[R: [U L U', R2]]",
       "[U' L: [L D' L', U]]"
     ],
@@ -10605,9 +10640,9 @@
         "FUL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "UFL"
+      "DFR": [
+        "UBR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -10632,6 +10667,7 @@
       "[U2 D' R': [U', R' D R]]",
       "[L': [U', L' D2 L]]",
       "[U: [R, U' R' F R U]]",
+      "[D R' F R: [U', R D R']]",
       "[l2: [L U' L', D2]]",
       "[R' F R D': [R' D R, U]]"
     ],
@@ -10644,9 +10680,9 @@
         "FUL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "LUF"
+      "DFR": [
+        "RUB",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -10680,9 +10716,9 @@
         "FUL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "FUL"
+      "DFR": [
+        "BUR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -10826,9 +10862,9 @@
         "LUF",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "UFL"
+      "DFL": [
+        "RUB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -10863,9 +10899,9 @@
         "LUF",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "LUF"
+      "DFL": [
+        "BUR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -11044,8 +11080,8 @@
   },
   "GCT": {
     "algs": [
-      "[U' D R: [U, R D' R']]",
       "[R' U' R: [R D R', U]]",
+      "[U' D R: [U, R D' R']]",
       "[D L2 D', R]"
     ],
     "buffers": {
@@ -11086,9 +11122,9 @@
         "LUF",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "FUL"
+      "DFL": [
+        "UBR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -11120,9 +11156,9 @@
         "LUF",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "FUL"
+      "DFR": [
+        "UBR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -11155,9 +11191,9 @@
         "LUF",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "UFL"
+      "DFR": [
+        "RUB",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -11193,9 +11229,9 @@
         "LUF",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "LUF"
+      "DFR": [
+        "BUR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -11348,9 +11384,9 @@
         "LDF",
         "UBR"
       ],
-      "FDL": [
-        "BUR",
-        "LUB"
+      "DFL": [
+        "RUB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -11383,9 +11419,9 @@
         "FDL",
         "UBR"
       ],
-      "FDL": [
-        "UBR",
-        "UBL"
+      "DFL": [
+        "BUR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -11605,11 +11641,11 @@
   },
   "GDW": {
     "algs": [
+      "[R D R': [R' U R, D']]",
       "[r U: [R', U' r2 D]]",
       "[r': [L2, D R' D']]",
       "[r: [U R' U', L2]]",
       "[L: [F R' F', L2]]",
-      "[R D R': [R' U R, D']]",
       "[R F': [D, R' U R]]",
       "[R' U R': [U', R' D R]]",
       "[R: [U R' U', L2]]",
@@ -11627,9 +11663,9 @@
         "DFL",
         "UBR"
       ],
-      "FDL": [
-        "RUB",
-        "BUL"
+      "DFL": [
+        "UBR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -11663,9 +11699,9 @@
         "DFR",
         "UBR"
       ],
-      "RDF": [
-        "RUB",
-        "BUL"
+      "DFR": [
+        "UBR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -11698,9 +11734,9 @@
         "FDR",
         "UBR"
       ],
-      "RDF": [
-        "BUR",
-        "LUB"
+      "DFR": [
+        "RUB",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -11733,9 +11769,9 @@
         "RDF",
         "UBR"
       ],
-      "RDF": [
-        "UBR",
-        "UBL"
+      "DFR": [
+        "BUR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -11882,9 +11918,9 @@
         "DFL",
         "RUB"
       ],
-      "FDL": [
-        "BUR",
-        "BUL"
+      "DFL": [
+        "RUB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -11928,9 +11964,9 @@
         "LDF",
         "RUB"
       ],
-      "FDL": [
-        "UBR",
-        "LUB"
+      "DFL": [
+        "BUR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -12161,9 +12197,9 @@
         "FDL",
         "RUB"
       ],
-      "FDL": [
-        "RUB",
-        "UBL"
+      "DFL": [
+        "UBR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -12197,9 +12233,9 @@
         "RDF",
         "RUB"
       ],
-      "RDF": [
-        "RUB",
-        "UBL"
+      "DFR": [
+        "UBR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -12239,9 +12275,9 @@
         "DFR",
         "RUB"
       ],
-      "RDF": [
-        "BUR",
-        "BUL"
+      "DFR": [
+        "RUB",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -12276,9 +12312,9 @@
         "FDR",
         "RUB"
       ],
-      "RDF": [
-        "UBR",
-        "LUB"
+      "DFR": [
+        "BUR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -12346,6 +12382,7 @@
       "[R2 U' D' R U': [R' D R, U2]]",
       "[U' R U R' U' D: [R D R', U2]]",
       "[R' U' R U' D': [R' D' R, U2]]",
+      "[U' R U R' D': [R' D R, U2]]",
       "[R U D R' U' D': [R D R', U2]]",
       "[R' F: [U2, F' R F R']]"
     ],
@@ -12439,9 +12476,9 @@
         "FDL",
         "BUR"
       ],
-      "FDL": [
-        "BUR",
-        "UBL"
+      "DFL": [
+        "RUB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -12480,9 +12517,9 @@
         "DFL",
         "BUR"
       ],
-      "FDL": [
-        "UBR",
-        "BUL"
+      "DFL": [
+        "BUR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -12668,8 +12705,8 @@
   },
   "GFT": {
     "algs": [
-      "[R: [R' D R D', B2]]",
       "[D' R' U' D: [R D' R', U2]]",
+      "[R: [R' D R D', B2]]",
       "[L: [U2, L D2 L']]",
       "[l U D': [R' D' R, U2]]",
       "[R2 D': [U2, R' D R]]",
@@ -12714,9 +12751,9 @@
         "LDF",
         "BUR"
       ],
-      "FDL": [
-        "RUB",
-        "LUB"
+      "DFL": [
+        "UBR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -12750,9 +12787,9 @@
         "FDR",
         "BUR"
       ],
-      "RDF": [
-        "RUB",
-        "LUB"
+      "DFR": [
+        "UBR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -12787,9 +12824,9 @@
         "RDF",
         "BUR"
       ],
-      "RDF": [
-        "BUR",
-        "UBL"
+      "DFR": [
+        "RUB",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -12824,9 +12861,9 @@
         "DFR",
         "BUR"
       ],
-      "RDF": [
-        "UBR",
-        "BUL"
+      "DFR": [
+        "BUR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -12857,9 +12894,9 @@
         "LDF",
         "UFL"
       ],
-      "FDL": [
-        "FUL",
-        "BUR"
+      "DFL": [
+        "LUF",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -12893,9 +12930,9 @@
         "LDF",
         "FUL"
       ],
-      "FDL": [
-        "LUF",
-        "BUR"
+      "DFL": [
+        "UFL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -12927,9 +12964,9 @@
         "LDF",
         "LUF"
       ],
-      "FDL": [
-        "UFL",
-        "BUR"
+      "DFL": [
+        "FUL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -12961,9 +12998,9 @@
         "UBR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "BUR"
+      "DFL": [
+        "BUL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -12996,9 +13033,9 @@
         "RUB",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "BUR"
+      "DFL": [
+        "UBL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13037,9 +13074,9 @@
         "BUR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "BUR"
+      "DFL": [
+        "LUB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13063,16 +13100,17 @@
       "[D' R' U R: [R D' R', U2]]",
       "[R': [R B R' U, D R' D' R]]",
       "[D R2 U: [D, R U R']]",
-      "[D L: [D2, L U' L']]"
+      "[D L: [D2, L U' L']]",
+      "[U F': [R U' R', D2]]"
     ],
     "buffers": {
       "UBR": [
         "LDF",
         "DBL"
       ],
-      "FDL": [
-        "BDL",
-        "BUR"
+      "DFL": [
+        "LDB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13101,9 +13139,9 @@
         "LDF",
         "BDL"
       ],
-      "FDL": [
-        "LDB",
-        "BUR"
+      "DFL": [
+        "DBL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13127,16 +13165,17 @@
       "[R' D R D: [U, R' D' R]]",
       "[R D': [B, D R' D' R]]",
       "[z': [D, R' U R]]",
-      "[L, D' R D]"
+      "[L, D' R D]",
+      "[U R' D R: [D, R U R']]"
     ],
     "buffers": {
       "UBR": [
         "LDF",
         "LDB"
       ],
-      "FDL": [
-        "DBL",
-        "BUR"
+      "DFL": [
+        "BDL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13165,9 +13204,9 @@
         "LDF",
         "DBR"
       ],
-      "FDL": [
-        "RDB",
-        "BUR"
+      "DFL": [
+        "BDR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13195,9 +13234,9 @@
         "LDF",
         "RDB"
       ],
-      "FDL": [
-        "BDR",
-        "BUR"
+      "DFL": [
+        "DBR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13226,9 +13265,9 @@
         "LDF",
         "BDR"
       ],
-      "FDL": [
-        "DBR",
-        "BUR"
+      "DFL": [
+        "RDB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13258,13 +13297,13 @@
         "LDF",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "DFL"
+      "DFR": [
+        "UBR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "BUR"
+      "DFL": [
+        "RDF",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13285,8 +13324,8 @@
   "GMY": {
     "algs": [
       "[D: [D, R' U' R]]",
-      "[U': [D, R U2 R']]",
       "[U2: [D, R U' R']]",
+      "[U': [D, R U2 R']]",
       "[y': [R U2 R', D']]"
     ],
     "buffers": {
@@ -13294,13 +13333,13 @@
         "LDF",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "FDL"
+      "DFR": [
+        "RUB",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "BUR"
+      "DFL": [
+        "DFR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13330,13 +13369,13 @@
         "LDF",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "LDF"
+      "DFR": [
+        "BUR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "BUR"
+      "DFL": [
+        "FDR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -13368,9 +13407,9 @@
         "FDL",
         "UFL"
       ],
-      "FDL": [
-        "UFL",
-        "UBR"
+      "DFL": [
+        "FUL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13403,9 +13442,9 @@
         "FDL",
         "FUL"
       ],
-      "FDL": [
-        "FUL",
-        "UBR"
+      "DFL": [
+        "LUF",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13440,9 +13479,9 @@
         "FDL",
         "LUF"
       ],
-      "FDL": [
-        "LUF",
-        "UBR"
+      "DFL": [
+        "UFL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13475,9 +13514,9 @@
         "UBR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "UBR"
+      "DFL": [
+        "LUB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13521,9 +13560,9 @@
         "RUB",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "UBR"
+      "DFL": [
+        "BUL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13562,9 +13601,9 @@
         "BUR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "UBR"
+      "DFL": [
+        "UBL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13596,9 +13635,9 @@
         "FDL",
         "DBL"
       ],
-      "FDL": [
-        "DBL",
-        "UBR"
+      "DFL": [
+        "BDL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13619,16 +13658,17 @@
   "GNP": {
     "algs": [
       "[D R' D': [R U R', D2]]",
-      "[R B R' D: [U, R' D' R]]"
+      "[R B R' D: [U, R' D' R]]",
+      "[U R' F': [R U R', D2]]"
     ],
     "buffers": {
       "UBR": [
         "FDL",
         "BDL"
       ],
-      "FDL": [
-        "BDL",
-        "UBR"
+      "DFL": [
+        "LDB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13658,9 +13698,9 @@
         "FDL",
         "LDB"
       ],
-      "FDL": [
-        "LDB",
-        "UBR"
+      "DFL": [
+        "DBL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13688,9 +13728,9 @@
         "FDL",
         "DBR"
       ],
-      "FDL": [
-        "DBR",
-        "UBR"
+      "DFL": [
+        "RDB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13711,9 +13751,9 @@
   "GNS": {
     "algs": [
       "[U R D: [D, R' U' R]]",
+      "[U R' F' R: [R D R', U']]",
       "x D R' U2 R D' R' U2 l",
       "[B, R' F2 R]",
-      "[U R' F' R: [R D R', U']]",
       "[U' R D: [D, R' U R]]"
     ],
     "buffers": {
@@ -13721,9 +13761,9 @@
         "FDL",
         "RDB"
       ],
-      "FDL": [
-        "RDB",
-        "UBR"
+      "DFL": [
+        "BDR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13753,9 +13793,9 @@
         "FDL",
         "BDR"
       ],
-      "FDL": [
-        "BDR",
-        "UBR"
+      "DFL": [
+        "DBR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13784,13 +13824,13 @@
         "FDL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "LDF"
+      "DFR": [
+        "UBR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "UBR"
+      "DFL": [
+        "FDR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13812,10 +13852,10 @@
     "algs": [
       "[U R': [R D' R' D, F']]",
       "[l' U D': [R' D R, U2]]",
+      "[U F: [D, R U' R']]",
       "r D2 L' U L D2 L' U' x'",
       "[x: [L D2 L', U]]",
       "[U' R D: [R' D' R, U2]]",
-      "[U F: [D, R U' R']]",
       "[U: [R, U r' F']]"
     ],
     "buffers": {
@@ -13823,13 +13863,13 @@
         "FDL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "DFL"
+      "DFR": [
+        "RUB",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "UBR"
+      "DFL": [
+        "RDF",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13858,13 +13898,13 @@
         "FDL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "FDL"
+      "DFR": [
+        "BUR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "UBR"
+      "DFL": [
+        "DFR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -13980,8 +14020,8 @@
     "algs": [
       "[U: [B2, U' R U R']]",
       "[R' U D R': [R' D R, U']]",
-      "[R' U' D' R: [D', R U' R']]",
       "[U R' B: [R U R', D']]",
+      "[R' U' D' R: [D', R U' R']]",
       "[D: [D R2 D', L2]]",
       "U x D2 R' U' R D2 R' U l U'",
       "[U x: [D2, R' U' R]]",
@@ -14087,16 +14127,17 @@
       "[D' R' U R: [U2, R D' R']]",
       "[R': [D R' D' R, R B R' U]]",
       "[D R2 U: [R U R', D]]",
-      "[D L: [L U' L', D2]]"
+      "[D L: [L U' L', D2]]",
+      "[U F': [D2, R U' R']]"
     ],
     "buffers": {
       "UBR": [
         "DBL",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "BDL"
+      "DFL": [
+        "RUB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -14128,9 +14169,9 @@
         "DBL",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "DBL"
+      "DFL": [
+        "BUR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -14151,9 +14192,9 @@
   "GOR": {
     "algs": [
       "[D', R2 U' R2 U R2]",
+      "[U R U' R': [D', R' U R]]",
       "[R' U R D': [R D R', U2]]",
       "[U: [R2, U L2 U']]",
-      "[U R U' R': [D', R' U R]]",
       "[L' U: [R2, U L' U']]"
     ],
     "buffers": {
@@ -14243,9 +14284,9 @@
         "DBL",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "LDB"
+      "DFL": [
+        "UBR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -14276,9 +14317,9 @@
         "DBL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "LDB"
+      "DFR": [
+        "UBR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -14307,9 +14348,9 @@
         "DBL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "BDL"
+      "DFR": [
+        "RUB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -14336,9 +14377,9 @@
         "DBL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "DBL"
+      "DFR": [
+        "BUR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -14391,7 +14432,8 @@
     "algs": [
       "[D' R: [D', R U' R']]",
       "[R': [F, R D' R D R2]]",
-      "[x: [L2, U R' U']]"
+      "[x: [L2, U R' U']]",
+      "[D' R' F R: [R D R', U']]"
     ],
     "buffers": {
       "UFL": [
@@ -14558,9 +14600,9 @@
         "BDL",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "LDB"
+      "DFL": [
+        "RUB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -14581,16 +14623,17 @@
   "GPN": {
     "algs": [
       "[D R' D: [R U R', D2]]",
-      "[R B R' D: [R' D' R, U]]"
+      "[R B R' D: [R' D' R, U]]",
+      "[U R' F': [D2, R U R']]"
     ],
     "buffers": {
       "UBR": [
         "BDL",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "BDL"
+      "DFL": [
+        "BUR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -14703,9 +14746,9 @@
         "BDL",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "DBL"
+      "DFL": [
+        "UBR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -14733,9 +14776,9 @@
         "BDL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "DBL"
+      "DFR": [
+        "UBR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -14764,9 +14807,9 @@
         "BDL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "LDB"
+      "DFR": [
+        "RUB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -14796,9 +14839,9 @@
         "BDL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "BDL"
+      "DFR": [
+        "BUR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -15008,16 +15051,17 @@
       "[R' D R D: [R' D' R, U]]",
       "[D' R: [B, R' D R D']]",
       "[z': [R' U R, D]]",
-      "[D' R D, L]"
+      "[D' R D, L]",
+      "[U R' D R: [R U R', D]]"
     ],
     "buffers": {
       "UBR": [
         "LDB",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "DBL"
+      "DFL": [
+        "RUB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -15047,9 +15091,9 @@
         "LDB",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "LDB"
+      "DFL": [
+        "BUR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -15099,8 +15143,8 @@
     "algs": [
       "[U R D': [R' U' R, D2]]",
       "[U' R D': [R' U R, D2]]",
-      "[l': [D2, R' U' R]]",
-      "[U R' U R: [R D' R', U']]"
+      "[U R' U R: [R D' R', U']]",
+      "[l': [D2, R' U' R]]"
     ],
     "buffers": {
       "UBR": [
@@ -15154,10 +15198,10 @@
     "algs": [
       "[D' R': [R U' R' U, B2]]",
       "[U D' R U' D: [R' U R, D2]]",
+      "[U D R U' R': [R' D R, U2]]",
       "[R' F': [D2, R U' R']]",
       "[R' F' R U' D': [R D R', U']]",
       "[B: [R' U R, D2]]",
-      "[U D R U' R': [R' D R, U2]]",
       "[y' R': [D2, R' U R]]",
       "[L' U: [D R' D', L2]]"
     ],
@@ -15166,9 +15210,9 @@
         "LDB",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "BDL"
+      "DFL": [
+        "UBR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -15199,9 +15243,9 @@
         "LDB",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "BDL"
+      "DFR": [
+        "UBR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -15233,9 +15277,9 @@
         "LDB",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "DBL"
+      "DFR": [
+        "RUB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -15256,8 +15300,8 @@
   "GQZ": {
     "algs": [
       "[U' D': [R' U R, D2]]",
-      "[R U': [R' U' R, D']]",
       "[U: [D2, R U R']]",
+      "[R U': [R' U' R, D']]",
       "[r: [D, L U2 L']]",
       "[y': [D2, R' U R]]"
     ],
@@ -15266,9 +15310,9 @@
         "LDB",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "LDB"
+      "DFR": [
+        "BUR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -15491,9 +15535,9 @@
         "DBR",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "RDB"
+      "DFL": [
+        "RUB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -15521,9 +15565,9 @@
         "DBR",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "DBR"
+      "DFL": [
+        "BUR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -15544,9 +15588,9 @@
   "GRO": {
     "algs": [
       "[R2 U' R2 U R2, D']",
+      "[U R U' R': [R' U R, D']]",
       "[R' U R D': [U2, R D R']]",
       "[U: [U L2 U', R2]]",
-      "[U R U' R': [R' U R, D']]",
       "[L' U: [U L' U', R2]]"
     ],
     "buffers": {
@@ -15636,9 +15680,9 @@
         "DBR",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "BDR"
+      "DFL": [
+        "UBR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -15669,9 +15713,9 @@
         "DBR",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "BDR"
+      "DFR": [
+        "UBR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -15702,9 +15746,9 @@
         "DBR",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "RDB"
+      "DFR": [
+        "RUB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -15736,9 +15780,9 @@
         "DBR",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "DBR"
+      "DFR": [
+        "BUR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -15957,9 +16001,9 @@
         "RDB",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "BDR"
+      "DFL": [
+        "RUB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -15980,9 +16024,9 @@
   "GSN": {
     "algs": [
       "[U R D: [R' U' R, D]]",
+      "[U R' F' R: [U', R D R']]",
       "l' U2 R D R' U2 R D' x'",
       "[R' F2 R, B]",
-      "[U R' F' R: [U', R D R']]",
       "[U' R D: [R' U R, D]]"
     ],
     "buffers": {
@@ -15990,9 +16034,9 @@
         "RDB",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "RDB"
+      "DFL": [
+        "BUR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -16065,8 +16109,8 @@
   "GSQ": {
     "algs": [
       "[U R D: [R' U' R, D2]]",
-      "[l': [R' U' R, D2]]",
       "[U R' U R: [U', R D' R']]",
+      "[l': [R' U' R, D2]]",
       "[U' R D: [R' U R, D2]]"
     ],
     "buffers": {
@@ -16099,9 +16143,9 @@
         "RDB",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "DBR"
+      "DFL": [
+        "UBR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -16128,16 +16172,17 @@
       "[F2: [U2, R D R']]",
       "[R2: [F', R U R2 U' R']]",
       "[F: [R' U' R, D2]]",
-      "[D' L: [D2, L U' L']]"
+      "[D' L: [D2, L U' L']]",
+      "[U R U' D' R': [R' D R, U2]]"
     ],
     "buffers": {
       "UBR": [
         "RDB",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "DBR"
+      "DFR": [
+        "UBR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -16164,9 +16209,9 @@
         "RDB",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "BDR"
+      "DFR": [
+        "RUB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -16188,8 +16233,8 @@
     "algs": [
       "[R U': [R' U' R, D]]",
       "[R' D: [U', R D' R']]",
-      "[R' D' R: [U', R D R']]",
       "[f': [U', R D R']]",
+      "[R' D' R: [U', R D R']]",
       "[y': [U R' U', L]]",
       "[y: [U L' U', R]]",
       "[D: [R', U' L U]]",
@@ -16200,9 +16245,9 @@
         "RDB",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "RDB"
+      "DFR": [
+        "BUR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -16422,9 +16467,9 @@
         "BDR",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "DBR"
+      "DFL": [
+        "RUB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -16454,9 +16499,9 @@
         "BDR",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "BDR"
+      "DFL": [
+        "BUR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -16569,9 +16614,9 @@
         "BDR",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "RDB"
+      "DFL": [
+        "UBR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -16592,8 +16637,8 @@
   "GTX": {
     "algs": [
       "[U' R' D: [U, R D' R']]",
-      "[z' x R': [U, R' D2 R]]",
       "[U D' R D: [U, R' D' R]]",
+      "[z' x R': [U, R' D2 R]]",
       "[y R: [R D2 R', U']]"
     ],
     "buffers": {
@@ -16601,9 +16646,9 @@
         "BDR",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "RDB"
+      "DFR": [
+        "UBR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -16626,6 +16671,7 @@
       "[D' R' D': [R U R', D2]]",
       "[D' R U' R': [U, R' D R]]",
       "[x' U: [U L U', R2]]",
+      "[U R U R' U': [R U R', D']]",
       "[U' D R D': [R' U R, D2]]"
     ],
     "buffers": {
@@ -16633,9 +16679,9 @@
         "BDR",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "DBR"
+      "DFR": [
+        "RUB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -16664,9 +16710,9 @@
         "BDR",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "BDR"
+      "DFR": [
+        "BUR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -16700,9 +16746,9 @@
         "DFL",
         "UFL"
       ],
-      "FDL": [
-        "LUF",
-        "RUB"
+      "DFL": [
+        "UFL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16737,9 +16783,9 @@
         "DFL",
         "FUL"
       ],
-      "FDL": [
-        "UFL",
-        "RUB"
+      "DFL": [
+        "FUL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16770,9 +16816,9 @@
         "DFL",
         "LUF"
       ],
-      "FDL": [
-        "FUL",
-        "RUB"
+      "DFL": [
+        "LUF",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16792,11 +16838,11 @@
   },
   "GWD": {
     "algs": [
+      "[R D R': [D', R' U R]]",
       "[r' D: [R', D' r2 U]]",
       "[r': [D R' D', L2]]",
       "[L': [F R' F', L2]]",
       "[r: [L2, U R' U']]",
-      "[R D R': [D', R' U R]]",
       "[R F': [R' U R, D]]",
       "[R' U R': [R' D R, U']]",
       "[D R2 D', L2]",
@@ -16814,9 +16860,9 @@
         "UBR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "RUB"
+      "DFL": [
+        "UBL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16854,9 +16900,9 @@
         "RUB",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "RUB"
+      "DFL": [
+        "LUB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16887,9 +16933,9 @@
         "BUR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "RUB"
+      "DFL": [
+        "BUL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16918,9 +16964,9 @@
         "DFL",
         "DBL"
       ],
-      "FDL": [
-        "LDB",
-        "RUB"
+      "DFL": [
+        "DBL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16953,9 +16999,9 @@
         "DFL",
         "BDL"
       ],
-      "FDL": [
-        "DBL",
-        "RUB"
+      "DFL": [
+        "BDL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -16977,10 +17023,10 @@
     "algs": [
       "[D' R': [B2, R U' R' U]]",
       "[U D' R U' D': [R' U R, D2]]",
+      "[U D R U' R': [U2, R' D R]]",
       "[R' F': [R U' R', D2]]",
       "[R' F' R U2 D': [R D R', U]]",
       "[B: [D2, R' U R]]",
-      "[U D R U' R': [U2, R' D R]]",
       "[F2: [R D' R', U']]",
       "[L' U: [L2, D R' D']]"
     ],
@@ -16989,9 +17035,9 @@
         "DFL",
         "LDB"
       ],
-      "FDL": [
-        "BDL",
-        "RUB"
+      "DFL": [
+        "LDB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17021,9 +17067,9 @@
         "DFL",
         "DBR"
       ],
-      "FDL": [
-        "BDR",
-        "RUB"
+      "DFL": [
+        "DBR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17050,9 +17096,9 @@
         "DFL",
         "RDB"
       ],
-      "FDL": [
-        "DBR",
-        "RUB"
+      "DFL": [
+        "RDB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17081,9 +17127,9 @@
         "DFL",
         "BDR"
       ],
-      "FDL": [
-        "RDB",
-        "RUB"
+      "DFL": [
+        "BDR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17114,13 +17160,13 @@
         "DFL",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "FDL"
+      "DFR": [
+        "UBR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "RUB"
+      "DFL": [
+        "DFR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17150,13 +17196,13 @@
         "DFL",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "LDF"
+      "DFR": [
+        "RUB",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "RUB"
+      "DFL": [
+        "FDR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17186,13 +17232,13 @@
         "DFL",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "DFL"
+      "DFR": [
+        "BUR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "RUB"
+      "DFL": [
+        "RDF",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17225,9 +17271,9 @@
         "DFR",
         "UFL"
       ],
-      "RDF": [
-        "LUF",
-        "RUB"
+      "DFR": [
+        "UFL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17248,11 +17294,11 @@
   "GXB": {
     "algs": [
       "[U' R': [R' U R, D]]",
-      "[U': [F', R B' R']]",
       "[D' R2 U': [R U R', D]]",
+      "[U': [F', R B' R']]",
+      "[U' R B' R': [U, R' D' R]]",
       "[D' R' F': [R U' R', D]]",
       "[z': [U2, R' D R]]",
-      "[U' R B' R': [U, R' D' R]]",
       "[R': [U L U', R2]]",
       "[U' L: [U, L D' L']]"
     ],
@@ -17265,9 +17311,9 @@
         "DFR",
         "FUL"
       ],
-      "RDF": [
-        "UFL",
-        "RUB"
+      "DFR": [
+        "FUL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17299,9 +17345,9 @@
         "DFR",
         "LUF"
       ],
-      "RDF": [
-        "FUL",
-        "RUB"
+      "DFR": [
+        "LUF",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17335,9 +17381,9 @@
         "UBR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "RUB"
+      "DFR": [
+        "UBL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17371,9 +17417,9 @@
         "RUB",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "RUB"
+      "DFR": [
+        "LUB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17407,9 +17453,9 @@
         "BUR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "RUB"
+      "DFR": [
+        "BUL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17439,13 +17485,13 @@
         "DFR",
         "LDF"
       ],
-      "RDF": [
-        "DFL",
-        "RUB"
+      "DFR": [
+        "LDF",
+        "UBR"
       ],
-      "FDL": [
-        "BUR",
-        "FDR"
+      "DFL": [
+        "RUB",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -17474,13 +17520,13 @@
         "DFR",
         "FDL"
       ],
-      "RDF": [
-        "LDF",
-        "RUB"
+      "DFR": [
+        "FDL",
+        "UBR"
       ],
-      "FDL": [
-        "UBR",
-        "DFR"
+      "DFL": [
+        "BUR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -17511,9 +17557,9 @@
         "DFR",
         "DBL"
       ],
-      "RDF": [
-        "LDB",
-        "RUB"
+      "DFR": [
+        "DBL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17541,9 +17587,9 @@
         "DFR",
         "BDL"
       ],
-      "RDF": [
-        "DBL",
-        "RUB"
+      "DFR": [
+        "BDL",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17574,9 +17620,9 @@
         "DFR",
         "LDB"
       ],
-      "RDF": [
-        "BDL",
-        "RUB"
+      "DFR": [
+        "LDB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17607,9 +17653,9 @@
         "DFR",
         "DBR"
       ],
-      "RDF": [
-        "BDR",
-        "RUB"
+      "DFR": [
+        "DBR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17636,16 +17682,17 @@
       "[F2: [R D R', U2]]",
       "[R2: [R U R2 U' R', F']]",
       "[F: [D2, R' U' R]]",
-      "[D' L: [L U' L', D2]]"
+      "[D' L: [L U' L', D2]]",
+      "[U R U' D' R': [U2, R' D R]]"
     ],
     "buffers": {
       "UBR": [
         "DFR",
         "RDB"
       ],
-      "RDF": [
-        "DBR",
-        "RUB"
+      "DFR": [
+        "RDB",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17666,8 +17713,8 @@
   "GXT": {
     "algs": [
       "[U' R' D: [R D' R', U]]",
-      "[z' x R': [R' D2 R, U]]",
       "[U D' R D: [R' D' R, U]]",
+      "[z' x R': [R' D2 R, U]]",
       "[y R: [U', R D2 R']]"
     ],
     "buffers": {
@@ -17675,9 +17722,9 @@
         "DFR",
         "BDR"
       ],
-      "RDF": [
-        "RDB",
-        "RUB"
+      "DFR": [
+        "BDR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -17708,13 +17755,13 @@
         "DFR",
         "DFL"
       ],
-      "RDF": [
-        "FDL",
-        "RUB"
+      "DFR": [
+        "DFL",
+        "UBR"
       ],
-      "FDL": [
-        "RUB",
-        "RDF"
+      "DFL": [
+        "UBR",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -17747,9 +17794,9 @@
         "FDR",
         "UFL"
       ],
-      "RDF": [
-        "FUL",
-        "BUR"
+      "DFR": [
+        "LUF",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17773,6 +17820,7 @@
       "[U R U R': [U', R' D' R]]",
       "[L': [L' D2 L, U']]",
       "[R': [F, R U R U' R']]",
+      "[D R' F R: [R D R', U']]",
       "[l2: [D2, L U' L']]",
       "[R' F R D': [U, R' D R]]"
     ],
@@ -17785,9 +17833,9 @@
         "FDR",
         "FUL"
       ],
-      "RDF": [
-        "LUF",
-        "BUR"
+      "DFR": [
+        "UFL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17820,9 +17868,9 @@
         "FDR",
         "LUF"
       ],
-      "RDF": [
-        "UFL",
-        "BUR"
+      "DFR": [
+        "FUL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17855,9 +17903,9 @@
         "UBR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "BUR"
+      "DFR": [
+        "BUL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17897,9 +17945,9 @@
         "RUB",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "BUR"
+      "DFR": [
+        "UBL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17934,9 +17982,9 @@
         "BUR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "BUR"
+      "DFR": [
+        "LUB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -17957,8 +18005,8 @@
   "GYM": {
     "algs": [
       "[D: [R' U' R, D]]",
-      "[U': [R U2 R', D]]",
       "[U2: [R U' R', D]]",
+      "[U': [R U2 R', D]]",
       "[y': [D', R U2 R']]"
     ],
     "buffers": {
@@ -17966,13 +18014,13 @@
         "FDR",
         "LDF"
       ],
-      "RDF": [
-        "FDL",
-        "BUR"
+      "DFR": [
+        "DFL",
+        "RUB"
       ],
-      "FDL": [
-        "BUR",
-        "RDF"
+      "DFL": [
+        "RUB",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -17994,10 +18042,10 @@
     "algs": [
       "[U R': [F', R D' R' D]]",
       "[l' U' D': [R' D R, U2]]",
+      "[U F: [R U' R', D]]",
       "x U L D2 L' U' L D2 r'",
       "[x: [U, L D2 L']]",
       "[U' R D: [U2, R' D' R]]",
-      "[U F: [R U' R', D]]",
       "[U: [U r' F', R]]"
     ],
     "buffers": {
@@ -18005,13 +18053,13 @@
         "FDR",
         "FDL"
       ],
-      "RDF": [
-        "DFL",
-        "BUR"
+      "DFR": [
+        "LDF",
+        "RUB"
       ],
-      "FDL": [
-        "UBR",
-        "FDR"
+      "DFL": [
+        "BUR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -18040,9 +18088,9 @@
         "FDR",
         "DBL"
       ],
-      "RDF": [
-        "BDL",
-        "BUR"
+      "DFR": [
+        "LDB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18071,9 +18119,9 @@
         "FDR",
         "BDL"
       ],
-      "RDF": [
-        "LDB",
-        "BUR"
+      "DFR": [
+        "DBL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18105,9 +18153,9 @@
         "FDR",
         "LDB"
       ],
-      "RDF": [
-        "DBL",
-        "BUR"
+      "DFR": [
+        "BDL",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18128,8 +18176,8 @@
   "GYR": {
     "algs": [
       "[R' U R U: [R' D' R, U2]]",
-      "[D R' D': [U', R D R']]",
       "[D' R' D R: [R D' R', U']]",
+      "[D R' D': [U', R D R']]",
       "[D R': [R' D2 R, U]]",
       "[z' R': [R' D' R, U2]]"
     ],
@@ -18138,9 +18186,9 @@
         "FDR",
         "DBR"
       ],
-      "RDF": [
-        "RDB",
-        "BUR"
+      "DFR": [
+        "BDR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18167,9 +18215,9 @@
         "FDR",
         "RDB"
       ],
-      "RDF": [
-        "BDR",
-        "BUR"
+      "DFR": [
+        "DBR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18192,6 +18240,7 @@
       "[D' R' D: [R U R', D2]]",
       "[D' R U' R': [R' D R, U]]",
       "[x' U: [R2, U L U']]",
+      "[U R U R' U': [D', R U R']]",
       "[U' D R D: [R' U R, D2]]"
     ],
     "buffers": {
@@ -18199,9 +18248,9 @@
         "FDR",
         "BDR"
       ],
-      "RDF": [
-        "DBR",
-        "BUR"
+      "DFR": [
+        "RDB",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -18231,13 +18280,13 @@
         "FDR",
         "DFL"
       ],
-      "RDF": [
-        "LDF",
-        "BUR"
+      "DFR": [
+        "FDL",
+        "RUB"
       ],
-      "FDL": [
-        "RUB",
-        "DFR"
+      "DFL": [
+        "UBR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -18269,9 +18318,9 @@
         "RDF",
         "UFL"
       ],
-      "RDF": [
-        "UFL",
-        "UBR"
+      "DFR": [
+        "FUL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18305,9 +18354,9 @@
         "RDF",
         "FUL"
       ],
-      "RDF": [
-        "FUL",
-        "UBR"
+      "DFR": [
+        "LUF",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18344,9 +18393,9 @@
         "RDF",
         "LUF"
       ],
-      "RDF": [
-        "LUF",
-        "UBR"
+      "DFR": [
+        "UFL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18379,9 +18428,9 @@
         "UBR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "UBR"
+      "DFR": [
+        "LUB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18417,9 +18466,9 @@
         "RUB",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "UBR"
+      "DFR": [
+        "BUL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18454,9 +18503,9 @@
         "BUR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "UBR"
+      "DFR": [
+        "UBL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18486,13 +18535,13 @@
         "RDF",
         "LDF"
       ],
-      "RDF": [
-        "LDF",
-        "UBR"
+      "DFR": [
+        "FDL",
+        "BUR"
       ],
-      "FDL": [
-        "BUR",
-        "DFR"
+      "DFL": [
+        "RUB",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -18521,13 +18570,13 @@
         "RDF",
         "FDL"
       ],
-      "RDF": [
-        "FDL",
-        "UBR"
+      "DFR": [
+        "DFL",
+        "BUR"
       ],
-      "FDL": [
-        "UBR",
-        "RDF"
+      "DFL": [
+        "BUR",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -18555,9 +18604,9 @@
         "RDF",
         "DBL"
       ],
-      "RDF": [
-        "DBL",
-        "UBR"
+      "DFR": [
+        "BDL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18587,9 +18636,9 @@
         "RDF",
         "BDL"
       ],
-      "RDF": [
-        "BDL",
-        "UBR"
+      "DFR": [
+        "LDB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18610,8 +18659,8 @@
   "GZQ": {
     "algs": [
       "[U' D: [R' U R, D2]]",
-      "[R U': [D', R' U' R]]",
       "[U: [R U R', D2]]",
+      "[R U': [D', R' U' R]]",
       "[r: [L U2 L', D]]",
       "[y': [R' U R, D2]]"
     ],
@@ -18620,9 +18669,9 @@
         "RDF",
         "LDB"
       ],
-      "RDF": [
-        "LDB",
-        "UBR"
+      "DFR": [
+        "DBL",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18654,9 +18703,9 @@
         "RDF",
         "DBR"
       ],
-      "RDF": [
-        "DBR",
-        "UBR"
+      "DFR": [
+        "RDB",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18678,8 +18727,8 @@
     "algs": [
       "[R U': [D, R' U' R]]",
       "[R' D: [R D' R', U']]",
-      "[R' D' R: [R D R', U']]",
       "[f': [R D R', U']]",
+      "[R' D' R: [R D R', U']]",
       "[y': [L, U R' U']]",
       "[y: [R, U L' U']]",
       "[D: [U' L U, R']]",
@@ -18690,9 +18739,9 @@
         "RDF",
         "RDB"
       ],
-      "RDF": [
-        "RDB",
-        "UBR"
+      "DFR": [
+        "BDR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18721,9 +18770,9 @@
         "RDF",
         "BDR"
       ],
-      "RDF": [
-        "BDR",
-        "UBR"
+      "DFR": [
+        "DBR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -18753,13 +18802,13 @@
         "RDF",
         "DFL"
       ],
-      "RDF": [
-        "DFL",
-        "UBR"
+      "DFR": [
+        "LDF",
+        "BUR"
       ],
-      "FDL": [
-        "RUB",
-        "FDR"
+      "DFL": [
+        "UBR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -18779,8 +18828,8 @@
   },
   "JAD": {
     "algs": [
-      "[R' D R U': [R' D' R, U']]",
       "[R' U' D': [R' D R, U']]",
+      "[R' D R U': [R' D' R, U']]",
       "[R' D' R U': [R' D R, U']]",
       "[R' U2 D: [R D R', U']]",
       "[R': [U, L' D2 L]]",
@@ -18903,8 +18952,8 @@
   },
   "JAG": {
     "algs": [
-      "[R F R': [U, R' D' R]]",
       "[R F' R': [U, R' D R]]",
+      "[R F R': [U, R' D' R]]",
       "[R' D R U': [R' D' R, U2]]",
       "[R' D' R U': [R' D R, U2]]",
       "[l D: [U, R' D' R]]",
@@ -19029,9 +19078,9 @@
         "LDF",
         "UFR"
       ],
-      "FDL": [
-        "RUF",
-        "FUL"
+      "DFL": [
+        "FUR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -19064,9 +19113,9 @@
         "FDL",
         "UFR"
       ],
-      "FDL": [
-        "UFR",
-        "UFL"
+      "DFL": [
+        "RUF",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -19278,8 +19327,8 @@
       "[U': [R B R', F2]]",
       "U' l U R' D2 R U' R' D2 F x",
       "[x' F': [R U R', D2]]",
-      "[U' R F': [D, R' U' R]]",
       "[R D R' D': [R' D' R, U']]",
+      "[U' R F': [D, R' U' R]]",
       "[D: [R' D R U' R D' R', U']]",
       "[D': [L2, D' R2 D]]",
       "[D2: [D r2 U', R2]]",
@@ -19298,9 +19347,9 @@
         "DFL",
         "UFR"
       ],
-      "FDL": [
-        "FUR",
-        "LUF"
+      "DFL": [
+        "UFR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -19335,9 +19384,9 @@
         "DFR",
         "UFR"
       ],
-      "RDF": [
-        "FUR",
-        "LUF"
+      "DFR": [
+        "UFR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -19369,9 +19418,9 @@
         "FDR",
         "UFR"
       ],
-      "RDF": [
-        "RUF",
-        "FUL"
+      "DFR": [
+        "FUR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -19402,9 +19451,9 @@
         "RDF",
         "UFR"
       ],
-      "RDF": [
-        "UFR",
-        "UFL"
+      "DFR": [
+        "RUF",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -19663,8 +19712,8 @@
     "algs": [
       "[R' D: [F2, D' R D R']]",
       "[U2 R': [U2, R' D R]]",
-      "[R' F R U D: [R' D' R, U2]]",
       "[U R U R': [U2, R' D R]]",
+      "[R' F R U D: [R' D' R, U2]]",
       "[D l' D': [R' D R, U2]]"
     ],
     "buffers": {
@@ -19676,9 +19725,9 @@
         "DFL",
         "FUR"
       ],
-      "FDL": [
-        "RUF",
-        "LUF"
+      "DFL": [
+        "FUR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -19711,9 +19760,9 @@
         "LDF",
         "FUR"
       ],
-      "FDL": [
-        "UFR",
-        "FUL"
+      "DFL": [
+        "RUF",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -19929,8 +19978,8 @@
   "JBW": {
     "algs": [
       "[R U D: [R' D' R, U2]]",
-      "[R: [R D2 R', U2]]",
       "[D' R: [R D' R', U2]]",
+      "[R: [R D2 R', U2]]",
       "[R D': [R D' R', U2]]",
       "[U D' R' U' R: [R D' R', U2]]"
     ],
@@ -19943,9 +19992,9 @@
         "FDL",
         "FUR"
       ],
-      "FDL": [
-        "FUR",
-        "UFL"
+      "DFL": [
+        "UFR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -19981,9 +20030,9 @@
         "RDF",
         "FUR"
       ],
-      "RDF": [
-        "FUR",
-        "UFL"
+      "DFR": [
+        "UFR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -20019,9 +20068,9 @@
         "DFR",
         "FUR"
       ],
-      "RDF": [
-        "RUF",
-        "LUF"
+      "DFR": [
+        "FUR",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -20056,9 +20105,9 @@
         "FDR",
         "FUR"
       ],
-      "RDF": [
-        "UFR",
-        "FUL"
+      "DFR": [
+        "RUF",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -20127,10 +20176,8 @@
       "[R U' R' U': [R' D' R, U']]",
       "[U' R' F: [R U R', D]]",
       "[R' F R U: [R' D R, U]]",
-      "[U: [L', U l F']]",
       "[U: [L', U R U']]",
-      "x L F R' F' r U R U' r2",
-      "[r F: [R', F' r U]]"
+      "[U: [L', U l F']]"
     ],
     "buffers": {
       "UFR": [
@@ -20249,8 +20296,8 @@
       "[R', U L U']",
       "[z: [D', R U R']]",
       "[R U' R' U: [R' D' R, U]]",
-      "[R' U' R D': [R' D' R, U]]",
       "U L U' R' U L' U' F D R U R' D' R U' R' F' R",
+      "[R' U' R D': [R' D' R, U]]",
       "[U': [U' r' F, R]]"
     ],
     "buffers": {
@@ -20340,9 +20387,9 @@
         "FDL",
         "RUF"
       ],
-      "FDL": [
-        "RUF",
-        "UFL"
+      "DFL": [
+        "FUR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -20376,9 +20423,9 @@
         "DFL",
         "RUF"
       ],
-      "FDL": [
-        "UFR",
-        "LUF"
+      "DFL": [
+        "RUF",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -20625,9 +20672,9 @@
         "LDF",
         "RUF"
       ],
-      "FDL": [
-        "FUR",
-        "FUL"
+      "DFL": [
+        "UFR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -20663,9 +20710,9 @@
         "FDR",
         "RUF"
       ],
-      "RDF": [
-        "FUR",
-        "FUL"
+      "DFR": [
+        "UFR",
+        "LUF"
       ]
     },
     "scrambles": [
@@ -20704,9 +20751,9 @@
         "RDF",
         "RUF"
       ],
-      "RDF": [
-        "RUF",
-        "UFL"
+      "DFR": [
+        "FUR",
+        "FUL"
       ]
     },
     "scrambles": [
@@ -20739,9 +20786,9 @@
         "DFR",
         "RUF"
       ],
-      "RDF": [
-        "UFR",
-        "LUF"
+      "DFR": [
+        "RUF",
+        "UFL"
       ]
     },
     "scrambles": [
@@ -20764,9 +20811,9 @@
       "[R' U2 D': [R' D R, U]]",
       "[R' D R U': [U', R' D' R]]",
       "[R' D' R U': [U', R' D R]]",
+      "[R' U D: [R D R', U]]",
       "[r': [L' D2 L, U]]",
       "[r2: [B2, r U r']]",
-      "[R' U D: [R D R', U]]",
       "[R': [L' D2 L, U]]",
       "[x U: [R', U L2 U']]",
       "[R F R': [R' D' R, U2]]"
@@ -20977,8 +21024,8 @@
       "[R' U' D' R': [U', R' D R]]",
       "[R D R': [R' D2 R, U2]]",
       "[U R D: [R D' R', U2]]",
-      "[F: [U' L' U, R2]]",
       "[R D R' U' D': [R D R', U2]]",
+      "[F: [U' L' U, R2]]",
       "[U R U D': [R' D' R, U2]]",
       "[R' U2: [R, U' R' F R U]]",
       "[R D2 R': [R' D R, U2]]",
@@ -21026,9 +21073,9 @@
         "LDF",
         "UFR"
       ],
-      "FDL": [
-        "RUF",
-        "LUB"
+      "DFL": [
+        "FUR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -21062,9 +21109,9 @@
         "FDL",
         "UFR"
       ],
-      "FDL": [
-        "UFR",
-        "UBL"
+      "DFL": [
+        "RUF",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -21302,9 +21349,9 @@
         "DFL",
         "UFR"
       ],
-      "FDL": [
-        "FUR",
-        "BUL"
+      "DFL": [
+        "UFR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -21343,9 +21390,9 @@
         "DFR",
         "UFR"
       ],
-      "RDF": [
-        "FUR",
-        "BUL"
+      "DFR": [
+        "UFR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -21379,9 +21426,9 @@
         "FDR",
         "UFR"
       ],
-      "RDF": [
-        "RUF",
-        "LUB"
+      "DFR": [
+        "FUR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -21412,9 +21459,9 @@
         "RDF",
         "UFR"
       ],
-      "RDF": [
-        "UFR",
-        "UBL"
+      "DFR": [
+        "RUF",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -21513,11 +21560,11 @@
     "algs": [
       "[L, U' R' U]",
       "[z: [U, R' D' R]]",
-      "[U' R' F: [D, R U R']]",
       "[R U' R' U': [U', R' D' R]]",
+      "[U' R' F: [D, R U R']]",
       "[R' F R U: [U, R' D R]]",
-      "[U: [U l F', L']]",
       "[U: [U R U', L']]",
+      "[U: [U l F', L']]",
       "r2 U R' U' r' F R F' L' x'",
       "[r2 U: [R', U' r' F]]",
       "[M: [L, U' R' U]]",
@@ -21697,9 +21744,9 @@
         "DFL",
         "FUR"
       ],
-      "FDL": [
-        "RUF",
-        "BUL"
+      "DFL": [
+        "FUR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -21736,9 +21783,9 @@
         "LDF",
         "FUR"
       ],
-      "FDL": [
-        "UFR",
-        "LUB"
+      "DFL": [
+        "RUF",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -21991,9 +22038,9 @@
         "FDL",
         "FUR"
       ],
-      "FDL": [
-        "FUR",
-        "UBL"
+      "DFL": [
+        "UFR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -22037,9 +22084,9 @@
         "RDF",
         "FUR"
       ],
-      "RDF": [
-        "FUR",
-        "UBL"
+      "DFR": [
+        "UFR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -22079,9 +22126,9 @@
         "DFR",
         "FUR"
       ],
-      "RDF": [
-        "RUF",
-        "BUL"
+      "DFR": [
+        "FUR",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -22121,9 +22168,9 @@
         "FDR",
         "FUR"
       ],
-      "RDF": [
-        "UFR",
-        "LUB"
+      "DFR": [
+        "RUF",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -22403,9 +22450,9 @@
         "FDL",
         "RUF"
       ],
-      "FDL": [
-        "RUF",
-        "UBL"
+      "DFL": [
+        "FUR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -22452,9 +22499,9 @@
         "DFL",
         "RUF"
       ],
-      "FDL": [
-        "UFR",
-        "BUL"
+      "DFL": [
+        "RUF",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -22517,8 +22564,8 @@
       "[D' R B': [D, R' U' R]]",
       "[D' R' U: [U, R' D' R]]",
       "[F': [U, L' D' L]]",
-      "[x' U' D': [R' D R, U']]",
       "[f' U: [U, R D' R']]",
+      "[x' U' D': [R' D R, U']]",
       "[R': [L U L', D2]]",
       "[D R B' R': [U, R' D R]]",
       "[x: [D, L' U2 L]]"
@@ -22669,7 +22716,6 @@
       "[D' x': [D', R U' R']]",
       "[l D': [R' D' R, U']]",
       "[R B' R' D: [R D' R', U']]",
-      "f' R U R' U' R' F R U D' R U' R' D S",
       "[x' U' D': [R' D R, U2]]",
       "[y: [R2, D' L D]]",
       "[x U: [D2, R U R']]"
@@ -22717,9 +22763,9 @@
         "LDF",
         "RUF"
       ],
-      "FDL": [
-        "FUR",
-        "LUB"
+      "DFL": [
+        "UFR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -22755,9 +22801,9 @@
         "FDR",
         "RUF"
       ],
-      "RDF": [
-        "FUR",
-        "LUB"
+      "DFR": [
+        "UFR",
+        "BUL"
       ]
     },
     "scrambles": [
@@ -22802,9 +22848,9 @@
         "RDF",
         "RUF"
       ],
-      "RDF": [
-        "RUF",
-        "UBL"
+      "DFR": [
+        "FUR",
+        "LUB"
       ]
     },
     "scrambles": [
@@ -22842,9 +22888,9 @@
         "DFR",
         "RUF"
       ],
-      "RDF": [
-        "UFR",
-        "BUL"
+      "DFR": [
+        "RUF",
+        "UBL"
       ]
     },
     "scrambles": [
@@ -22864,9 +22910,9 @@
   },
   "JGA": {
     "algs": [
-      "[R F R': [R' D' R, U]]",
-      "[R F' R': [R' D R, U]]",
       "[R' D R U: [R' D' R, U2]]",
+      "[R F' R': [R' D R, U]]",
+      "[R F R': [R' D' R, U]]",
       "[R' D' R U: [R' D R, U2]]",
       "[l D: [R' D' R, U]]",
       "[l: [U', R D2 R']]",
@@ -23107,9 +23153,9 @@
         "LDF",
         "UFR"
       ],
-      "FDL": [
-        "RUF",
-        "BUR"
+      "DFL": [
+        "FUR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -23142,9 +23188,9 @@
         "FDL",
         "UFR"
       ],
-      "FDL": [
-        "UFR",
-        "UBR"
+      "DFL": [
+        "RUF",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -23170,8 +23216,8 @@
       "[x': [R' D' R, U2]]",
       "l' U' R D2 R' U R D2 x'",
       "[l' U' l, B2]",
-      "[U D' R D' R': [U', R' D R]]",
       "[R' U R' D': [D', R U' R']]",
+      "[U D' R D' R': [U', R' D R]]",
       "[R U' R D: [R' U R, D2]]",
       "[l' D: [R' D' R, U]]"
     ],
@@ -23373,9 +23419,9 @@
         "DFL",
         "UFR"
       ],
-      "FDL": [
-        "FUR",
-        "RUB"
+      "DFL": [
+        "UFR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -23414,9 +23460,9 @@
         "DFR",
         "UFR"
       ],
-      "RDF": [
-        "FUR",
-        "RUB"
+      "DFR": [
+        "UFR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -23450,9 +23496,9 @@
         "FDR",
         "UFR"
       ],
-      "RDF": [
-        "RUF",
-        "BUR"
+      "DFR": [
+        "FUR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -23483,9 +23529,9 @@
         "RDF",
         "UFR"
       ],
-      "RDF": [
-        "UFR",
-        "UBR"
+      "DFR": [
+        "RUF",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -23752,9 +23798,9 @@
         "DFL",
         "FUR"
       ],
-      "FDL": [
-        "RUF",
-        "RUB"
+      "DFL": [
+        "FUR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -23790,9 +23836,9 @@
         "LDF",
         "FUR"
       ],
-      "FDL": [
-        "UFR",
-        "BUR"
+      "DFL": [
+        "RUF",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -23879,8 +23925,8 @@
     "algs": [
       "[R, U' L U]",
       "[U' R U: [D', R' U' R]]",
-      "[R B': [R' U R, D']]",
       "[D' R U': [R' U R, D]]",
+      "[R B': [R' U R, D']]",
       "[z: [D, R' U R]]"
     ],
     "buffers": {
@@ -24026,9 +24072,9 @@
         "FDL",
         "FUR"
       ],
-      "FDL": [
-        "FUR",
-        "UBR"
+      "DFL": [
+        "UFR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -24062,9 +24108,9 @@
         "RDF",
         "FUR"
       ],
-      "RDF": [
-        "FUR",
-        "UBR"
+      "DFR": [
+        "UFR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -24097,9 +24143,9 @@
         "DFR",
         "FUR"
       ],
-      "RDF": [
-        "RUF",
-        "RUB"
+      "DFR": [
+        "FUR",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -24133,9 +24179,9 @@
         "FDR",
         "FUR"
       ],
-      "RDF": [
-        "UFR",
-        "BUR"
+      "DFR": [
+        "RUF",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -24414,9 +24460,9 @@
         "FDL",
         "RUF"
       ],
-      "FDL": [
-        "RUF",
-        "UBR"
+      "DFL": [
+        "FUR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -24440,9 +24486,9 @@
       "[U R U' D: [R' D' R, U2]]",
       "[f' U': [R' D' R, U2]]",
       "[F' U': [R' D' R, U2]]",
+      "[R D2 R': [U, R' D R]]",
       "[D R' D' R, U' R B' R']",
       "[U R: [U2, R D2 R']]",
-      "[R D2 R': [U, R' D R]]",
       "[U' D l U: [R' D' R, U2]]",
       "[D R' F' R U: [R' D' R, U2]]",
       "[y R: [U2, R D' R']]",
@@ -24458,9 +24504,9 @@
         "DFL",
         "RUF"
       ],
-      "FDL": [
-        "UFR",
-        "RUB"
+      "DFL": [
+        "RUF",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -24699,9 +24745,9 @@
         "LDF",
         "RUF"
       ],
-      "FDL": [
-        "FUR",
-        "BUR"
+      "DFL": [
+        "UFR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -24736,9 +24782,9 @@
         "FDR",
         "RUF"
       ],
-      "RDF": [
-        "FUR",
-        "BUR"
+      "DFR": [
+        "UFR",
+        "RUB"
       ]
     },
     "scrambles": [
@@ -24774,9 +24820,9 @@
         "RDF",
         "RUF"
       ],
-      "RDF": [
-        "RUF",
-        "UBR"
+      "DFR": [
+        "FUR",
+        "BUR"
       ]
     },
     "scrambles": [
@@ -24804,9 +24850,9 @@
       "[B: [R' D' R, U2]]",
       "[D': [D R' D' R, U' R B' R']]",
       "[R: [U', R2 D R2 D' R2]]",
+      "[U D' R U' D: [R' D' R, U2]]",
       "[B2: [D2, R U R']]",
       "[U' R' D': [R' D' R, U2]]",
-      "[U D' R U' D: [R' D' R, U2]]",
       "[U' l U: [R' D' R, U2]]",
       "[U D' R: [U2, R D2 R']]",
       "[U' L: [U2, L D' L']]",
@@ -24821,9 +24867,9 @@
         "DFR",
         "RUF"
       ],
-      "RDF": [
-        "UFR",
-        "RUB"
+      "DFR": [
+        "RUF",
+        "UBR"
       ]
     },
     "scrambles": [
@@ -24854,9 +24900,9 @@
         "UFR",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "RUF"
+      "DFL": [
+        "LUF",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -24878,8 +24924,8 @@
     "algs": [
       "[D R': [F2, R D' R' D]]",
       "[U2 R': [R' D R, U2]]",
-      "[R' F R U' D: [R' D' R, U2]]",
       "[U R U R': [R' D R, U2]]",
+      "[R' F R U' D: [R' D' R, U2]]",
       "[D L' D': [U2, R' D R]]"
     ],
     "buffers": {
@@ -24891,9 +24937,9 @@
         "FUR",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "RUF"
+      "DFL": [
+        "UFL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -24928,9 +24974,9 @@
         "RUF",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "RUF"
+      "DFL": [
+        "FUL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -24962,9 +25008,9 @@
         "UFR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "RUF"
+      "DFL": [
+        "BUL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25000,9 +25046,9 @@
         "FUR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "RUF"
+      "DFL": [
+        "UBL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25040,9 +25086,9 @@
         "RUF",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "RUF"
+      "DFL": [
+        "LUB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25073,9 +25119,9 @@
         "UFR",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "RUF"
+      "DFL": [
+        "RUB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25107,9 +25153,9 @@
         "FUR",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "RUF"
+      "DFL": [
+        "UBR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25144,9 +25190,9 @@
         "RUF",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "RUF"
+      "DFL": [
+        "BUR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25179,9 +25225,9 @@
         "LDF",
         "DBL"
       ],
-      "FDL": [
-        "BDL",
-        "RUF"
+      "DFL": [
+        "LDB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25213,9 +25259,9 @@
         "LDF",
         "BDL"
       ],
-      "FDL": [
-        "LDB",
-        "RUF"
+      "DFL": [
+        "DBL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25239,17 +25285,17 @@
       "[R' D R: [D, R U R']]",
       "[z': [R U' R', D']]",
       "[D F: [R U' R', D]]",
-      "[R B' R' U: [U, R' D R]]",
-      "[U R' D R: [U', R' D' R U' R D' R']]"
+      "[U R' D R: [U', R' D' R U' R D' R']]",
+      "[R B' R' U: [U, R' D R]]"
     ],
     "buffers": {
       "UFR": [
         "LDF",
         "LDB"
       ],
-      "FDL": [
-        "DBL",
-        "RUF"
+      "DFL": [
+        "BDL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25281,9 +25327,9 @@
         "LDF",
         "DBR"
       ],
-      "FDL": [
-        "RDB",
-        "RUF"
+      "DFL": [
+        "BDR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25313,9 +25359,9 @@
         "LDF",
         "RDB"
       ],
-      "FDL": [
-        "BDR",
-        "RUF"
+      "DFL": [
+        "DBR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25347,9 +25393,9 @@
         "LDF",
         "BDR"
       ],
-      "FDL": [
-        "DBR",
-        "RUF"
+      "DFL": [
+        "RDB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25381,13 +25427,13 @@
         "LDF",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "DFL"
+      "DFR": [
+        "UFR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "RUF"
+      "DFL": [
+        "RDF",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25415,13 +25461,13 @@
         "LDF",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "FDL"
+      "DFR": [
+        "FUR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "RUF"
+      "DFL": [
+        "DFR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25454,13 +25500,13 @@
         "LDF",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "LDF"
+      "DFR": [
+        "RUF",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "RUF"
+      "DFL": [
+        "FDR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -25492,9 +25538,9 @@
         "UFR",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "UFR"
+      "DFL": [
+        "FUL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25527,9 +25573,9 @@
         "FUR",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "UFR"
+      "DFL": [
+        "LUF",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25563,9 +25609,9 @@
         "RUF",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "UFR"
+      "DFL": [
+        "UFL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25600,9 +25646,9 @@
         "UFR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "UFR"
+      "DFL": [
+        "LUB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25640,9 +25686,9 @@
         "FUR",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "UFR"
+      "DFL": [
+        "BUL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25690,9 +25736,9 @@
         "RUF",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "UFR"
+      "DFL": [
+        "UBL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25725,9 +25771,9 @@
         "UFR",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "UFR"
+      "DFL": [
+        "BUR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25763,9 +25809,9 @@
         "FUR",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "UFR"
+      "DFL": [
+        "RUB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25789,9 +25835,9 @@
       "[U R U D: [R' D' R, U2]]",
       "[f' U: [R' D' R, U2]]",
       "[F' U: [R' D' R, U2]]",
+      "[R D2 R': [R' D R, U]]",
       "[U' R B' R', D R' D' R]",
       "[U R: [R D2 R', U2]]",
-      "[R D2 R': [R' D R, U]]",
       "[D R' F' R U': [R' D' R, U2]]",
       "[y R: [R D' R', U2]]",
       "[F2: [R' D R, U]]",
@@ -25806,9 +25852,9 @@
         "RUF",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "UFR"
+      "DFL": [
+        "UBR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25829,8 +25875,8 @@
   "JNO": {
     "algs": [
       "[D R D: [U, R' D' R]]",
-      "[L, D' R2 D]",
       "[D R: [R D2 R', U']]",
+      "[L, D' R2 D]",
       "[R' D: [R D' R' D, F']]",
       "[l' D: [R' D' R, U']]",
       "[z' U': [R U R', D']]",
@@ -25843,9 +25889,9 @@
         "FDL",
         "DBL"
       ],
-      "FDL": [
-        "DBL",
-        "UFR"
+      "DFL": [
+        "BDL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25880,9 +25926,9 @@
         "FDL",
         "BDL"
       ],
-      "FDL": [
-        "BDL",
-        "UFR"
+      "DFL": [
+        "LDB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25903,8 +25949,8 @@
   "JNQ": {
     "algs": [
       "[D: [R U R', D]]",
-      "[R' F' R: [R D' R', U']]",
       "[L' U L, D]",
+      "[R' F' R: [R D' R', U']]",
       "[y: [D', R' U2 R]]"
     ],
     "buffers": {
@@ -25912,9 +25958,9 @@
         "FDL",
         "LDB"
       ],
-      "FDL": [
-        "LDB",
-        "UFR"
+      "DFL": [
+        "DBL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25945,9 +25991,9 @@
         "FDL",
         "DBR"
       ],
-      "FDL": [
-        "DBR",
-        "UFR"
+      "DFL": [
+        "RDB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -25978,9 +26024,9 @@
         "FDL",
         "RDB"
       ],
-      "FDL": [
-        "RDB",
-        "UFR"
+      "DFL": [
+        "BDR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -26011,9 +26057,9 @@
         "FDL",
         "BDR"
       ],
-      "FDL": [
-        "BDR",
-        "UFR"
+      "DFL": [
+        "DBR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -26045,13 +26091,13 @@
         "FDL",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "LDF"
+      "DFR": [
+        "UFR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "UFR"
+      "DFL": [
+        "FDR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -26084,13 +26130,13 @@
         "FDL",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "DFL"
+      "DFR": [
+        "FUR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "UFR"
+      "DFL": [
+        "RDF",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -26117,13 +26163,13 @@
         "FDL",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "FDL"
+      "DFR": [
+        "RUF",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "UFR"
+      "DFL": [
+        "DFR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -26465,9 +26511,9 @@
         "DBL",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "BDL"
+      "DFL": [
+        "FUR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -26502,9 +26548,9 @@
         "DBL",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "DBL"
+      "DFL": [
+        "RUF",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -26634,9 +26680,9 @@
         "DBL",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "LDB"
+      "DFL": [
+        "UFR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -26668,9 +26714,9 @@
         "DBL",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "LDB"
+      "DFR": [
+        "UFR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -26707,9 +26753,9 @@
         "DBL",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "BDL"
+      "DFR": [
+        "FUR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -26739,9 +26785,9 @@
         "DBL",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "DBL"
+      "DFR": [
+        "RUF",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -26939,8 +26985,8 @@
       "[U R' F R: [U', R D' R']]",
       "[D' R B': [R' U' R, D]]",
       "[F': [L' D' L, U]]",
-      "[x' U2 D': [R' D R, U]]",
       "[f' U: [R D' R', U]]",
+      "[x' U2 D': [R' D R, U]]",
       "[R': [D2, L U L']]",
       "[D R B' R': [R' D R, U]]",
       "[D' R' U: [R' D' R, U]]",
@@ -27084,9 +27130,9 @@
         "BDL",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "LDB"
+      "DFL": [
+        "FUR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -27123,9 +27169,9 @@
         "BDL",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "BDL"
+      "DFL": [
+        "RUF",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -27247,9 +27293,9 @@
         "BDL",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "DBL"
+      "DFL": [
+        "UFR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -27280,9 +27326,9 @@
         "BDL",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "DBL"
+      "DFR": [
+        "UFR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -27313,9 +27359,9 @@
         "BDL",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "LDB"
+      "DFR": [
+        "FUR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -27348,9 +27394,9 @@
         "BDL",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "BDL"
+      "DFR": [
+        "RUF",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -27439,8 +27485,8 @@
       "[R' U' R: [R D' R', U']]",
       "[L2, U' R' U]",
       "[U': [U r2 D', R']]",
-      "[F: [R U R', D2]]",
       "[z: [U2, R' D' R]]",
+      "[F: [R U R', D2]]",
       "[F, R D' R D R2]"
     ],
     "buffers": {
@@ -27616,8 +27662,8 @@
     "algs": [
       "[U' L U, R]",
       "[U' R U: [R' U' R, D']]",
-      "[R B': [D', R' U R]]",
       "[D' R U': [D, R' U R]]",
+      "[R B': [D', R' U R]]",
       "[z: [R' U R, D]]",
       "[z' U: [R D R', U]]"
     ],
@@ -27684,17 +27730,17 @@
       "[z': [D', R U' R']]",
       "[D: [R, U L' U']]",
       "[D F: [D, R U' R']]",
-      "[R B' R' U: [R' D R, U]]",
-      "[R D' R': [U', R D R' U R' D R]]"
+      "[R D' R': [U', R D R' U R' D R]]",
+      "[R B' R' U: [R' D R, U]]"
     ],
     "buffers": {
       "UFR": [
         "LDB",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "DBL"
+      "DFL": [
+        "FUR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -27724,9 +27770,9 @@
         "LDB",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "LDB"
+      "DFL": [
+        "RUF",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -27843,9 +27889,9 @@
         "LDB",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "BDL"
+      "DFL": [
+        "UFR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -27881,9 +27927,9 @@
         "LDB",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "BDL"
+      "DFR": [
+        "UFR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -27917,9 +27963,9 @@
         "LDB",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "DBL"
+      "DFR": [
+        "FUR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -27948,9 +27994,9 @@
         "LDB",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "LDB"
+      "DFR": [
+        "RUF",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -28234,8 +28280,8 @@
   },
   "JRI": {
     "algs": [
-      "[F': [R D R', U2]]",
       "[f': [R D R', U2]]",
+      "[F': [R D R', U2]]",
       "[U R U D': [R' D R, U2]]",
       "[R': [U, R2 D' R2 D R2]]",
       "[R': [U, R' D R U' R D' R']]",
@@ -28286,9 +28332,9 @@
         "DBR",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "RDB"
+      "DFL": [
+        "FUR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -28320,9 +28366,9 @@
         "DBR",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "DBR"
+      "DFL": [
+        "RUF",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -28437,9 +28483,9 @@
         "DBR",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "BDR"
+      "DFL": [
+        "UFR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -28476,9 +28522,9 @@
         "DBR",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "BDR"
+      "DFR": [
+        "UFR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -28503,6 +28549,7 @@
       "[U' D R': [U, R' D2 R]]",
       "[U: [D L2 D', R']]",
       "[y L': [U, L' D2 L]]",
+      "[U' D' R' D R: [U', R D' R']]",
       "[f' U': [R D R', U']]"
     ],
     "buffers": {
@@ -28510,9 +28557,9 @@
         "DBR",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "RDB"
+      "DFR": [
+        "FUR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -28549,9 +28596,9 @@
         "DBR",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "DBR"
+      "DFR": [
+        "RUF",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -28878,9 +28925,9 @@
         "RDB",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "BDR"
+      "DFL": [
+        "FUR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -28911,9 +28958,9 @@
         "RDB",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "RDB"
+      "DFL": [
+        "RUF",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -29031,9 +29078,9 @@
         "RDB",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "DBR"
+      "DFL": [
+        "UFR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -29066,9 +29113,9 @@
         "RDB",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "DBR"
+      "DFR": [
+        "UFR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -29098,9 +29145,9 @@
         "RDB",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "BDR"
+      "DFR": [
+        "FUR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -29131,9 +29178,9 @@
         "RDB",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "RDB"
+      "DFR": [
+        "RUF",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -29155,6 +29202,7 @@
     "algs": [
       "[D': [U', R' D' R]]",
       "[U2 D: [R D' R', U]]",
+      "[R U R': [D, R' U R]]",
       "[L D2 L', U]",
       "[y U': [U', R' D' R]]"
     ],
@@ -29321,9 +29369,9 @@
       "[D' R': [D, R' U R]]",
       "[R2 U': [R D R', U2]]",
       "[U' R' U' R: [U, R D R']]",
-      "D' R U R' U' D R' F' R U R U' R' F",
       "[L: [L D2 L', U]]",
       "[R U R' U: [R U' R', D']]",
+      "D' R U R' U' D R' F' R U R U' R' F",
       "[D' x': [R U' R', D']]",
       "[l D': [U', R' D' R]]",
       "[R B' R' D: [U', R D' R']]",
@@ -29467,9 +29515,9 @@
         "BDR",
         "LDF"
       ],
-      "FDL": [
-        "RUF",
-        "DBR"
+      "DFL": [
+        "FUR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -29500,9 +29548,9 @@
         "BDR",
         "FDL"
       ],
-      "FDL": [
-        "UFR",
-        "BDR"
+      "DFL": [
+        "RUF",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -29626,9 +29674,9 @@
         "BDR",
         "DFL"
       ],
-      "FDL": [
-        "FUR",
-        "RDB"
+      "DFL": [
+        "UFR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -29659,9 +29707,9 @@
         "BDR",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "RDB"
+      "DFR": [
+        "UFR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -29695,9 +29743,9 @@
         "BDR",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "DBR"
+      "DFR": [
+        "FUR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -29724,9 +29772,9 @@
         "BDR",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "BDR"
+      "DFR": [
+        "RUF",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -29751,8 +29799,8 @@
       "[U' x': [D2, R U R']]",
       "x' F' D2 R U R' D2 R U' l' U",
       "[x' F': [D2, R U R']]",
-      "[U' R F': [R' U' R, D]]",
       "[R D R' D': [U', R' D' R]]",
+      "[U' R F': [R' U' R, D]]",
       "[D: [U', R' D R U' R D' R']]",
       "[D': [D' R2 D, L2]]",
       "[D2: [R2, D r2 U']]",
@@ -29771,9 +29819,9 @@
         "UFR",
         "DFL"
       ],
-      "FDL": [
-        "LUF",
-        "FUR"
+      "DFL": [
+        "UFL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -29794,8 +29842,8 @@
   "JWB": {
     "algs": [
       "[R U' D: [R' D' R, U2]]",
-      "[R: [U2, R D2 R']]",
       "[D' R: [U2, R D' R']]",
+      "[R: [U2, R D2 R']]",
       "[R D': [U2, R D' R']]",
       "[U D' R' U' R: [U2, R D' R']]"
     ],
@@ -29808,9 +29856,9 @@
         "FUR",
         "FDL"
       ],
-      "FDL": [
-        "UFL",
-        "FUR"
+      "DFL": [
+        "FUL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -29843,9 +29891,9 @@
         "RUF",
         "LDF"
       ],
-      "FDL": [
-        "FUL",
-        "FUR"
+      "DFL": [
+        "LUF",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -29889,9 +29937,9 @@
         "UFR",
         "DFL"
       ],
-      "FDL": [
-        "BUL",
-        "FUR"
+      "DFL": [
+        "UBL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -29929,9 +29977,9 @@
         "FUR",
         "FDL"
       ],
-      "FDL": [
-        "UBL",
-        "FUR"
+      "DFL": [
+        "LUB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -29967,9 +30015,9 @@
         "RUF",
         "LDF"
       ],
-      "FDL": [
-        "LUB",
-        "FUR"
+      "DFL": [
+        "BUL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30007,9 +30055,9 @@
         "UFR",
         "DFL"
       ],
-      "FDL": [
-        "RUB",
-        "FUR"
+      "DFL": [
+        "UBR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30047,9 +30095,9 @@
         "FUR",
         "FDL"
       ],
-      "FDL": [
-        "UBR",
-        "FUR"
+      "DFL": [
+        "BUR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30082,9 +30130,9 @@
         "RUF",
         "LDF"
       ],
-      "FDL": [
-        "BUR",
-        "FUR"
+      "DFL": [
+        "RUB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30121,9 +30169,9 @@
         "DFL",
         "DBL"
       ],
-      "FDL": [
-        "LDB",
-        "FUR"
+      "DFL": [
+        "DBL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30160,9 +30208,9 @@
         "DFL",
         "BDL"
       ],
-      "FDL": [
-        "DBL",
-        "FUR"
+      "DFL": [
+        "BDL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30198,9 +30246,9 @@
         "DFL",
         "LDB"
       ],
-      "FDL": [
-        "BDL",
-        "FUR"
+      "DFL": [
+        "LDB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30232,9 +30280,9 @@
         "DFL",
         "DBR"
       ],
-      "FDL": [
-        "BDR",
-        "FUR"
+      "DFL": [
+        "DBR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30266,9 +30314,9 @@
         "DFL",
         "RDB"
       ],
-      "FDL": [
-        "DBR",
-        "FUR"
+      "DFL": [
+        "RDB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30299,9 +30347,9 @@
         "DFL",
         "BDR"
       ],
-      "FDL": [
-        "RDB",
-        "FUR"
+      "DFL": [
+        "BDR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30324,8 +30372,8 @@
       "[D, R2 U R2 U' R2]",
       "[U' R' F': [R U' R', D']]",
       "[R U' R' D: [R' D' R, U2]]",
-      "[U' R' U R: [D, R U' R']]",
       "[U': [R2, U' L2 U]]",
+      "[U' R' U R: [D, R U' R']]",
       "[R U' R' U': [R D2 R', U2]]",
       "[z R': [D2, R' U2 R]]"
     ],
@@ -30334,13 +30382,13 @@
         "DFL",
         "DFR"
       ],
-      "RDF": [
-        "FUR",
-        "FDL"
+      "DFR": [
+        "UFR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "FUR"
+      "DFL": [
+        "DFR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30377,13 +30425,13 @@
         "DFL",
         "FDR"
       ],
-      "RDF": [
-        "RUF",
-        "LDF"
+      "DFR": [
+        "FUR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "FUR"
+      "DFL": [
+        "FDR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30412,13 +30460,13 @@
         "DFL",
         "RDF"
       ],
-      "RDF": [
-        "UFR",
-        "DFL"
+      "DFR": [
+        "RUF",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "FUR"
+      "DFL": [
+        "RDF",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30453,9 +30501,9 @@
         "UFR",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "FUR"
+      "DFR": [
+        "UFL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30492,9 +30540,9 @@
         "FUR",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "FUR"
+      "DFR": [
+        "FUL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30531,9 +30579,9 @@
         "RUF",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "FUR"
+      "DFR": [
+        "LUF",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30574,9 +30622,9 @@
         "UFR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "FUR"
+      "DFR": [
+        "UBL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30620,9 +30668,9 @@
         "FUR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "FUR"
+      "DFR": [
+        "LUB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30658,9 +30706,9 @@
         "RUF",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "FUR"
+      "DFR": [
+        "BUL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30699,9 +30747,9 @@
         "UFR",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "FUR"
+      "DFR": [
+        "UBR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30735,9 +30783,9 @@
         "FUR",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "FUR"
+      "DFR": [
+        "BUR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30772,9 +30820,9 @@
         "RUF",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "FUR"
+      "DFR": [
+        "RUB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30806,13 +30854,13 @@
         "DFR",
         "LDF"
       ],
-      "RDF": [
-        "DFL",
-        "FUR"
+      "DFR": [
+        "LDF",
+        "UFR"
       ],
-      "FDL": [
-        "RUF",
-        "FDR"
+      "DFL": [
+        "FUR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -30844,13 +30892,13 @@
         "DFR",
         "FDL"
       ],
-      "RDF": [
-        "LDF",
-        "FUR"
+      "DFR": [
+        "FDL",
+        "UFR"
       ],
-      "FDL": [
-        "UFR",
-        "DFR"
+      "DFL": [
+        "RUF",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -30882,9 +30930,9 @@
         "DFR",
         "DBL"
       ],
-      "RDF": [
-        "LDB",
-        "FUR"
+      "DFR": [
+        "DBL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30916,9 +30964,9 @@
         "DFR",
         "BDL"
       ],
-      "RDF": [
-        "DBL",
-        "FUR"
+      "DFR": [
+        "BDL",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30954,9 +31002,9 @@
         "DFR",
         "LDB"
       ],
-      "RDF": [
-        "BDL",
-        "FUR"
+      "DFR": [
+        "LDB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -30993,9 +31041,9 @@
         "DFR",
         "DBR"
       ],
-      "RDF": [
-        "BDR",
-        "FUR"
+      "DFR": [
+        "DBR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -31028,9 +31076,9 @@
         "DFR",
         "RDB"
       ],
-      "RDF": [
-        "DBR",
-        "FUR"
+      "DFR": [
+        "RDB",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -31061,9 +31109,9 @@
         "DFR",
         "BDR"
       ],
-      "RDF": [
-        "RDB",
-        "FUR"
+      "DFR": [
+        "BDR",
+        "UFR"
       ]
     },
     "scrambles": [
@@ -31086,8 +31134,8 @@
       "[R2 U R2 U' R2, D]",
       "[U' R' F': [D', R U' R']]",
       "[R U' R' D: [U2, R' D' R]]",
-      "[U' R' U R: [R U' R', D]]",
       "[U': [U' L2 U, R2]]",
+      "[U' R' U R: [R U' R', D]]",
       "[R U' R' U: [R D2 R', U2]]",
       "[z R': [R' U2 R, D2]]"
     ],
@@ -31096,13 +31144,13 @@
         "DFR",
         "DFL"
       ],
-      "RDF": [
-        "FDL",
-        "FUR"
+      "DFR": [
+        "DFL",
+        "UFR"
       ],
-      "FDL": [
-        "FUR",
-        "RDF"
+      "DFL": [
+        "UFR",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -31134,9 +31182,9 @@
         "UFR",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "RUF"
+      "DFR": [
+        "LUF",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31172,9 +31220,9 @@
         "FUR",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "RUF"
+      "DFR": [
+        "UFL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31211,9 +31259,9 @@
         "RUF",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "RUF"
+      "DFR": [
+        "FUL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31248,9 +31296,9 @@
         "UFR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "RUF"
+      "DFR": [
+        "BUL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31290,9 +31338,9 @@
         "FUR",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "RUF"
+      "DFR": [
+        "UBL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31335,9 +31383,9 @@
         "RUF",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "RUF"
+      "DFR": [
+        "LUB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31371,9 +31419,9 @@
         "UFR",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "RUF"
+      "DFR": [
+        "RUB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31406,9 +31454,9 @@
         "FUR",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "RUF"
+      "DFR": [
+        "UBR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31446,9 +31494,9 @@
         "RUF",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "RUF"
+      "DFR": [
+        "BUR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31476,13 +31524,13 @@
         "FDR",
         "LDF"
       ],
-      "RDF": [
-        "FDL",
-        "RUF"
+      "DFR": [
+        "DFL",
+        "FUR"
       ],
-      "FDL": [
-        "RUF",
-        "RDF"
+      "DFL": [
+        "FUR",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -31515,13 +31563,13 @@
         "FDR",
         "FDL"
       ],
-      "RDF": [
-        "DFL",
-        "RUF"
+      "DFR": [
+        "LDF",
+        "FUR"
       ],
-      "FDL": [
-        "UFR",
-        "FDR"
+      "DFL": [
+        "RUF",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -31557,9 +31605,9 @@
         "FDR",
         "DBL"
       ],
-      "RDF": [
-        "BDL",
-        "RUF"
+      "DFR": [
+        "LDB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31590,9 +31638,9 @@
         "FDR",
         "BDL"
       ],
-      "RDF": [
-        "LDB",
-        "RUF"
+      "DFR": [
+        "DBL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31626,9 +31674,9 @@
         "FDR",
         "LDB"
       ],
-      "RDF": [
-        "DBL",
-        "RUF"
+      "DFR": [
+        "BDL",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31661,9 +31709,9 @@
         "FDR",
         "DBR"
       ],
-      "RDF": [
-        "RDB",
-        "RUF"
+      "DFR": [
+        "BDR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31693,9 +31741,9 @@
         "FDR",
         "RDB"
       ],
-      "RDF": [
-        "BDR",
-        "RUF"
+      "DFR": [
+        "DBR",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31729,9 +31777,9 @@
         "FDR",
         "BDR"
       ],
-      "RDF": [
-        "DBR",
-        "RUF"
+      "DFR": [
+        "RDB",
+        "FUR"
       ]
     },
     "scrambles": [
@@ -31766,13 +31814,13 @@
         "FDR",
         "DFL"
       ],
-      "RDF": [
-        "LDF",
-        "RUF"
+      "DFR": [
+        "FDL",
+        "FUR"
       ],
-      "FDL": [
-        "FUR",
-        "DFR"
+      "DFL": [
+        "UFR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -31803,9 +31851,9 @@
         "UFR",
         "RDF"
       ],
-      "RDF": [
-        "UFL",
-        "UFR"
+      "DFR": [
+        "FUL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -31840,9 +31888,9 @@
         "FUR",
         "FDR"
       ],
-      "RDF": [
-        "FUL",
-        "UFR"
+      "DFR": [
+        "LUF",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -31876,9 +31924,9 @@
         "RUF",
         "DFR"
       ],
-      "RDF": [
-        "LUF",
-        "UFR"
+      "DFR": [
+        "UFL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -31911,9 +31959,9 @@
         "UFR",
         "RDF"
       ],
-      "RDF": [
-        "UBL",
-        "UFR"
+      "DFR": [
+        "LUB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -31954,9 +32002,9 @@
         "FUR",
         "FDR"
       ],
-      "RDF": [
-        "LUB",
-        "UFR"
+      "DFR": [
+        "BUL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -31994,9 +32042,9 @@
         "RUF",
         "DFR"
       ],
-      "RDF": [
-        "BUL",
-        "UFR"
+      "DFR": [
+        "UBL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32027,9 +32075,9 @@
         "UFR",
         "RDF"
       ],
-      "RDF": [
-        "UBR",
-        "UFR"
+      "DFR": [
+        "BUR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32064,9 +32112,9 @@
         "FUR",
         "FDR"
       ],
-      "RDF": [
-        "BUR",
-        "UFR"
+      "DFR": [
+        "RUB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32109,9 +32157,9 @@
         "RUF",
         "DFR"
       ],
-      "RDF": [
-        "RUB",
-        "UFR"
+      "DFR": [
+        "UBR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32143,13 +32191,13 @@
         "RDF",
         "LDF"
       ],
-      "RDF": [
-        "LDF",
-        "UFR"
+      "DFR": [
+        "FDL",
+        "RUF"
       ],
-      "FDL": [
-        "RUF",
-        "DFR"
+      "DFL": [
+        "FUR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -32176,13 +32224,13 @@
         "RDF",
         "FDL"
       ],
-      "RDF": [
-        "FDL",
-        "UFR"
+      "DFR": [
+        "DFL",
+        "RUF"
       ],
-      "FDL": [
-        "UFR",
-        "RDF"
+      "DFL": [
+        "RUF",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -32212,9 +32260,9 @@
         "RDF",
         "DBL"
       ],
-      "RDF": [
-        "DBL",
-        "UFR"
+      "DFR": [
+        "BDL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32246,9 +32294,9 @@
         "RDF",
         "BDL"
       ],
-      "RDF": [
-        "BDL",
-        "UFR"
+      "DFR": [
+        "LDB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32278,9 +32326,9 @@
         "RDF",
         "LDB"
       ],
-      "RDF": [
-        "LDB",
-        "UFR"
+      "DFR": [
+        "DBL",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32316,9 +32364,9 @@
         "RDF",
         "DBR"
       ],
-      "RDF": [
-        "DBR",
-        "UFR"
+      "DFR": [
+        "RDB",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32349,9 +32397,9 @@
         "RDF",
         "RDB"
       ],
-      "RDF": [
-        "RDB",
-        "UFR"
+      "DFR": [
+        "BDR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32378,9 +32426,9 @@
         "RDF",
         "BDR"
       ],
-      "RDF": [
-        "BDR",
-        "UFR"
+      "DFR": [
+        "DBR",
+        "RUF"
       ]
     },
     "scrambles": [
@@ -32409,13 +32457,13 @@
         "RDF",
         "DFL"
       ],
-      "RDF": [
-        "DFL",
-        "UFR"
+      "DFR": [
+        "LDF",
+        "RUF"
       ],
-      "FDL": [
-        "FUR",
-        "FDR"
+      "DFL": [
+        "UFR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -32441,9 +32489,9 @@
       "[F D': [D', R U' R']]"
     ],
     "buffers": {
-      "FDL": [
-        "LDB",
-        "BDR"
+      "DFL": [
+        "DBL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -32469,9 +32517,9 @@
       "[B R': [U, R' D R]]"
     ],
     "buffers": {
-      "FDL": [
-        "LDB",
-        "DBR"
+      "DFL": [
+        "DBL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -32496,9 +32544,9 @@
       "[U L': [L' U' L, D2]]"
     ],
     "buffers": {
-      "FDL": [
-        "LDB",
-        "RDB"
+      "DFL": [
+        "DBL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -32523,9 +32571,9 @@
       "[R' U R2 D': [B, D R' D' R]]"
     ],
     "buffers": {
-      "FDL": [
-        "DBL",
-        "BDR"
+      "DFL": [
+        "BDL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -32551,9 +32599,9 @@
       "[F' R F, L']"
     ],
     "buffers": {
-      "FDL": [
-        "DBL",
-        "DBR"
+      "DFL": [
+        "BDL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -32580,9 +32628,9 @@
       "[z': [D, R' U' R]]"
     ],
     "buffers": {
-      "FDL": [
-        "DBL",
-        "RDB"
+      "DFL": [
+        "BDL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -32608,9 +32656,9 @@
       "[R' U D' R D': [R' U' R, D2]]"
     ],
     "buffers": {
-      "FDL": [
-        "BDL",
-        "BDR"
+      "DFL": [
+        "LDB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -32636,9 +32684,9 @@
       "[R' l' U' D' R: [U, R D' R']]"
     ],
     "buffers": {
-      "FDL": [
-        "BDL",
-        "DBR"
+      "DFL": [
+        "LDB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -32664,9 +32712,9 @@
       "[D' R2 D: [R' D R, U]]"
     ],
     "buffers": {
-      "FDL": [
-        "BDL",
-        "RDB"
+      "DFL": [
+        "LDB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -32693,9 +32741,9 @@
       "[F D': [R U' R', D']]"
     ],
     "buffers": {
-      "FDL": [
-        "BDR",
-        "LDB"
+      "DFL": [
+        "DBR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -32720,9 +32768,9 @@
       "[R' U R D' R: [B, R' D R D']]"
     ],
     "buffers": {
-      "FDL": [
-        "BDR",
-        "DBL"
+      "DFL": [
+        "DBR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -32749,9 +32797,9 @@
       "[R' U D' R D: [R' U' R, D2]]"
     ],
     "buffers": {
-      "FDL": [
-        "BDR",
-        "BDL"
+      "DFL": [
+        "DBR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -32777,9 +32825,9 @@
       "[B R': [R' D R, U]]"
     ],
     "buffers": {
-      "FDL": [
-        "DBR",
-        "LDB"
+      "DFL": [
+        "RDB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -32805,9 +32853,9 @@
       "[L', F' R F]"
     ],
     "buffers": {
-      "FDL": [
-        "DBR",
-        "DBL"
+      "DFL": [
+        "RDB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -32833,9 +32881,9 @@
       "[R' l' U' D' R: [R D' R', U]]"
     ],
     "buffers": {
-      "FDL": [
-        "DBR",
-        "BDL"
+      "DFL": [
+        "RDB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -32860,9 +32908,9 @@
       "[U L': [D2, L' U' L]]"
     ],
     "buffers": {
-      "FDL": [
-        "RDB",
-        "LDB"
+      "DFL": [
+        "BDR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -32889,9 +32937,9 @@
       "[z': [R' U' R, D]]"
     ],
     "buffers": {
-      "FDL": [
-        "RDB",
-        "DBL"
+      "DFL": [
+        "BDR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -32917,9 +32965,9 @@
       "[D' R2 D: [U, R' D R]]"
     ],
     "buffers": {
-      "FDL": [
-        "RDB",
-        "BDL"
+      "DFL": [
+        "BDR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -32944,13 +32992,13 @@
       "[R D' R D': [R' U' R, D2]]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "LDB"
+      "DFR": [
+        "LDF",
+        "DBL"
       ],
-      "FDL": [
-        "BDL",
-        "FDR"
+      "DFL": [
+        "LDB",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -32978,13 +33026,13 @@
       "[U' D R U: [D, R U' R']]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "DBL"
+      "DFR": [
+        "LDF",
+        "BDL"
       ],
-      "FDL": [
-        "LDB",
-        "FDR"
+      "DFL": [
+        "DBL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -33011,13 +33059,13 @@
       "[z': [R U R', D']]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "BDL"
+      "DFR": [
+        "LDF",
+        "LDB"
       ],
-      "FDL": [
-        "DBL",
-        "FDR"
+      "DFL": [
+        "BDL",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -33043,13 +33091,13 @@
       "[x: [R' D' R, U']]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "BDR"
+      "DFR": [
+        "LDF",
+        "DBR"
       ],
-      "FDL": [
-        "RDB",
-        "FDR"
+      "DFL": [
+        "BDR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -33075,13 +33123,13 @@
       "[x: [R' F' R2 F R, U']]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "DBR"
+      "DFR": [
+        "LDF",
+        "RDB"
       ],
-      "FDL": [
-        "BDR",
-        "FDR"
+      "DFL": [
+        "DBR",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -33102,18 +33150,18 @@
   "XMT": {
     "algs": [
       "[R D' R' D, F']",
-      "[z': [U, R' D' R]]",
       "[x D': [R' D R, U']]",
+      "[z': [U, R' D' R]]",
       "[R F: [D, R U' R']]"
     ],
     "buffers": {
-      "RDF": [
-        "DFL",
-        "RDB"
+      "DFR": [
+        "LDF",
+        "BDR"
       ],
-      "FDL": [
-        "DBR",
-        "FDR"
+      "DFL": [
+        "RDB",
+        "RDF"
       ]
     },
     "scrambles": [
@@ -33140,13 +33188,13 @@
       "[y' x: [R' F' R2 F R, U']]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "LDB"
+      "DFR": [
+        "FDL",
+        "DBL"
       ],
-      "FDL": [
-        "DBL",
-        "DFR"
+      "DFL": [
+        "BDL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33173,13 +33221,13 @@
       "[R' D' R U' D': [R' U' R, D2]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "DBL"
+      "DFR": [
+        "FDL",
+        "BDL"
       ],
-      "FDL": [
-        "BDL",
-        "DFR"
+      "DFL": [
+        "LDB",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33206,13 +33254,13 @@
       "[z U: [L2, U R U']]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "BDL"
+      "DFR": [
+        "FDL",
+        "LDB"
       ],
-      "FDL": [
-        "LDB",
-        "DFR"
+      "DFL": [
+        "DBL",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33238,13 +33286,13 @@
       "[z' U': [U' L' U, R2]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "BDR"
+      "DFR": [
+        "FDL",
+        "DBR"
       ],
-      "FDL": [
-        "DBR",
-        "DFR"
+      "DFL": [
+        "RDB",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33268,13 +33316,13 @@
       "[R U' R' F': [R U' R', D']]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "DBR"
+      "DFR": [
+        "FDL",
+        "RDB"
       ],
-      "FDL": [
-        "RDB",
-        "DFR"
+      "DFL": [
+        "BDR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33299,13 +33347,13 @@
       "[z': [U, R' F' R2 F R]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDF",
-        "RDB"
+      "DFR": [
+        "FDL",
+        "BDR"
       ],
-      "FDL": [
-        "BDR",
-        "DFR"
+      "DFL": [
+        "DBR",
+        "FDR"
       ]
     },
     "scrambles": [
@@ -33330,13 +33378,13 @@
       "[R D' R D: [R' U' R, D2]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "DFL"
+      "DFR": [
+        "DBL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "BDL"
+      "DFL": [
+        "RDF",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -33363,13 +33411,13 @@
       "[y' x: [U', R' F' R2 F R]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "LDF"
+      "DFR": [
+        "DBL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "DBL"
+      "DFL": [
+        "FDR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -33395,9 +33443,9 @@
       "[x R: [U', R D2 R']]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "BDR"
+      "DFR": [
+        "DBL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -33422,9 +33470,9 @@
       "[x U': [R2, U' L2 U]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "DBR"
+      "DFR": [
+        "DBL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -33450,9 +33498,9 @@
       "[y' x U: [U R2 U', L2]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "RDB"
+      "DFR": [
+        "DBL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -33478,13 +33526,13 @@
       "[x U': [R, U' L2 U]]"
     ],
     "buffers": {
-      "RDF": [
-        "LDB",
-        "FDL"
+      "DFR": [
+        "DBL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "LDB"
+      "DFL": [
+        "DFR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -33512,13 +33560,13 @@
       "[U' D R U: [R U' R', D]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "DFL"
+      "DFR": [
+        "BDL",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "LDB"
+      "DFL": [
+        "RDF",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -33545,13 +33593,13 @@
       "[R' D' R U' D: [R' U' R, D2]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "LDF"
+      "DFR": [
+        "BDL",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "BDL"
+      "DFL": [
+        "FDR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -33576,9 +33624,9 @@
       "[R2 D': [U', R D R']]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "BDR"
+      "DFR": [
+        "BDL",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -33607,9 +33655,9 @@
       "[y z' U': [U' L' U, R2]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "DBR"
+      "DFR": [
+        "BDL",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -33637,9 +33685,9 @@
       "[y R: [R, U L' U']]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "RDB"
+      "DFR": [
+        "BDL",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -33667,13 +33715,13 @@
       "[D2 R' U': [D', R' U R]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBL",
-        "FDL"
+      "DFR": [
+        "BDL",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "DBL"
+      "DFL": [
+        "DFR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -33700,13 +33748,13 @@
       "[z': [D', R U R']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "DFL"
+      "DFR": [
+        "LDB",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "DBL"
+      "DFL": [
+        "RDF",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -33733,13 +33781,13 @@
       "[z U: [U R U', L2]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "LDF"
+      "DFR": [
+        "LDB",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "LDB"
+      "DFL": [
+        "FDR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -33766,9 +33814,9 @@
       "[U' D' R U: [D, R U' R']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "BDR"
+      "DFR": [
+        "LDB",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -33794,9 +33842,9 @@
       "[y R U': [R2, U' L2 U]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "DBR"
+      "DFR": [
+        "LDB",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -33823,9 +33871,9 @@
       "[x: [R, U L' U']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "RDB"
+      "DFR": [
+        "LDB",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -33853,13 +33901,13 @@
       "[y' z' U': [R2, U' L' U]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDL",
-        "FDL"
+      "DFR": [
+        "LDB",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "BDL"
+      "DFL": [
+        "DFR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -33885,13 +33933,13 @@
       "[x: [U', R' D' R]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "DFL"
+      "DFR": [
+        "DBR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "RDB"
+      "DFL": [
+        "RDF",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -33917,13 +33965,13 @@
       "[z' U': [R2, U' L' U]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "LDF"
+      "DFR": [
+        "DBR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "DBR"
+      "DFL": [
+        "FDR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -33949,9 +33997,9 @@
       "[x R: [R D2 R', U']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "LDB"
+      "DFR": [
+        "DBR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -33976,9 +34024,9 @@
       "[R2 D': [R D R', U']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "DBL"
+      "DFR": [
+        "DBR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -34005,9 +34053,9 @@
       "[U' D' R U: [R U' R', D]]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "BDL"
+      "DFR": [
+        "DBR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -34033,13 +34081,13 @@
       "[x U: [U R2 U', L']]"
     ],
     "buffers": {
-      "RDF": [
-        "BDR",
-        "FDL"
+      "DFR": [
+        "DBR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "BDR"
+      "DFL": [
+        "DFR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -34065,13 +34113,13 @@
       "[x: [U', R' F' R2 F R]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "DFL"
+      "DFR": [
+        "RDB",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "BDR"
+      "DFL": [
+        "RDF",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -34095,13 +34143,13 @@
       "[R U' R' F': [D', R U' R']]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "LDF"
+      "DFR": [
+        "RDB",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "RDB"
+      "DFL": [
+        "FDR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -34126,9 +34174,9 @@
       "[x U': [U' L2 U, R2]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "LDB"
+      "DFR": [
+        "RDB",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -34157,9 +34205,9 @@
       "[y z' U': [R2, U' L' U]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "DBL"
+      "DFR": [
+        "RDB",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -34185,9 +34233,9 @@
       "[y R U': [U' L2 U, R2]]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "BDL"
+      "DFR": [
+        "RDB",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -34213,13 +34261,13 @@
       "[D R2 D': [R D R', U']]"
     ],
     "buffers": {
-      "RDF": [
-        "DBR",
-        "FDL"
+      "DFR": [
+        "RDB",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "DBR"
+      "DFL": [
+        "DFR",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -34240,18 +34288,18 @@
   "XTM": {
     "algs": [
       "[F', R D' R' D]",
-      "[z': [R' D' R, U]]",
       "[x D': [U', R' D R]]",
+      "[z': [R' D' R, U]]",
       "[R F: [R U' R', D]]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "DFL"
+      "DFR": [
+        "BDR",
+        "LDF"
       ],
-      "FDL": [
-        "FDR",
-        "DBR"
+      "DFL": [
+        "RDF",
+        "RDB"
       ]
     },
     "scrambles": [
@@ -34276,13 +34324,13 @@
       "[z': [R' F' R2 F R, U]]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "LDF"
+      "DFR": [
+        "BDR",
+        "FDL"
       ],
-      "FDL": [
-        "DFR",
-        "BDR"
+      "DFL": [
+        "FDR",
+        "DBR"
       ]
     },
     "scrambles": [
@@ -34308,9 +34356,9 @@
       "[y' x U: [L2, U R2 U']]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "LDB"
+      "DFR": [
+        "BDR",
+        "DBL"
       ]
     },
     "scrambles": [
@@ -34338,9 +34386,9 @@
       "[y R: [U L' U', R]]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "DBL"
+      "DFR": [
+        "BDR",
+        "BDL"
       ]
     },
     "scrambles": [
@@ -34366,9 +34414,9 @@
       "[x: [U L' U', R]]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "BDL"
+      "DFR": [
+        "BDR",
+        "LDB"
       ]
     },
     "scrambles": [
@@ -34395,13 +34443,13 @@
       "[x: [U L U', R]]"
     ],
     "buffers": {
-      "RDF": [
-        "RDB",
-        "FDL"
+      "DFR": [
+        "BDR",
+        "DFL"
       ],
-      "FDL": [
-        "RDF",
-        "RDB"
+      "DFL": [
+        "DFR",
+        "BDR"
       ]
     },
     "scrambles": [
@@ -34427,13 +34475,13 @@
       "[x U': [U' L2 U, R]]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "LDB"
+      "DFR": [
+        "DFL",
+        "DBL"
       ],
-      "FDL": [
-        "LDB",
-        "RDF"
+      "DFL": [
+        "DBL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -34461,13 +34509,13 @@
       "[D2 R' U': [R' U R, D']]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "DBL"
+      "DFR": [
+        "DFL",
+        "BDL"
       ],
-      "FDL": [
-        "DBL",
-        "RDF"
+      "DFL": [
+        "BDL",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -34495,13 +34543,13 @@
       "[y' z' U': [U' L' U, R2]]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "BDL"
+      "DFR": [
+        "DFL",
+        "LDB"
       ],
-      "FDL": [
-        "BDL",
-        "RDF"
+      "DFL": [
+        "LDB",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -34527,13 +34575,13 @@
       "[x U: [L', U R2 U']]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "BDR"
+      "DFR": [
+        "DFL",
+        "DBR"
       ],
-      "FDL": [
-        "BDR",
-        "RDF"
+      "DFL": [
+        "DBR",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -34559,13 +34607,13 @@
       "[D R2 D': [U', R D R']]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "DBR"
+      "DFR": [
+        "DFL",
+        "RDB"
       ],
-      "FDL": [
-        "DBR",
-        "RDF"
+      "DFL": [
+        "RDB",
+        "DFR"
       ]
     },
     "scrambles": [
@@ -34592,13 +34640,13 @@
       "[x: [R, U L U']]"
     ],
     "buffers": {
-      "RDF": [
-        "FDL",
-        "RDB"
+      "DFR": [
+        "DFL",
+        "BDR"
       ],
-      "FDL": [
-        "RDB",
-        "RDF"
+      "DFL": [
+        "BDR",
+        "DFR"
       ]
     },
     "scrambles": [

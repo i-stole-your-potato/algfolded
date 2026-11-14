@@ -30,7 +30,7 @@ const speffz = (s: string): string => SPEFFZ[s] ?? s
 // The DBL corner is a valid parity buffer in the data (paired with DBR) but
 // is never part of the configurable order, so its tracked sticker is appended
 // with lowest priority — cf. EXTRA_CORNERS in flip_twist.ts.
-const EXTRA_BUFFERS = ['LDB']
+const EXTRA_BUFFERS = ['DBL']
 
 const cycleOf = (s: string) => STICKER_CYCLES.find((c) => c.includes(s))
 const rot = (s: string, n: number): string => {
@@ -67,8 +67,8 @@ export const partition = (raw: Record<string, RawParity>, bufferOrder: string[])
   for (const [id, c] of Object.entries(raw)) {
     const [c1, c2, e1, e2] = id.split(' ')
     // buffer = the highest-priority buffer sticker on either swapped corner;
-    // the target is re-anchored to that sticker (e.g. "DFR DFL": buffer RDF,
-    // target FDL — not the canonical DFL).
+    // the target is re-anchored to that sticker (e.g. "DFR RDB": buffer DFR,
+    // target RDB).
     let buffer: string | null = null
     let target: string | null = null
     let bufIdx = 0
@@ -100,7 +100,7 @@ export const parities: Algset = {
   name: 'algset.parities',
   usesLetterScheme: true,
   levels: [
-    // Stufe 1: the corner buffer (its tracked sticker, e.g. UFR / RDF),
+    // Stufe 1: the corner buffer (its tracked sticker, e.g. UFR / DFR),
     // ordered by the settings' buffer order.
     { id: 'buffer', display: (v, ctx) => ({ primary: v, secondary: ctx.toLetter(v) }) },
     // Stufe 2: the edge swap ("UF-UR" first), with its letters as secondary.

@@ -45,7 +45,7 @@ const edgeName = (p) => HOME_E[p][0];
 // corner piece -> its tracked buffer sticker (matches the 3-twists buffers, plus
 // the two never-configured back corners as their own U/D facelet).
 const CORNER_BUFFER_STICKER = {
-  UFR: "UFR", UFL: "UFL", UBR: "UBR", UBL: "UBL", DFR: "RDF", DFL: "FDL", DBR: "DBR", DBL: "DBL",
+  UFR: "UFR", UFL: "UFL", UBR: "UBR", UBL: "UBL", DFR: "DFR", DFL: "DFL", DBR: "DBR", DBL: "DBL",
 };
 
 // Landing sticker of a twisted corner's U/D facelet: with orientation o in place,
