@@ -81,6 +81,49 @@ beforeEach(() => {
 })
 
 describe('a tracked flow run', () => {
+  it('uses a custom page size for advancement, totals and saved runs', async () => {
+    const { flow } = await load()
+    flow.start({ pages: 2, casesPerPage: 3, tracked: true }, 100)
+    expect(flow.currentPage).toHaveLength(3)
+    expect(flow.totalCases).toBe(6)
+    for (let page = 0; page < 2; page++) {
+      for (let i = 0; i < 3; i++) {
+        expect(solveCase(flow, 100 + (page * 3 + i) * 2000)).toBe(i === 2)
+      }
+      expect(flow.progress).toBe((page + 1) / 2)
+      flow.nextPage(100 + (page + 1) * 6000)
+    }
+    expect(flow.finished).toBe(true)
+    expect(flow.summary!.cases).toBe(6)
+    expect(flow.runs[0]).toMatchObject({pages: 2, cases: 6})
+    expect(flow.comparableRuns).toHaveLength(1)
+    // The existing persisted fields distinguish page sizes, including old runs.
+    flow.start({pages: 2, tracked: true}, 20000)
+    expect(flow.currentPage).toHaveLength(5)
+    expect(flow.comparableRuns).toHaveLength(0)
+    flow.start({pages: 2, casesPerPage: 3, tracked: true}, 30000)
+    expect(flow.comparableRuns).toHaveLength(1)
+  })
+
+  it('supports pages larger than the selection and computes manual averages correctly', async () => {
+    const { flow } = await load()
+    flow.start({ pages: 2, casesPerPage: 7, tracked: false }, 1000)
+    expect(flow.currentPage).toHaveLength(7)
+    flow.advancePageManually(8000)
+    expect(flow.completedCases).toBe(7)
+    expect(flow.progress).toBe(0.5)
+    flow.advancePageManually(15000)
+    expect(flow.pageSummary).toMatchObject({pages: 2, cases: 14, totalMs: 14000, msPerCase: 1000})
+  })
+
+  it.each([[0, 5], [-2, 5], [Infinity, 5], [NaN, 5], [2.9, 2], [1000, 100], [1, 1]])(
+    'normalizes page size %s to %s', async (size, expected) => {
+      const { flow } = await load()
+      flow.start({pages: 1, casesPerPage: size, tracked: false}, 1000)
+      expect(flow.currentPage).toHaveLength(expected)
+      expect(flow.totalCases).toBe(expected)
+    })
+
   it('opens on a full page of five distinct cases', async () => {
     const { flow } = await load()
     flow.start({ pages: 2, tracked: true }, 0)

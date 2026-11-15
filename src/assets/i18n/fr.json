@@ -47,9 +47,10 @@
       "mode_practice": "Pratique",
       "mode_recap": "Recap",
       "mode_flow": "Flow",
-      "flow_btn_title": "Enchaîner cinq cas à la suite",
-      "flow_explainer": "Cinq cas à la fois, à la suite, sans mélange entre eux.",
-      "flow_pages": "Pages ({n} cas chacune)"
+      "flow_btn_title": "Enchaîner les cas à la suite",
+      "flow_explainer": "{n} cas à la fois, à la suite, sans mélange entre eux.",
+      "flow_pages": "Pages ({n} cas chacune)",
+      "flow_cases_per_page": "Cas par page"
     },
     "presets": {
       "presets": "Préréglages",
@@ -175,7 +176,7 @@
       "flow_share": "{pct}% de la session en exécution, le reste à se rappeler",
       "struggled_title": "Difficultés :",
       "runs_title": "Séries",
-      "runs_scope": "séries sur les mêmes cas, {pages} pages chacune",
+      "runs_scope": "séries sur les mêmes cas, {pages} pages de {n} cas chacune",
       "struggled_wrong": "échoué",
       "struggled_slow": "nettement sous votre rythme pour ce cas"
     },
@@ -234,7 +235,7 @@
       "clear_session": "Effacer la session",
       "select_deselect": "Sélectionner / désélectionner le cas actuel",
       "recap": "Commencer à revoir tous les cas sélectionnés",
-      "flow": "Démarrer le flow, cinq cas à la fois (écran de sélection)",
+      "flow": "Démarrer le flow",
       "add_to_starred": "Ajouter le cas sélectionné aux préréglages favoris",
       "didnt_know": "Marquer le cas actuel comme « non su » (répéter plus tôt)",
       "show_hint": "Afficher l'algorithme du cas actuel",
@@ -294,7 +295,7 @@
       "wc_select_done": "Sélection : {count}",
       "wc_add_done": "Ajout : {count}",
       "wc_remove_done": "Retrait : {count}",
-      "flow": "Démarrer le flow (cinq cas à la fois)"
+      "flow": "Démarrer le flow"
     },
     "algset": {
       "ltct": "LTCT",

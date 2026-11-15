@@ -47,9 +47,10 @@
       "mode_practice": "Üben",
       "mode_recap": "Recap",
       "mode_flow": "Flow",
-      "flow_btn_title": "Fünf Fälle am Stück trainieren, direkt hintereinander",
-      "flow_explainer": "Fünf Fälle auf einmal, direkt hintereinander, kein Scramble dazwischen.",
-      "flow_pages": "Seiten (je {n} Fälle)"
+      "flow_btn_title": "Fälle direkt hintereinander üben",
+      "flow_explainer": "{n} Fälle auf einmal, direkt hintereinander, kein Scramble dazwischen.",
+      "flow_pages": "Seiten (je {n} Fälle)",
+      "flow_cases_per_page": "Fälle pro Seite"
     },
     "presets": {
       "presets": "Voreinstellungen",
@@ -175,7 +176,7 @@
       "flow_share": "{pct}% der Session war Ausführung, der Rest Erinnern",
       "struggled_title": "Mühe gehabt:",
       "runs_title": "Durchgänge",
-      "runs_scope": "Durchgänge über dieselben Fälle, je {pages} Seiten",
+      "runs_scope": "Durchgänge über dieselben Fälle, je {pages} Seiten mit {n} Fällen",
       "struggled_wrong": "danebengegangen",
       "struggled_slow": "deutlich unter deinem Tempo für diesen Fall"
     },
@@ -234,7 +235,7 @@
       "clear_session": "Sitzung löschen",
       "select_deselect": "Aktuellen Fall auswählen / abwählen",
       "recap": "Wiederholung aller ausgewählten Fälle starten",
-      "flow": "Flow starten, fünf Fälle am Stück (Auswahlseite)",
+      "flow": "Flow starten",
       "add_to_starred": "Ausgewählten Fall zu favorisierten Voreinstellungen hinzufügen",
       "didnt_know": "Aktuellen Fall als „nicht gewusst“ markieren (früher wiederholen)",
       "show_hint": "Algorithmus für den aktuellen Fall anzeigen",
@@ -294,7 +295,7 @@
       "wc_select_done": "{count} ausgewählt",
       "wc_add_done": "{count} hinzugefügt",
       "wc_remove_done": "{count} entfernt",
-      "flow": "Flow starten (fünf Fälle am Stück)"
+      "flow": "Flow starten"
     },
     "algset": {
       "ltct": "LTCT",

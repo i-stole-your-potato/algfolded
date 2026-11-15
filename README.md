@@ -14,6 +14,7 @@ Compared with the upstream snapshot at [`73db2fe`](https://github.com/tobipch/al
 - **Refreshed algorithm data:** re-fetched all eight algsets from BLDDB, regenerated corner-commutator buffer targets, and restored commutator notation. Case IDs and existing scrambles are preserved, so selections, notes and history continue to refer to the same cases. A refresh does not necessarily change every data file.
 - **Recap selection fix:** deselecting a completed case during a recap no longer switches to Practice or resets the remaining progress. The current case stays in place if still pending, deselected cases leave the queue, and newly selected cases join the recap. Completing all remaining selected cases still ends the recap normally.
 - **Visible upstream credit:** added a link to tobipch's repository in the page footer, with English, German, French and Italian translations.
+- **Configurable Flow page size:** choose 1–100 cases per page on the Flow selection panel (default 5). The setting is saved locally; progress and manual timing summaries use the selected size. Historical runs are compared only when selection, page count and total case count match, so existing five-case pages remain compatible.
 - **Regression coverage:** updated buffer-label tests and added checks for D-face target geometry, saved-setting migration and changes to the selection during Recap.
 
 Practice, Recap, Flow, smart-cube support and cloud sync were already present upstream.
@@ -83,6 +84,8 @@ After a solve, mark a case as forgotten — its estimated time is temporarily se
 Go through every selected case exactly once (Alt+R) — a counter shows how many remain. Normal weighted selection resumes once all cases are covered.
 
 ### Smart cube (Bluetooth)
+
+For Flow, select **Flow** on the selection screen and set **Cases per page** next to the page count. The default is **5**. The chosen size applies when starting the next run; longer pages scroll to keep the current case visible.
 
 Connect a Bluetooth smart cube for hands-free scramble tracking. Supported brands: **GAN** (Gen2/Gen3/Gen4, via `gan-web-bluetooth`) and **MoYu / QiYi** (via `btcube-web`). Click the Bluetooth button and pick your cube's brand.
 

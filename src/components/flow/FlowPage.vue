@@ -1,10 +1,10 @@
 <script setup>
-import {computed} from "vue";
+import {computed, ref, watch} from "vue";
 import {useFlowStore} from "@/stores/FlowStore";
 import {useAlgsetStore} from "@/stores/AlgsetStore";
 import {msToClock} from "@/helpers/time_formatter";
 
-// One page of five cases: the header, the labels, and the two lines of text
+// One page of cases: the header, the labels, and the two lines of text
 // under them. No scramble, no timer display, no cube — the point of flow is
 // that there is nothing on screen but what to execute next.
 const props = defineProps({
@@ -19,6 +19,10 @@ const algset = useAlgsetStore()
 const label = (key) => algset.caseLabel(key)
 const progressPct = computed(() => Math.round(flow.progress * 100))
 const clock = computed(() => msToClock(props.clockMs))
+const caseList = ref(null)
+watch(() => [flow.pageIndex, flow.caseIndex], () => {
+  caseList.value?.querySelector('.is-current')?.scrollIntoView({block: 'nearest'})
+}, {flush: 'post'})
 </script>
 
 <template>
@@ -46,7 +50,7 @@ const clock = computed(() => msToClock(props.clockMs))
       </span>
     </div>
 
-    <div class="flow-cases">
+    <div class="flow-cases" ref="caseList">
       <div
           v-for="(item, i) in flow.currentPage"
           :key="`${i}-${flow.caseStates[i] === 'wrong' ? flow.wrongFlash : 0}`"
@@ -106,10 +110,12 @@ const clock = computed(() => msToClock(props.clockMs))
   gap: clamp(0.4rem, 1.5vh, 1.25rem);
   flex: 1 1 auto;
   min-height: 0;
-  justify-content: center;
+  justify-content: safe center;
+  overflow-y: auto;
   align-items: center;
 }
 .flow-case {
+  flex-shrink: 0;
   font-size: clamp(1.75rem, min(10vw, 9vh), 5rem);
   font-weight: 700;
   line-height: 1.1;

@@ -47,9 +47,10 @@
       "mode_practice": "Pratica",
       "mode_recap": "Recap",
       "mode_flow": "Flow",
-      "flow_btn_title": "Allena cinque casi di fila",
-      "flow_explainer": "Cinque casi alla volta, uno dopo l'altro, senza scramble in mezzo.",
-      "flow_pages": "Pagine ({n} casi ciascuna)"
+      "flow_btn_title": "Allena i casi di fila",
+      "flow_explainer": "{n} casi alla volta, uno dopo l'altro, senza scramble in mezzo.",
+      "flow_pages": "Pagine ({n} casi ciascuna)",
+      "flow_cases_per_page": "Casi per pagina"
     },
     "presets": {
       "presets": "Preimpostazioni",
@@ -175,7 +176,7 @@
       "flow_share": "{pct}% della sessione in esecuzione, il resto a ricordare",
       "struggled_title": "Difficoltà:",
       "runs_title": "Serie",
-      "runs_scope": "serie sugli stessi casi, {pages} pagine ciascuna",
+      "runs_scope": "serie sugli stessi casi, {pages} pagine da {n} casi ciascuna",
       "struggled_wrong": "andato male",
       "struggled_slow": "ben sotto il tuo ritmo per questo caso"
     },
@@ -234,7 +235,7 @@
       "clear_session": "Cancella sessione",
       "select_deselect": "Seleziona / deseleziona caso corrente",
       "recap": "Inizia a ripassare tutti i casi selezionati",
-      "flow": "Avvia flow, cinque casi alla volta (schermata di selezione)",
+      "flow": "Avvia flow",
       "add_to_starred": "Aggiungi caso selezionato a preimpostazione preferita",
       "didnt_know": "Segna il caso corrente come “non saputo” (ripeti prima)",
       "show_hint": "Mostra l'algoritmo del caso corrente",
@@ -294,7 +295,7 @@
       "wc_select_done": "Selezione: {count}",
       "wc_add_done": "Aggiunta: {count}",
       "wc_remove_done": "Rimozione: {count}",
-      "flow": "Avvia flow (cinque casi alla volta)"
+      "flow": "Avvia flow"
     },
     "algset": {
       "ltct": "LTCT",

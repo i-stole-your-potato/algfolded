@@ -24,6 +24,13 @@
 import {aoN, bestAoN} from '@/helpers/srs'
 
 export const CASES_PER_PAGE = 5
+export const MAX_CASES_PER_PAGE = 100
+export const normalizeCasesPerPage = (value: unknown): number => {
+    const n = Number(value)
+    return Number.isFinite(n) && n > 0
+        ? Math.min(MAX_CASES_PER_PAGE, Math.max(1, Math.floor(n)))
+        : CASES_PER_PAGE
+}
 
 export interface Attempt {
     /** when the case became the current one, or was re-armed after a retry */

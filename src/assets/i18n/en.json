@@ -47,9 +47,10 @@
       "mode_practice": "Practice",
       "mode_recap": "Recap",
       "mode_flow": "Flow",
-      "flow_btn_title": "Drill five cases at a time, back to back",
-      "flow_explainer": "Five cases at a time, back to back, no scramble in between.",
-      "flow_pages": "Pages ({n} cases each)"
+      "flow_btn_title": "Drill cases back to back",
+      "flow_explainer": "{n} cases at a time, back to back, no scramble in between.",
+      "flow_pages": "Pages ({n} cases each)",
+      "flow_cases_per_page": "Cases per page"
     },
     "presets": {
       "presets": "Presets",
@@ -175,7 +176,7 @@
       "flow_share": "{pct}% of the session was turning, the rest recall",
       "struggled_title": "Trouble:",
       "runs_title": "Runs",
-      "runs_scope": "runs over the same cases, {pages} pages each",
+      "runs_scope": "runs over the same cases, {pages} pages of {n} cases each",
       "struggled_wrong": "went wrong",
       "struggled_slow": "well off your own pace for this case"
     },
@@ -234,7 +235,7 @@
       "clear_session": "Clear session",
       "select_deselect": "Select/deselect current case",
       "recap": "Start recap all selected cases",
-      "flow": "Start flow, five cases at a time (selection screen)",
+      "flow": "Start flow",
       "add_to_starred": "Add selected case to starred preset",
       "didnt_know": "Mark the current case as “didn't know” (repeat sooner)",
       "show_hint": "Show the algorithm for the current case",
@@ -294,7 +295,7 @@
       "wc_select_done": "{count} selected",
       "wc_add_done": "{count} added",
       "wc_remove_done": "{count} removed",
-      "flow": "Start flow (five cases at a time)"
+      "flow": "Start flow"
     },
     "algset": {
       "ltct": "LTCT",

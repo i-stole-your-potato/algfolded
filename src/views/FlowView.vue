@@ -45,7 +45,7 @@ const beginRun = () => {
   }
   showHint.value = false
   wrongFeedback.value = false
-  flow.start({pages: settings.store.flowPages, tracked: bt.connected})
+  flow.start({pages: settings.store.flowPages, casesPerPage: settings.store.flowCasesPerPage, tracked: bt.connected})
 }
 
 // --- arming ---------------------------------------------------------------

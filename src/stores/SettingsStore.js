@@ -19,8 +19,9 @@ const defaultSettings = {
     smartSelection: true,
     // start practice with the timer ("timed") or just step through cases
     timedMode: true,
-    // flow mode: how many pages of five cases one run drills
+    // flow mode: page count and cases on each page
     flowPages: 4,
+    flowCasesPerPage: 5,
     // how algorithms are displayed: "commutator" notation or "expanded" moves
     algNotation: "commutator",
     slownessPower: 2,

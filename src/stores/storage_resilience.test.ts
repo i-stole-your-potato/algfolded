@@ -21,6 +21,19 @@ beforeEach(() => {
 })
 
 describe('stores survive corrupt localStorage', () => {
+  it('defaults old settings to five Flow cases per page and persists custom sizes', async () => {
+    vi.resetModules()
+    localStorage.setItem('ltctTrainerSettings', JSON.stringify({flowPages: 3}))
+    const {useSettingsStore} = await import('./SettingsStore')
+    const settings = useSettingsStore()
+    expect(settings.store.flowCasesPerPage).toBe(5)
+    settings.store.flowCasesPerPage = 8
+    const {nextTick} = await import('vue')
+    await nextTick()
+    expect(JSON.parse(localStorage.getItem('ltctTrainerSettings')!).flowCasesPerPage).toBe(8)
+    settings.resetDefaults()
+    expect(settings.store.flowCasesPerPage).toBe(5)
+  })
   it('SettingsStore falls back to defaults', async () => {
     for (const bad of CORRUPT) {
       vi.resetModules(); localStorage.clear(); freshPinia()

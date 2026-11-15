@@ -1,7 +1,7 @@
 import {defineStore} from 'pinia'
 import {computed, ref, shallowRef, watch} from 'vue'
 import {
-    CASES_PER_PAGE, MAX_RUNS, armAttempt, noteFirstMove, flagWrong, retryAttempt,
+    CASES_PER_PAGE, normalizeCasesPerPage, MAX_RUNS, armAttempt, noteFirstMove, flagWrong, retryAttempt,
     rebaseAttempt, completeAttempt, attemptElapsedMs, summarizeFlow, summarizePages,
     summarizeRuns, mergeRuns, updateTrouble, troubleCases, selectionSignature,
 } from '@/helpers/flow_timing'
@@ -11,7 +11,7 @@ import {useAuthStore} from '@/stores/AuthStore'
 import {apiFetch} from '@/helpers/api'
 import {readNamespaced, writeNamespaced} from '@/helpers/namespaced_storage'
 
-// The green flash on the fifth case, and nothing more. A few frames is enough
+// The green flash on the last case, and nothing more. A few frames is enough
 // to register that the page landed; anything longer is felt as a wait, and the
 // whole point of flow is that the cases run into each other.
 export const PAGE_ADVANCE_MS = 60
@@ -41,7 +41,7 @@ const loadTrouble = (algsetId) => {
 }
 
 /**
- * A flow run: pages of five cases, drilled back to back.
+ * A flow run: configurable pages of cases, drilled back to back.
  *
  * The store owns the run's data and its arithmetic. Everything to do with the
  * cube itself lives in BluetoothCubeStore and is wired up by the view, which
@@ -56,6 +56,7 @@ export const useFlowStore = defineStore('flow', () => {
     const auth = useAuthStore()
 
     const pageCount = ref(1)
+    const casesPerPage = ref(CASES_PER_PAGE)
     const tracked = ref(false)          // a smart cube was connected at start
     const active = ref(false)
     const finished = ref(false)
@@ -159,15 +160,16 @@ export const useFlowStore = defineStore('flow', () => {
     // each other, so the series is the one matching the run that was just done.
     // Runs stored before the split carry no selection and match nothing.
     const comparableRuns = computed(() => runs.value.filter(
-        r => r.pages === pageCount.value && r.sel === selection.value))
+        r => r.pages === pageCount.value && r.cases === pageCount.value * casesPerPage.value &&
+            r.sel === selection.value))
     const runStats = computed(() => summarizeRuns(comparableRuns.value))
 
     const currentPage = computed(() => pages.value[pageIndex.value] || [])
     const currentCase = computed(() => currentPage.value[caseIndex.value] || null)
-    const totalCases = computed(() => pageCount.value * CASES_PER_PAGE)
+    const totalCases = computed(() => pageCount.value * casesPerPage.value)
     const completedCases = computed(() => tracked.value
         ? records.value.length
-        : pageTimes.value.length * CASES_PER_PAGE)
+        : pageTimes.value.length * casesPerPage.value)
     const progress = computed(() => totalCases.value > 0
         ? Math.min(1, completedCases.value / totalCases.value) : 0)
 
@@ -181,12 +183,12 @@ export const useFlowStore = defineStore('flow', () => {
     // Fill a page from the session's picker: SRS weighting, cooldown and the
     // user's selection, exactly as the timer gets them. Passing the page's own
     // keys as `avoid` keeps a case from appearing twice on one page; with a
-    // selection smaller than five the picker falls back on its own.
+    // selection smaller than the page size the picker falls back on its own.
     const fillPage = () => {
         const page = []
         const avoid = new Set()
         const labels = new Set()
-        for (let i = 0; i < CASES_PER_PAGE; i++) {
+        for (let i = 0; i < casesPerPage.value; i++) {
             let next = null
             // Two different cases can carry the same label (the same letter
             // pair from another buffer). With no scramble on screen to tell
@@ -221,8 +223,9 @@ export const useFlowStore = defineStore('flow', () => {
         armCurrent(now)
     }
 
-    const start = ({pages: count, tracked: isTracked}, now = Date.now()) => {
+    const start = ({pages: count, tracked: isTracked, casesPerPage: size = CASES_PER_PAGE}, now = Date.now()) => {
         pageCount.value = Math.max(1, Math.floor(count) || 1)
+        casesPerPage.value = normalizeCasesPerPage(size)
         tracked.value = !!isTracked
         selection.value = selectionSignature(session.store.keys)
         active.value = true
@@ -422,11 +425,11 @@ export const useFlowStore = defineStore('flow', () => {
         : null)
     const pageSummary = computed(() => tracked.value
         ? null
-        : summarizePages(pageTimes.value))
+        : summarizePages(pageTimes.value, casesPerPage.value))
 
     return {
         CASES_PER_PAGE,
-        pageCount, tracked, active, finished, advancing,
+        pageCount, casesPerPage, tracked, active, finished, advancing,
         pages, pageIndex, caseIndex, armSeq, records, pageTimes, abandonedMs,
         wrongIndex, wrongFlash, startedAt, endedAt,
         currentPage, currentCase, caseStates, totalCases, completedCases, progress,
