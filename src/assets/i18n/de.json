@@ -420,37 +420,6 @@
     },
     "footer": {
       "forked_from": "Fork des Repositorys von tobipch"
-    },
-    "drive": {
-      "title": "Google Drive · manuelle Synchronisierung",
-      "description": "Sichere Buchstabenschemata, Notizen, Einstellungen, eigene Algorithmen, Auswahlen, Vorlagen, Trainingsverlauf und abgeschlossene Flow-Läufe. Melde dich auf einem anderen Gerät mit demselben Google-Konto an und stelle eine Sicherung wieder her. Jede Sicherung ist eine eigene Version; Änderungen werden nicht automatisch zusammengeführt.",
-      "privacy": "Optional: Beim Aktivieren wird Googles Anmeldebibliothek geladen. Nach der Freigabe ist nur der versteckte Drive-Ordner dieser App zugänglich. Sicherungen werden direkt an Google gesendet und bleiben bis zum Löschen der App-Daten in Drive erhalten. Tokens bleiben im Arbeitsspeicher. Trennen löscht die Sitzung, aber keine Berechtigungen oder Sicherungen. Verwalte den Zugriff im Google-Konto. WCA-Zugangsdaten, ausstehende Server-Uploads und Bluetooth-Verbindungen sind ausgeschlossen.",
-      "unconfigured": "Google Drive ist noch nicht eingerichtet. Der Betreiber muss VITE_GOOGLE_CLIENT_ID setzen und die Website neu bauen. Siehe README.",
-      "prepare": "Google-Verbindung aktivieren",
-      "connect": "Google-Konto auswählen",
-      "upload": "Dieses Gerät sichern",
-      "refresh": "Sicherungen aktualisieren",
-      "disconnect": "Trennen",
-      "version": "Sicherung wiederherstellen (neueste zuerst)",
-      "empty": "Keine Sicherungen in diesem Google-Konto",
-      "restore": "Ausgewählte Sicherung wiederherstellen",
-      "recover": "Lokalen Wiederherstellungspunkt laden",
-      "working": "Wird verarbeitet…",
-      "saved": "Neue Sicherung in Google Drive gespeichert.",
-      "wca": "Melde dich vor der Wiederherstellung bei WCA ab, damit die Serversynchronisierung die Daten nicht überschreibt.",
-      "confirm": "Sicherung vom {date} ({count} Dateneinträge) wiederherstellen? ALLE lokalen App-Daten werden ersetzt, auch Löschungen, und die Seite wird neu geladen. Schliesse zuerst andere Tabs dieser Website. Der Smart Cube wird getrennt. Vorher wird ein lokaler Wiederherstellungspunkt gespeichert.",
-      "errors": {
-        "invalid_backup": "Die Sicherung ist beschädigt oder ihr Format wird nicht unterstützt. Es wurde nichts wiederhergestellt.",
-        "recovery_space": "Kein lokaler Wiederherstellungspunkt möglich. Schaffe Platz im Browserspeicher. Deine Daten wurden nicht verändert.",
-        "recovery_required": "Wiederherstellung und Zurücksetzen fehlgeschlagen. Lass diesen Tab offen und sichere den lokalen Wiederherstellungspunkt, bevor du Browserspeicher löschst.",
-        "restore_failed": "Wiederherstellung fehlgeschlagen. Die vorherigen lokalen Daten wurden wiederhergestellt.",
-        "google_load": "Google-Anmeldung konnte nicht geladen werden. Prüfe Verbindung oder Inhaltsblocker und versuche es erneut.",
-        "google_auth": "Google-Verbindung abgebrochen oder nicht erlaubt. Versuche es erneut und erlaube den Zugriff auf App-Daten.",
-        "google_expired": "Google-Zugriff abgelaufen. Wähle dein Konto erneut aus.",
-        "google_network": "Netzwerkfehler oder Zeitüberschreitung. Aktualisiere die Liste vor einem erneuten Upload; die Sicherung wurde möglicherweise bereits gespeichert.",
-        "google_forbidden": "Google verweigert den Zugriff. Prüfe Drive-API, Kontoberechtigungen und Speicherplatz.",
-        "google_request": "Vorgang fehlgeschlagen. Prüfe Verbindung und Browserspeicher und versuche es erneut."
-      }
     }
   }
 }

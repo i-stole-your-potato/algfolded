@@ -420,37 +420,6 @@
     },
     "footer": {
       "forked_from": "Fork du dépôt de tobipch"
-    },
-    "drive": {
-      "title": "Google Drive · synchronisation manuelle",
-      "description": "Sauvegardez les schémas de lettres, notes, réglages, algorithmes personnels, sélections, préréglages, historique et sessions Flow terminées. Sur un autre appareil, utilisez le même compte Google et restaurez une sauvegarde. Chaque sauvegarde est une version distincte ; les changements ne sont pas fusionnés automatiquement.",
-      "privacy": "Facultatif : l’activation charge la bibliothèque de connexion Google. Après autorisation, seul le dossier Drive caché de cette application est accessible. Les sauvegardes sont envoyées directement à Google et conservées jusqu’à la suppression des données de l’application dans Drive. Les jetons restent en mémoire. Déconnecter efface la session, sans révoquer les autorisations ni supprimer les sauvegardes. Gérez les accès dans votre compte Google. Les identifiants WCA, envois au serveur en attente et connexions Bluetooth sont exclus.",
-      "unconfigured": "Google Drive n’est pas encore configuré. Le propriétaire doit définir VITE_GOOGLE_CLIENT_ID et reconstruire le site ; consultez le README.",
-      "prepare": "Activer la connexion Google",
-      "connect": "Choisir un compte Google",
-      "upload": "Sauvegarder cet appareil",
-      "refresh": "Actualiser les sauvegardes",
-      "disconnect": "Déconnecter",
-      "version": "Sauvegarde à restaurer (plus récente en premier)",
-      "empty": "Aucune sauvegarde dans ce compte Google",
-      "restore": "Restaurer la sauvegarde sélectionnée",
-      "recover": "Restaurer le point de récupération local",
-      "working": "Opération en cours…",
-      "saved": "Nouvelle sauvegarde enregistrée dans Google Drive.",
-      "wca": "Déconnectez-vous de WCA avant la restauration pour éviter que le serveur remplace les données restaurées.",
-      "confirm": "Restaurer la sauvegarde du {date} ({count} entrées) ? TOUTES les données locales seront remplacées, suppressions comprises, puis la page sera rechargée. Fermez d’abord les autres onglets de ce site. Le cube connecté sera déconnecté. Un point de récupération local sera enregistré avant la restauration.",
-      "errors": {
-        "invalid_backup": "Sauvegarde endommagée ou format non pris en charge. Aucune restauration effectuée.",
-        "recovery_space": "Impossible d’enregistrer le point de récupération. Libérez de l’espace dans le navigateur. Vos données sont inchangées.",
-        "recovery_required": "La restauration et son annulation ont échoué. Gardez cet onglet ouvert et préservez le point de récupération avant d’effacer le stockage du navigateur.",
-        "restore_failed": "Échec de la restauration. Les anciennes données locales ont été rétablies.",
-        "google_load": "Impossible de charger Google. Vérifiez la connexion ou le bloqueur de contenu, puis réessayez.",
-        "google_auth": "Connexion Google annulée ou autorisation refusée. Réessayez en autorisant les données de l’application.",
-        "google_expired": "L’accès Google a expiré. Sélectionnez à nouveau votre compte.",
-        "google_network": "Échec réseau ou délai dépassé. Actualisez la liste avant de renvoyer : la sauvegarde a peut-être été enregistrée.",
-        "google_forbidden": "Google refuse l’accès. Vérifiez l’API Drive, les autorisations du compte et l’espace disponible.",
-        "google_request": "Échec de l’opération. Vérifiez la connexion et le stockage du navigateur, puis réessayez."
-      }
     }
   }
 }
