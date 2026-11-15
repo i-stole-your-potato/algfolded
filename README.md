@@ -16,7 +16,13 @@ Compared with the upstream snapshot at [`73db2fe`](https://github.com/tobipch/al
 - **Visible upstream credit:** added a link to tobipch's repository in the page footer, with English, German, French and Italian translations.
 - **Regression coverage:** updated buffer-label tests and added checks for D-face target geometry, saved-setting migration and changes to the selection during Recap.
 
-Practice, Recap, Flow, smart-cube support and cloud sync were already present upstream. GitHub Pages deployment has not been configured in this fork.
+Practice, Recap, Flow, smart-cube support and cloud sync were already present upstream.
+
+### GitHub Pages
+
+The frontend is published at https://i-stole-your-potato.github.io/algfolded/ by `.github/workflows/pages.yml` on pushes to `master`. The workflow builds with the Pages base path and deploys `dist/`. In repository Settings → Pages, select **GitHub Actions** as the source. A deployment can also be started manually from the Actions tab.
+
+Pages hosts only the static frontend: practice, Recap, Flow and browser-local data work without a backend. WCA login and cloud sync require the separate API and database described below; they are not hosted by Pages.
 
 Validation of these changes: type checking passes; the test suite has 364 passing tests and two pre-existing failures in `src/views/legal.test.ts` that assume operator details are unfilled. The data checks also identify 11 pre-existing parity cases without pre-generated scrambles; the trainer uses its inverse-algorithm fallback for those cases.
 
