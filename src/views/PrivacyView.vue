@@ -25,6 +25,9 @@ const {t} = useI18n()
     <p>{{ t('privacy.localstorage.body') }}</p>
     <p>{{ t('privacy.localstorage.note') }}</p>
 
+    <h2>{{ t('drive.title') }}</h2>
+    <p>{{ t('drive.privacy') }}</p>
+
     <h2>{{ t('privacy.account.title') }}</h2>
     <p>{{ t('privacy.account.body') }}</p>
     <ul>

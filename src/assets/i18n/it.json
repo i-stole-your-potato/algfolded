@@ -420,6 +420,37 @@
     },
     "footer": {
       "forked_from": "Fork del repository di tobipch"
+    },
+    "drive": {
+      "title": "Google Drive · sincronizzazione manuale",
+      "description": "Salva schemi di lettere, note, impostazioni, algoritmi personali, selezioni, preset, cronologia e sessioni Flow completate. Su un altro dispositivo, usa lo stesso account Google e ripristina un backup. Ogni backup è una versione separata; le modifiche non vengono unite automaticamente.",
+      "privacy": "Facoltativo: l’attivazione carica la libreria di accesso Google. Dopo l’autorizzazione è accessibile solo la cartella Drive nascosta di questa app. I backup vengono inviati direttamente a Google e conservati finché non elimini i dati dell’app in Drive. I token restano in memoria. Disconnetti cancella la sessione, non le autorizzazioni o i backup. Gestisci gli accessi nel tuo account Google. Credenziali WCA, invii al server in attesa e connessioni Bluetooth sono esclusi.",
+      "unconfigured": "Google Drive non è ancora configurato. Il proprietario deve impostare VITE_GOOGLE_CLIENT_ID e ricompilare il sito; consulta il README.",
+      "prepare": "Abilita connessione Google",
+      "connect": "Scegli account Google",
+      "upload": "Salva backup di questo dispositivo",
+      "refresh": "Aggiorna backup",
+      "disconnect": "Disconnetti",
+      "version": "Backup da ripristinare (più recente per primo)",
+      "empty": "Nessun backup in questo account Google",
+      "restore": "Ripristina backup selezionato",
+      "recover": "Ripristina punto di recupero locale",
+      "working": "Operazione in corso…",
+      "saved": "Nuovo backup salvato in Google Drive.",
+      "wca": "Esci da WCA prima del ripristino per impedire alla sincronizzazione del server di sostituire i dati ripristinati.",
+      "confirm": "Ripristinare il backup del {date} ({count} voci)? TUTTI i dati locali saranno sostituiti, incluse le eliminazioni, e la pagina si ricaricherà. Chiudi prima le altre schede del sito. Il cubo Bluetooth si disconnetterà. Prima verrà salvato un punto di recupero locale.",
+      "errors": {
+        "invalid_backup": "Backup danneggiato o formato non supportato. Nessun dato ripristinato.",
+        "recovery_space": "Impossibile salvare il punto di recupero. Libera spazio nel browser. I dati attuali non sono stati modificati.",
+        "recovery_required": "Ripristino e annullamento non riusciti. Tieni aperta questa scheda e conserva il punto di recupero prima di cancellare i dati del browser.",
+        "restore_failed": "Ripristino non riuscito. I dati locali precedenti sono stati recuperati.",
+        "google_load": "Impossibile caricare l’accesso Google. Controlla connessione o blocco dei contenuti e riprova.",
+        "google_auth": "Connessione Google annullata o autorizzazione negata. Riprova consentendo l’accesso ai dati dell’app.",
+        "google_expired": "Accesso Google scaduto. Seleziona nuovamente il tuo account.",
+        "google_network": "Errore di rete o tempo scaduto. Aggiorna l’elenco prima di riprovare: il backup potrebbe essere già stato salvato.",
+        "google_forbidden": "Google ha negato l’accesso. Controlla API Drive, permessi dell’account e spazio disponibile.",
+        "google_request": "Operazione non riuscita. Controlla connessione e memoria del browser, poi riprova."
+      }
     }
   }
 }

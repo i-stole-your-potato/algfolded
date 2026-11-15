@@ -2,6 +2,7 @@
 import {useSettingsStore} from "@/stores/SettingsStore";
 import LetterSchemeEditor from "@/components/LetterSchemeEditor.vue";
 import BufferOrderEditor from "@/components/BufferOrderEditor.vue";
+import DriveBackup from "@/components/DriveBackup.vue";
 import {useI18n} from 'vue-i18n'
 import {useRouter, useRoute} from "vue-router";
 
@@ -31,6 +32,7 @@ const onDoneBtnClicked = () => router.push({name: route.query.from === 'timer' ?
       </button>
     </div>
     <hr>
+    <DriveBackup />
     <form>
 
       <!-- Timer -->

@@ -420,6 +420,37 @@
     },
     "footer": {
       "forked_from": "Forked from tobipch's repo"
+    },
+    "drive": {
+      "title": "Google Drive · manual sync",
+      "description": "Back up all letter schemes, notes, settings, custom algorithms, selections, presets, practice history and completed Flow runs. On another device, connect to the same Google account and restore a backup. Backups are separate versions; changes are not merged automatically.",
+      "privacy": "Optional: enabling Google loads its sign-in library. After authorization, only this app’s hidden Drive folder is accessible. Backups are sent directly to Google and remain until you delete the app data in Drive. Tokens stay in memory; Disconnect clears this session, but does not revoke Google access or delete backups. Manage access in your Google Account. WCA credentials, pending server uploads and Bluetooth connections are excluded.",
+      "unconfigured": "Google Drive is not configured yet. The site owner must set VITE_GOOGLE_CLIENT_ID and rebuild the site; see the README.",
+      "prepare": "Enable Google connection",
+      "connect": "Choose Google account",
+      "upload": "Back up this device",
+      "refresh": "Refresh backups",
+      "disconnect": "Disconnect",
+      "version": "Backup to restore (newest first)",
+      "empty": "No backups in this Google account",
+      "restore": "Restore selected backup",
+      "recover": "Restore local recovery point",
+      "working": "Working…",
+      "saved": "New backup saved to Google Drive.",
+      "wca": "Sign out of WCA before restoring to prevent server sync from replacing restored data.",
+      "confirm": "Restore backup from {date} ({count} data entries)? This replaces ALL local app data, including deletions, and reloads the page. Close other tabs of this site first. The smart cube will disconnect. A local recovery point will be saved before restoring.",
+      "errors": {
+        "invalid_backup": "This backup is damaged or uses an unsupported format. Nothing was restored.",
+        "recovery_space": "Cannot save the local recovery point. Free browser storage space before restoring. Your current data was not changed.",
+        "recovery_required": "Restoring and rolling back failed. Keep this tab open and preserve the local recovery point before clearing browser storage.",
+        "restore_failed": "Restore failed. Your previous local data has been restored.",
+        "google_load": "Google sign-in could not load. Check your connection or content blocker, then try again.",
+        "google_auth": "Google connection was cancelled or permission was not granted. Try again and allow app data access.",
+        "google_expired": "Google access expired. Choose your account again to reconnect.",
+        "google_network": "Network request failed or timed out. Refresh the backup list before retrying an upload; it may already have been saved.",
+        "google_forbidden": "Google denied access. Check Drive API configuration, account permissions and available storage.",
+        "google_request": "The operation failed. Check your connection and browser storage, then try again."
+      }
     }
   }
 }
