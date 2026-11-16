@@ -2048,8 +2048,7 @@
     "algs": [
       "[R D: [R' D' R, U']]",
       "[U' R U, L']",
-      "[U': [R, U r' F']]",
-      "[F': [D, R U R']]"
+      "[U': [R, U r' F']]"
     ],
     "buffers": {
       "UFL": [
@@ -5349,8 +5348,7 @@
     "algs": [
       "[R D: [U', R' D' R]]",
       "[L', U' R U]",
-      "[U': [U r' F', R]]",
-      "[F': [R U R', D]]"
+      "[U': [U r' F', R]]"
     ],
     "buffers": {
       "UFL": [
