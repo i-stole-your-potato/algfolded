@@ -115,10 +115,13 @@ watch(() => [flow.pageIndex, flow.caseIndex], () => {
   gap: clamp(0.5rem, 2vw, 1rem);
 }
 .flow-help {
+  position: fixed;
+  top: 50%;
+  right: max(var(--app-gutter, 12px), calc((100% - 1500px) / 2 + var(--app-gutter, 12px)));
+  transform: translateY(-50%);
+  width: min(520px, calc((100% - 2 * var(--app-gutter, 12px)) * 0.58));
+  max-height: 65dvh;
   overflow-y: auto;
-  align-self: safe center;
-  max-height: 100%;
-  min-width: 0;
   padding: 0.25rem;
 }
 .flow-cases {
