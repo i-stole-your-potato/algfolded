@@ -116,7 +116,8 @@
       "U' R' U' R' D' R U R' D R2 U' R2 D' R U2 R' D R U2 R U2",
       "U' R' U' R2 U R2 U2 R S R2 S' R U R' U2",
       "R U2 R' U' R U' R' U R2 U R U R' U' R' U' R' U R' U",
-      "U' R' U' R U' R' U2 R U' R2 U R U R' U' R' U' R' U R'"
+      "U' R' U' R U' R' U2 R U' R2 U R U R' U' R' U' R' U R'",
+      "U' R' U' R U' R' U2 R U' M2 U' M U2 M' U' M2"
     ],
     "scrambles": [
       "B L' B' U F2 U' L2 U' F2 U L2 U F2 U F' L F L U2 L",
@@ -179,6 +180,7 @@
       "R' U' R' D' R U R' D R2 U' R2 D' R U2 R' D R U2 R U",
       "R' U' R2 U R2 U2 R S R2 S' R U R' U",
       "R' F2 R D R' D' F2 U' R2 U R' U' R2 U",
+      "R' U' R U' R' U2 R U2 R2 U R2 S R2 S' U' R2",
       "U' R2 D' R U2 R' D R U R' F R U R U' R' F' R U2",
       "R' U' R U' R' U2 R U' R2 U R U R' U' R' U' R' U R' U'"
     ],
@@ -238,7 +240,8 @@
       "R U R D' R' U' R D R2 U' D' R D R' U2 R D' R' U' D",
       "U D' R' D R2 U' R' U R' D' R U' R D R2 U R U2 R D' R' U D",
       "U R2 D2 R U' R' D2 R U R U2 R D' R' U2 R D R' U'",
-      "U' D' R D R' U2 R D' R' U' D R U R D' R' U' R D R2"
+      "U' D' R D R' U2 R D' R' U' D R U R D' R' U' R D R2",
+      "R U R D' R' U' R D R D2 R U2 R' D2 R U2"
     ],
     "scrambles": [
       "L U F2 R2 D' L2 D R2 D' L2 D F2 U' R2 U R' U' L' U R U' R2",
@@ -663,8 +666,8 @@
     ],
     "dir": "cw",
     "algs": [
-      "D' R' U D R U' R' D' R U R' U' R U D R' D' R U' R' D R",
       "U R' D' R U' R' D R D' R' U D R U' R' D' R U R' U' R D",
+      "D' R' U D R U' R' D' R U R' U' R U D R' D' R U' R' D R",
       "U R' U' R U R' D' R U' R' U D R D' R' D R U' R' D' R D"
     ],
     "scrambles": [
@@ -895,7 +898,8 @@
       "U' R2 D R U' R' D' R U R U2 R2 D R U' R' D' R U R U'",
       "U2 R' D R U2 R' D' R' D2 R' U R D2 R' U' R'",
       "R' D R2 U R2 D' R U' R' D R U R U' R' U2 R' D' R U2",
-      "R2 D' R U2 R' D2 R U2 R' D' R2 D R' D' R U2 R' D R U2 D'"
+      "R2 D' R U2 R' D2 R U2 R' D' R2 D R' D' R U2 R' D R U2 D'",
+      "U R' U' R' D R U R' D' R2 D' R D' R' U2 R D R' U D"
     ],
     "scrambles": [
       "U R2 D2 B D2 R2 B' D2 L2 B' U2 F' D2 R2 U F2 U' F U F",
@@ -926,7 +930,8 @@
       "U' R' U' R' D R U R' D' R2 U2 R' U' R' D R U R' D' R2 U'",
       "U R' U' R' D R U R' D' R2 U2 R' U' R' D R U R' D' R2 U",
       "R' D R U2 R U R' U' R' D' R U R' D R2 U' R2 D' R U2",
-      "R' D R U2 R' D' R U2 R U R D2 R' U' R D2 R2"
+      "R' D R U2 R' D' R U2 R U R D2 R' U' R D2 R2",
+      "U R2 D R U' R' D' R U R U2 D' R D' R' U2 R D R' U' D"
     ],
     "scrambles": [
       "L D L D R2 D B2 U' B2 D B2 U B2 L2 U2 L' D' U2 R2 D L",
