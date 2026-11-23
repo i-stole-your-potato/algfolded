@@ -81,6 +81,25 @@ beforeEach(() => {
 })
 
 describe('a tracked flow run', () => {
+  it.each([true, false])('covers the selection without repeats across pages and Again (smart selection: %s)', async smartSelection => {
+    const {flow} = await load()
+    const {useSettingsStore} = await import('./SettingsStore')
+    useSettingsStore().store.smartSelection = smartSelection
+    const shown: string[] = []
+    const start = (now: number) => flow.start({pages: 2, casesPerPage: 2, tracked: false}, now)
+    for (const now of [1000, 4000, 7000]) {
+      start(now)
+      for (let page = 0; page < 2; page++) {
+        shown.push(...flow.currentPage.map((item: {key: string}) => item.key))
+        flow.advancePageManually(now + (page + 1) * 1000)
+      }
+      expect(flow.finished).toBe(true)
+    }
+    const selected = CASES.map(c => c.id).sort()
+    expect(shown.slice(0, 6).sort()).toEqual(selected)
+    expect(shown.slice(6, 12).sort()).toEqual(selected)
+  })
+
   it('uses a custom page size for advancement, totals and saved runs', async () => {
     const { flow } = await load()
     flow.start({ pages: 2, casesPerPage: 3, tracked: true }, 100)

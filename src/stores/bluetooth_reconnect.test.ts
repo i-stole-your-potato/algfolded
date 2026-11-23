@@ -25,9 +25,11 @@ class FakeGatt {
 
 class FakeDevice {
   name: string
+  id: string
+  mac?: string
   gatt: FakeGatt
   listeners: Record<string, Function[]> = {}
-  constructor(name: string) { this.name = name; this.gatt = new FakeGatt(this) }
+  constructor(name: string, id = name) { this.name = name; this.id = id; this.gatt = new FakeGatt(this) }
   addEventListener(type: string, fn: Function) { (this.listeners[type] ||= []).push(fn) }
   removeEventListener(type: string, fn: Function) {
     this.listeners[type] = (this.listeners[type] || []).filter(l => l !== fn)
@@ -67,7 +69,18 @@ const connectSmartCube = vi.fn(async () => {
 })
 
 vi.mock('btcube-web', () => ({ connectSmartCube: (...a: unknown[]) => connectSmartCube(...a as []) }))
-vi.mock('gan-web-bluetooth', () => ({ connectGanCube: vi.fn() }))
+vi.mock('gan-web-bluetooth', () => ({
+  connectGanCube: async (provider: (device: FakeDevice, fallback: boolean) => Promise<string | null>) => {
+    const device: FakeDevice = await (navigator as any).bluetooth.requestDevice({filters: []})
+    const mac = await provider(device, false) || await provider(device, true)
+    if (!mac) throw new Error('No MAC address')
+    device.mac = mac
+    await device.gatt.connect()
+    if (behaviour === 'throw-after-gatt') throw new Error('Connection failed')
+    return {device, deviceName: device.name, events$: makeSubject(),
+      sendCubeCommand: async () => {}, disconnect: () => device.gatt.disconnect()}
+  },
+}))
 
 const freshStore = async () => {
   const { useBluetoothCubeStore } = await import('@/stores/BluetoothCubeStore')
@@ -90,6 +103,51 @@ beforeEach(() => {
 afterEach(() => { vi.useRealTimers() })
 
 describe('smart cube connect / disconnect / reconnect', () => {
+  it('reuses the saved GAN MAC after reload and keeps equal device names separate', async () => {
+    const prompt = vi.spyOn(window, 'prompt').mockReturnValueOnce('aa:bb:cc:dd:ee:ff')
+    requestDevice.mockResolvedValueOnce(new FakeDevice('GAN i3', 'first'))
+    const bt = await freshStore()
+    await bt.connect('gan')
+    expect(bt.connected).toBe(true)
+    bt.disconnect()
+
+    setActivePinia(createPinia())
+    const reloaded = await freshStore()
+    const first = new FakeDevice('GAN i3', 'first')
+    requestDevice.mockResolvedValueOnce(first)
+    await reloaded.connect('gan')
+    expect(first.mac).toBe('AA:BB:CC:DD:EE:FF')
+    expect(prompt).toHaveBeenCalledTimes(1)
+    reloaded.disconnect()
+
+    const second = new FakeDevice('GAN i3', 'second')
+    requestDevice.mockResolvedValueOnce(second)
+    prompt.mockReturnValueOnce('11:22:33:44:55:66')
+    await reloaded.connect('gan')
+    expect(second.mac).toBe('11:22:33:44:55:66')
+    expect(prompt).toHaveBeenCalledTimes(2)
+    reloaded.disconnect()
+  })
+
+  it('updates the MAC only when a manually entered replacement connects', async () => {
+    const key = 'algfolded_gan_mac:first'
+    localStorage.setItem(key, JSON.stringify('AA:BB:CC:DD:EE:FF'))
+    vi.spyOn(window, 'prompt').mockReturnValue('11:22:33:44:55:66')
+    const bt = await freshStore()
+    behaviour = 'throw-after-gatt'
+    requestDevice.mockResolvedValueOnce(new FakeDevice('GAN i3', 'first'))
+    await bt.connect('gan', {enterMac: true})
+    expect(bt.connected).toBe(false)
+    expect(JSON.parse(localStorage.getItem(key)!)).toBe('AA:BB:CC:DD:EE:FF')
+
+    behaviour = 'ok'
+    requestDevice.mockResolvedValueOnce(new FakeDevice('GAN i3', 'first'))
+    await bt.connect('gan', {enterMac: true})
+    expect(bt.connected).toBe(true)
+    expect(JSON.parse(localStorage.getItem(key)!)).toBe('11:22:33:44:55:66')
+    bt.disconnect()
+  })
+
   it('reconnects after a clean disconnect', async () => {
     const bt = await freshStore()
     await bt.connect('moyu')

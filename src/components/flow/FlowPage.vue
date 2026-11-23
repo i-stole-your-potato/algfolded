@@ -4,9 +4,6 @@ import {useFlowStore} from "@/stores/FlowStore";
 import {useAlgsetStore} from "@/stores/AlgsetStore";
 import {msToClock} from "@/helpers/time_formatter";
 
-// One page of cases: the header, the labels, and the two lines of text
-// under them. No scramble, no timer display, no cube — the point of flow is
-// that there is nothing on screen but what to execute next.
 const props = defineProps({
   clockMs: {type: Number, default: 0},
   wrongFeedback: {type: Boolean, default: false},
@@ -50,21 +47,24 @@ watch(() => [flow.pageIndex, flow.caseIndex], () => {
       </span>
     </div>
 
-    <div class="flow-cases" ref="caseList">
-      <div
-          v-for="(item, i) in flow.currentPage"
-          :key="`${i}-${flow.caseStates[i] === 'wrong' ? flow.wrongFlash : 0}`"
-          class="flow-case"
-          :class="'is-' + flow.caseStates[i]">
-        {{ label(item.key) }}
+    <div class="flow-body" :class="{'has-hint': $slots.hint}">
+      <div class="flow-cases" ref="caseList">
+        <div
+            v-for="(item, i) in flow.currentPage"
+            :key="`${i}-${flow.caseStates[i] === 'wrong' ? flow.wrongFlash : 0}`"
+            class="flow-case"
+            :class="'is-' + flow.caseStates[i]">
+          {{ label(item.key) }}
+        </div>
       </div>
+      <aside v-if="$slots.hint" class="flow-help">
+        <slot name="hint"/>
+      </aside>
     </div>
 
     <p class="flow-feedback mt-3 mb-0" :class="{invisible: !wrongFeedback}">
       {{ $t('flow.wrong_execution') }}
     </p>
-
-    <slot/>
 
     <p class="text-muted small flow-hint mb-0">
       {{ flow.tracked ? $t('flow.hint_cube') : $t('flow.hint_manual') }}
@@ -104,11 +104,27 @@ watch(() => [flow.pageIndex, flow.caseIndex], () => {
   background-color: var(--bs-primary);
   transition: width 0.2s ease-in-out;
 }
+.flow-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.flow-body.has-hint {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+.flow-help {
+  overflow-y: auto;
+  align-self: safe center;
+  max-height: 100%;
+  min-width: 0;
+  padding: 0.25rem;
+}
 .flow-cases {
   display: flex;
   flex-direction: column;
   gap: clamp(0.4rem, 1.5vh, 1.25rem);
-  flex: 1 1 auto;
   min-height: 0;
   justify-content: safe center;
   overflow-y: auto;

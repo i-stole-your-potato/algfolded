@@ -151,18 +151,19 @@ export const useSessionStore = defineStore('session', () => {
 
     // Pick a single key honoring recap mode, cooldown and the `avoid` set.
     // Returns null only when no admissible key exists (recap exhausted).
-    const chooseKey = (avoid = new Set()) => {
-        if (store.keys.length === 0) return null
-        if (store.mode === 'recap') {
+    const chooseKey = (avoid = new Set(), eligibleKeys) => {
+        const keys = eligibleKeys ?? store.keys
+        if (keys.length === 0) return null
+        if (!eligibleKeys && store.mode === 'recap') {
             const zero = casesWithZeroCount.value
             const pool = zero.filter(k => !avoid.has(k))
             return pool.length > 0 ? random_element(pool) : null
         }
         const cooldown = Math.min(3, Math.floor(store.keys.length / 2))
         const recentSet = new Set(recentCases.value.slice(-cooldown))
-        let candidates = store.keys.filter(k => !recentSet.has(k) && !avoid.has(k))
-        if (candidates.length === 0) candidates = store.keys.filter(k => !avoid.has(k))
-        if (candidates.length === 0) candidates = store.keys
+        let candidates = keys.filter(k => !recentSet.has(k) && !avoid.has(k))
+        if (candidates.length === 0) candidates = keys.filter(k => !avoid.has(k))
+        if (candidates.length === 0) candidates = keys
 
         const settingsStore = useSettingsStore()
         if (settingsStore.store.smartSelection) {
@@ -181,17 +182,17 @@ export const useSessionStore = defineStore('session', () => {
             return weightedRandomPick(entries)
         }
         if (Math.random() < 0.2) {
-            const minCount = Math.min(...Object.values(store.keysCount))
-            const least = Object.keys(store.keysCount).filter(key => store.keysCount[key] === minCount && !recentSet.has(key) && !avoid.has(key))
-            const fallback = Object.keys(store.keysCount).filter(key => store.keysCount[key] === minCount && !avoid.has(key))
+            const minCount = Math.min(...keys.map(key => store.keysCount[key] ?? 0))
+            const fallback = keys.filter(key => (store.keysCount[key] ?? 0) === minCount && !avoid.has(key))
+            const least = fallback.filter(key => !recentSet.has(key))
             return random_element(least.length > 0 ? least : (fallback.length > 0 ? fallback : candidates))
         }
         return random_element(candidates)
     }
 
     // Choose a key, record it for cooldown, and bundle it with a fresh scramble.
-    const commitCase = (avoid) => {
-        const key = chooseKey(avoid)
+    const commitCase = (avoid, eligibleKeys = undefined) => {
+        const key = chooseKey(avoid, eligibleKeys)
         if (key == null) return null
         recentCases.value.push(key)
         if (recentCases.value.length > 3) recentCases.value.shift()

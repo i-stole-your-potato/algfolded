@@ -14,6 +14,7 @@
       "bluetooth_connecting": "Connecting to smart cube…",
       "bluetooth_disconnect": "Disconnect smart cube",
       "bluetooth_select_brand": "Select cube brand",
+      "bluetooth_gan_enter_mac": "GAN (enter MAC manually)",
       "bluetooth_pause": "Pause tracking",
       "bluetooth_resume": "Resume tracking",
       "bluetooth_reset_to_solved": "Reset virtual cube to solved",

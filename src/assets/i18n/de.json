@@ -14,6 +14,7 @@
       "bluetooth_connecting": "Verbinde mit Smart Cube…",
       "bluetooth_disconnect": "Smart Cube trennen",
       "bluetooth_select_brand": "Würfelmarke wählen",
+      "bluetooth_gan_enter_mac": "GAN (MAC manuell eingeben)",
       "bluetooth_pause": "Tracking pausieren",
       "bluetooth_resume": "Tracking fortsetzen",
       "bluetooth_reset_to_solved": "Virtuellen Würfel auf gelöst zurücksetzen",

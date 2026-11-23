@@ -149,6 +149,10 @@ export const useFlowStore = defineStore('flow', () => {
     // is going, and frozen for the duration of one, so a run is always filed
     // under the cases it actually drew from.
     const selection = ref(selectionSignature(session.store.keys))
+    let cycleAlgset = null
+    let cycleKeys = []
+    let unseenKeys = new Set()
+    let keysByLabel = new Map()
     watch(() => session.store.keys, (keys) => {
         if (!active.value) selection.value = selectionSignature(keys)
     })
@@ -180,28 +184,18 @@ export const useFlowStore = defineStore('flow', () => {
         return i === wrongIndex.value ? 'wrong' : 'current'
     }))
 
-    // Fill a page from the session's picker: SRS weighting, cooldown and the
-    // user's selection, exactly as the timer gets them. Passing the page's own
-    // keys as `avoid` keeps a case from appearing twice on one page; with a
-    // selection smaller than the page size the picker falls back on its own.
+    // Each cycle shows every selected case once. The picker still applies SRS
+    // and cooldown among the unseen cases. Avoid identical labels on a page
+    // when there's a choice, since different cases can share the same letters.
     const fillPage = () => {
         const page = []
         const avoid = new Set()
-        const labels = new Set()
         for (let i = 0; i < casesPerPage.value; i++) {
-            let next = null
-            // Two different cases can carry the same label (the same letter
-            // pair from another buffer). With no scramble on screen to tell
-            // them apart that just reads as a duplicate, so try a few times for
-            // a distinct one before settling for the repeat.
-            for (let attempt = 0; attempt < 4; attempt++) {
-                next = session.commitCase(avoid)
-                if (!next) break
-                avoid.add(next.key)
-                if (!labels.has(algset.caseLabel(next.key))) break
-            }
+            if (unseenKeys.size === 0) unseenKeys = new Set(cycleKeys)
+            const next = session.commitCase(avoid, [...unseenKeys])
             if (!next) break
-            labels.add(algset.caseLabel(next.key))
+            unseenKeys.delete(next.key)
+            for (const key of keysByLabel.get(algset.caseLabel(next.key))) avoid.add(key)
             page.push(next)
         }
         return page
@@ -228,6 +222,19 @@ export const useFlowStore = defineStore('flow', () => {
         casesPerPage.value = normalizeCasesPerPage(size)
         tracked.value = !!isTracked
         selection.value = selectionSignature(session.store.keys)
+        const keys = new Set(session.store.keys)
+        if (cycleAlgset !== algset.activeId || keys.size !== cycleKeys.length ||
+            cycleKeys.some(key => !keys.has(key))) {
+            cycleAlgset = algset.activeId
+            cycleKeys = [...keys]
+            unseenKeys = new Set(cycleKeys)
+        }
+        keysByLabel = new Map()
+        for (const key of cycleKeys) {
+            const label = algset.caseLabel(key)
+            if (!keysByLabel.has(label)) keysByLabel.set(label, [])
+            keysByLabel.get(label).push(key)
+        }
         active.value = true
         finished.value = false
         advancing.value = false
@@ -388,6 +395,10 @@ export const useFlowStore = defineStore('flow', () => {
     }
 
     const reset = () => {
+        cycleAlgset = null
+        cycleKeys = []
+        unseenKeys.clear()
+        keysByLabel.clear()
         active.value = false
         finished.value = false
         advancing.value = false

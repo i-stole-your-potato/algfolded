@@ -3,6 +3,10 @@ import {ref} from 'vue'
 import {invertMove, moveFace, moveAmount, amountToMove, buildMoveRemap} from '@/helpers/scramble_utils'
 import {useDisplayStore} from '@/stores/DisplayStore'
 import {useSettingsStore} from '@/stores/SettingsStore'
+import {readNamespaced, writeNamespaced} from '@/helpers/namespaced_storage'
+
+const ganMacKey = 'algfolded_gan_mac'
+const isMac = (value) => typeof value === 'string' && /^([0-9a-f]{2}:){5}[0-9a-f]{2}$/i.test(value)
 
 let kpuzzlePromise = null
 async function getKPuzzle() {
@@ -259,17 +263,22 @@ export const useBluetoothCubeStore = defineStore('bluetoothCube', () => {
         deadReadings = 0
     }
 
-    // GAN cubes derive their encryption key from the device MAC address. The
-    // library auto-detects it from the BLE advertisement when possible; if that
-    // fails it calls this provider as a last resort, where we ask the user.
-    const ganMacProvider = async (device, isFallbackCall) => {
-        if (!isFallbackCall) return null // let the library try auto-detection first
+    // The library asks for a known MAC before trying its own discovery, then
+    // calls back for manual entry if discovery couldn't read the address.
+    const ganMacProvider = (attempt, enterMac) => async (device, isFallbackCall) => {
+        if (!adoptAttempt(attempt)) return null
+        if (enterMac && isFallbackCall) return null // already asked during this attempt
+        if (!enterMac && !isFallbackCall) {
+            const saved = device.id ? readNamespaced(ganMacKey, device.id, null) : null
+            return isMac(saved) ? saved : null
+        }
         const mac = window.prompt(
             'Enter your GAN cube MAC address (e.g. AB:CD:EF:12:34:56).\n' +
             'You can find it in the GAN / Cube Station app.'
         )
         const trimmed = (mac || '').trim()
-        return /^([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}$/.test(trimmed) ? trimmed : null
+        // In manual mode a cancelled prompt still lets the library try discovery.
+        return isMac(trimmed) ? trimmed.toUpperCase() : null
     }
 
     // Connect a MoYu / QiYi cube via btcube-web.
@@ -390,10 +399,10 @@ export const useBluetoothCubeStore = defineStore('bluetoothCube', () => {
     }
 
     // Connect a GAN cube via gan-web-bluetooth.
-    const connectGan = async (display, attempt) => {
+    const connectGan = async (display, attempt, enterMac) => {
         const {connectGanCube} = await import('gan-web-bluetooth')
         patchRequestDevice()
-        const conn = await connectGanCube(ganMacProvider)
+        const conn = await connectGanCube(ganMacProvider(attempt, enterMac))
         if (!adoptAttempt(attempt)) { closeAbandoned(conn); return }
         cube = conn
         cubeDisconnect = () => { try { conn.disconnect() } catch (_) {} }
@@ -401,6 +410,9 @@ export const useBluetoothCubeStore = defineStore('bluetoothCube', () => {
         deviceName.value = conn.deviceName || 'GAN Smart Cube'
         // The library exposes the BluetoothDevice; keep it for liveness polling.
         gattDevice = conn.device || null
+        if (gattDevice?.id && isMac(gattDevice.mac)) {
+            writeNamespaced(ganMacKey, gattDevice.id, gattDevice.mac.toUpperCase())
+        }
         subscriptions.push(conn.events$.subscribe(event => {
             if (event.type === 'MOVE') {
                 onMove(event.move)
@@ -457,7 +469,7 @@ export const useBluetoothCubeStore = defineStore('bluetoothCube', () => {
         closeGatt(c?.device)
     }
 
-    const connect = async (brand = 'moyu') => {
+    const connect = async (brand = 'moyu', {enterMac = false} = {}) => {
         const display = useDisplayStore()
         // Two attempts in flight would each open their own GATT link, and the
         // one that loses is never closed — that alone can make the cube
@@ -473,7 +485,7 @@ export const useBluetoothCubeStore = defineStore('bluetoothCube', () => {
             const deadline = new Promise((_, reject) => { deadlineReject = reject })
             armDeadline(CHOOSER_TIMEOUT_MS)
             const pending = brand === 'gan'
-                ? connectGan(display, attempt)
+                ? connectGan(display, attempt, enterMac)
                 : connectMoyu(display, attempt)
             await Promise.race([pending, deadline])
         } catch (e) {

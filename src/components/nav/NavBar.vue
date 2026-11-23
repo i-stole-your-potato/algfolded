@@ -60,9 +60,9 @@ const onBluetoothClick = () => {
   // promptly inside the click gesture (no slow/late chooser).
   if (showConnectMenu.value) bt.warmupLibraries()
 }
-const connectBrand = (brand) => {
+const connectBrand = (brand, options) => {
   showConnectMenu.value = false
-  bt.connect(brand)
+  bt.connect(brand, options)
 }
 const onDocClick = (e) => {
   if (showConnectMenu.value && btConnectWrap.value && !btConnectWrap.value.contains(e.target)) {
@@ -200,6 +200,7 @@ onUnmounted(() => {
             <div v-if="showConnectMenu && !bt.connected && !bt.connecting" class="bt-connect-menu">
               <div class="bt-connect-menu-title">{{ $t('nav.bluetooth_select_brand') }}</div>
               <button class="bt-connect-item" @click.stop="connectBrand('gan')">GAN</button>
+              <button class="bt-connect-item" @click.stop="connectBrand('gan', {enterMac: true})">{{ $t('nav.bluetooth_gan_enter_mac') }}</button>
               <button class="bt-connect-item" @click.stop="connectBrand('moyu')">MoYu / QiYi</button>
             </div>
           </span>

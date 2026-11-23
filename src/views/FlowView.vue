@@ -13,7 +13,7 @@ import {useAlgsetStore} from "@/stores/AlgsetStore";
 import {useBluetoothCubeStore} from "@/stores/BluetoothCubeStore";
 import {useDisplayStore} from "@/stores/DisplayStore";
 
-// Flow mode. Five cases at a time, back to back, nothing else on screen.
+// Flow mode presents pages of cases back to back.
 //
 // Detection is the letter-pair mechanism the timer already uses: the virtual
 // cube is set to the case's scrambled state and the case is done the moment
@@ -101,7 +101,7 @@ const finishCase = () => {
   const pageDone = flow.completeCurrent(moves)
   wrongFeedback.value = false
   if (!pageDone) return
-  // Hold the fifth case green for a moment, then swap the whole page.
+  // Hold the last case green for a moment, then swap the whole page.
   clearTimeout(advanceTimer)
   advanceTimer = setTimeout(() => {
     advanceTimer = null
@@ -180,7 +180,13 @@ onUnmounted(() => {
         :clockMs="clockMs"
         :wrongFeedback="wrongFeedback"
         @finish="flow.finish()">
-      <AlgHint v-if="showHint && currentKey" :caseKey="currentKey"/>
+      <template v-if="showHint && currentKey" #hint>
+        <p v-if="flow.currentCase.scramble" class="flow-scramble mb-2">
+          <span class="d-block small text-muted">{{ $t('timer.scramble') }}</span>
+          <span class="font-monospace">{{ flow.currentCase.scramble }}</span>
+        </p>
+        <AlgHint :caseKey="currentKey"/>
+      </template>
     </FlowPage>
   </div>
 </template>
@@ -188,5 +194,8 @@ onUnmounted(() => {
 <style scoped>
 .flow-view {
   min-height: 0;
+}
+.flow-scramble {
+  overflow-wrap: anywhere;
 }
 </style>

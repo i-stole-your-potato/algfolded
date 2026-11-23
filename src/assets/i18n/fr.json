@@ -14,6 +14,7 @@
       "bluetooth_connecting": "Connexion au smart cube…",
       "bluetooth_disconnect": "Déconnecter le smart cube",
       "bluetooth_select_brand": "Choisir la marque du cube",
+      "bluetooth_gan_enter_mac": "GAN (saisir l’adresse MAC)",
       "bluetooth_pause": "Mettre en pause le suivi",
       "bluetooth_resume": "Reprendre le suivi",
       "bluetooth_reset_to_solved": "Réinitialiser le cube virtuel à l'état résolu",
